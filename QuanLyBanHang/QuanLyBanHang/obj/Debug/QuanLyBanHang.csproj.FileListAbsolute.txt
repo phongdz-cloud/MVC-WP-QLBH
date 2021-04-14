@@ -10,3 +10,15 @@ C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj
 C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
 C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmKhachHang.resources
 C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmSanPham.resources
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmKhachHang.resources
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmMain.resources
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmSanPham.resources
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CoreCompileInputs.cache
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+C:\Users\Hoang Trung Nhat\Desktop\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
