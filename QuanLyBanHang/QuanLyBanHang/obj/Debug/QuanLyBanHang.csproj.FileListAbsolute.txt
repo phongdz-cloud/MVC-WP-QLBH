@@ -1,0 +1,12 @@
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmMain.resources
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmKhachHang.resources
+C:\Users\dell\Desktop\Quản Lý Bán Hàng DBMS\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmSanPham.resources
