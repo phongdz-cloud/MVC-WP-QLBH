@@ -94,6 +94,7 @@ namespace QuanLyBanHang
             this.btnHienThi.TabIndex = 5;
             this.btnHienThi.Text = "&Hiển thị DS";
             this.btnHienThi.UseVisualStyleBackColor = true;
+            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
             // 
             // btnHuy
             // 
@@ -106,6 +107,7 @@ namespace QuanLyBanHang
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "&Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -118,6 +120,7 @@ namespace QuanLyBanHang
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "&Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -130,6 +133,7 @@ namespace QuanLyBanHang
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "&Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -142,6 +146,7 @@ namespace QuanLyBanHang
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "&Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -154,6 +159,7 @@ namespace QuanLyBanHang
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel1
             // 

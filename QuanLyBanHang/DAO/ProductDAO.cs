@@ -31,35 +31,35 @@ namespace DAO
         public bool insertProduct(ref string err, ProductDTO product)
         {
             return db.MyExcuteNonQuery("spInsertSanPham", CommandType.StoredProcedure, ref err,
-               new SqlParameter("@MASANPHAM", product.MaSP),
-                new SqlParameter("@TENSANPHAM", product.TenSP),
-                new SqlParameter("@GIABAN", product.GiaBan),
-                new SqlParameter("@SOLUONGTON", product.SlTon),
-                new SqlParameter("@MANHOMSP", product.ManhomSP),
-                new SqlParameter("@NUOCSX", product.NuocSX),
-                new SqlParameter("@NGAYSX", product.NgaySX),
-                new SqlParameter("@HANSD", product.HanSD));
+               new SqlParameter("@maSP", product.MaSP),
+                new SqlParameter("@tenSP", product.TenSP),
+                new SqlParameter("@giaban", product.GiaBan),
+                new SqlParameter("@soluongton", product.SlTon),
+                new SqlParameter("@manhomsp", product.ManhomSP),
+                new SqlParameter("@nuocsx", product.NuocSX),
+                new SqlParameter("@ngaysx", product.NgaySX),
+                new SqlParameter("@hansd", product.HanSD));
         }
         #endregion
         #region Update product
         public bool updateProduct(ref string err, ProductDTO product)
         {
             return db.MyExcuteNonQuery("spUpdateSanPham", CommandType.StoredProcedure, ref err,
-               new SqlParameter("@MASANPHAM", product.MaSP),
-                new SqlParameter("@TENSANPHAM", product.TenSP),
-                new SqlParameter("@GIABAN", product.GiaBan),
-                new SqlParameter("@SOLUONGTON", product.SlTon),
-                new SqlParameter("@MANHOMSP", product.ManhomSP),
-                new SqlParameter("@NUOCSX", product.NuocSX),
-                new SqlParameter("@NGAYSX", product.NgaySX),
-                new SqlParameter("@HANSD", product.HanSD));
+               new SqlParameter("@maSP", product.MaSP),
+                new SqlParameter("@tenSP", product.TenSP),
+                new SqlParameter("@giaban", product.GiaBan),
+                new SqlParameter("@soluongton", product.SlTon),
+                new SqlParameter("@manhomsp", product.ManhomSP),
+                new SqlParameter("@nuocsx", product.NuocSX),
+                new SqlParameter("@ngaysx", product.NgaySX),
+                new SqlParameter("@hansd", product.HanSD));
         }
         #endregion
         #region Delete product
         public bool deleteProduct(ref string err, ProductDTO product)
         {
             return db.MyExcuteNonQuery("spDeleteSanPham", CommandType.StoredProcedure, ref err,
-               new SqlParameter("@MASANPHAM", product.MaSP));
+               new SqlParameter("@maSP", product.MaSP));
         }
         #endregion
     }
