@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="CustomerTypeBUS.cs" />
+    <Compile Include="ProductBUS.cs" />
+    <Compile Include="ProductGroupBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
