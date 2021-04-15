@@ -13,6 +13,7 @@ namespace QuanLyBanHang
 {
     public partial class frmKhachHang : Form
     {
+        #region Khởi tạo các thuộc tính cần có của form khách hàng
         CustomerDTO customerDTO;
         CustomerBUS customerBUS = new CustomerBUS();
         CustomerTypeBUS customerTypeBUS = new CustomerTypeBUS();
@@ -22,6 +23,7 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
         }
+        #endregion
         #region Sự kiện load form
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
@@ -58,9 +60,6 @@ namespace QuanLyBanHang
             MaLoaiKH.ValueMember = "MALOAIKH";
             DataTable dbCustomer = customerBUS.GetCustomer();
             dgvKhachHang.DataSource = dbCustomer;
-            //cbbMaLoaiKH.DataSource = dbCustomerType;
-            //cbbMaLoaiKH.DisplayMember = "TENLOAI";
-            //cbbMaLoaiKH.ValueMember = "MALOAIKH";
         }
         #endregion
         #region Phương thức này có chức năng binding dữ liệu từ view lên property Customer

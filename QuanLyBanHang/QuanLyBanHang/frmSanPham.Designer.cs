@@ -38,6 +38,8 @@ namespace QuanLyBanHang
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpHanSD = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaySX = new System.Windows.Forms.DateTimePicker();
             this.cbbNuocSX = new System.Windows.Forms.ComboBox();
             this.cbbNhomSP = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,9 +55,7 @@ namespace QuanLyBanHang
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dtpNgaySX = new System.Windows.Forms.DateTimePicker();
-            this.dtpHanSD = new System.Windows.Forms.DateTimePicker();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.MASANPHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENSANPHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIABAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +66,7 @@ namespace QuanLyBanHang
             this.HANSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -82,7 +82,6 @@ namespace QuanLyBanHang
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1385, 100);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnHienThi
             // 
@@ -181,6 +180,22 @@ namespace QuanLyBanHang
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1385, 266);
             this.panel1.TabIndex = 3;
+            // 
+            // dtpHanSD
+            // 
+            this.dtpHanSD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHanSD.Location = new System.Drawing.Point(878, 212);
+            this.dtpHanSD.Name = "dtpHanSD";
+            this.dtpHanSD.Size = new System.Drawing.Size(217, 22);
+            this.dtpHanSD.TabIndex = 7;
+            // 
+            // dtpNgaySX
+            // 
+            this.dtpNgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySX.Location = new System.Drawing.Point(878, 155);
+            this.dtpNgaySX.Name = "dtpNgaySX";
+            this.dtpNgaySX.Size = new System.Drawing.Size(217, 22);
+            this.dtpNgaySX.TabIndex = 6;
             // 
             // cbbNuocSX
             // 
@@ -332,11 +347,11 @@ namespace QuanLyBanHang
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh mục sản phẩm";
             // 
-            // dataGridView1
+            // dgvProduct
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MASANPHAM,
             this.TENSANPHAM,
             this.GIABAN,
@@ -345,28 +360,12 @@ namespace QuanLyBanHang
             this.NUOCSX,
             this.NGAYSX,
             this.HANSD});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 266);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1385, 259);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // dtpNgaySX
-            // 
-            this.dtpNgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySX.Location = new System.Drawing.Point(878, 155);
-            this.dtpNgaySX.Name = "dtpNgaySX";
-            this.dtpNgaySX.Size = new System.Drawing.Size(217, 22);
-            this.dtpNgaySX.TabIndex = 6;
-            // 
-            // dtpHanSD
-            // 
-            this.dtpHanSD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHanSD.Location = new System.Drawing.Point(878, 212);
-            this.dtpHanSD.Name = "dtpHanSD";
-            this.dtpHanSD.Size = new System.Drawing.Size(217, 22);
-            this.dtpHanSD.TabIndex = 7;
+            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduct.Location = new System.Drawing.Point(0, 266);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.RowHeadersWidth = 51;
+            this.dgvProduct.Size = new System.Drawing.Size(1385, 259);
+            this.dgvProduct.TabIndex = 4;
             // 
             // MASANPHAM
             // 
@@ -429,16 +428,17 @@ namespace QuanLyBanHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1385, 625);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSanPham";
             this.Text = "Danh mục sản phẩm";
+            this.Load += new System.EventHandler(this.frmSanPham_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -468,7 +468,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.DateTimePicker dtpHanSD;
         private System.Windows.Forms.DateTimePicker dtpNgaySX;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASANPHAM;
