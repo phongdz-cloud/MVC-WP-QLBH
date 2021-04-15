@@ -207,6 +207,14 @@ namespace QuanLyBanHang
             // 
             this.cbbNuocSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNuocSX.FormattingEnabled = true;
+            this.cbbNuocSX.Items.AddRange(new object[] {
+            "Việt Nam",
+            "Thái Lan",
+            "Lào",
+            "Nhật",
+            "Mỹ",
+            "Pháp",
+            "Hàn"});
             this.cbbNuocSX.Location = new System.Drawing.Point(371, 212);
             this.cbbNuocSX.Name = "cbbNuocSX";
             this.cbbNuocSX.Size = new System.Drawing.Size(226, 28);

@@ -17,3 +17,4 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyB
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\DTO.pdb
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\DAO.pdb
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FrmNhanVien.resources
