@@ -31,6 +31,7 @@ namespace QuanLyBanHang
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbMaLoaiKH = new System.Windows.Forms.ComboBox();
             this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace QuanLyBanHang
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.cbbMaLoaiKH = new System.Windows.Forms.ComboBox();
             this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +82,20 @@ namespace QuanLyBanHang
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 183);
             this.panel1.TabIndex = 0;
+            // 
+            // cbbMaLoaiKH
+            // 
+            this.cbbMaLoaiKH.FormattingEnabled = true;
+            this.cbbMaLoaiKH.Items.AddRange(new object[] {
+            "B",
+            "BK",
+            "D",
+            "KC",
+            "V"});
+            this.cbbMaLoaiKH.Location = new System.Drawing.Point(582, 107);
+            this.cbbMaLoaiKH.Name = "cbbMaLoaiKH";
+            this.cbbMaLoaiKH.Size = new System.Drawing.Size(139, 24);
+            this.cbbMaLoaiKH.TabIndex = 6;
             // 
             // cbbGioiTinh
             // 
@@ -222,6 +236,7 @@ namespace QuanLyBanHang
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "&Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -234,6 +249,7 @@ namespace QuanLyBanHang
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "&Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -246,6 +262,7 @@ namespace QuanLyBanHang
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "&Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -258,6 +275,7 @@ namespace QuanLyBanHang
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "&Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -270,6 +288,7 @@ namespace QuanLyBanHang
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dgvKhachHang
             // 
@@ -289,14 +308,6 @@ namespace QuanLyBanHang
             this.dgvKhachHang.RowTemplate.Height = 24;
             this.dgvKhachHang.Size = new System.Drawing.Size(1175, 305);
             this.dgvKhachHang.TabIndex = 2;
-            // 
-            // cbbMaLoaiKH
-            // 
-            this.cbbMaLoaiKH.FormattingEnabled = true;
-            this.cbbMaLoaiKH.Location = new System.Drawing.Point(582, 107);
-            this.cbbMaLoaiKH.Name = "cbbMaLoaiKH";
-            this.cbbMaLoaiKH.Size = new System.Drawing.Size(139, 24);
-            this.cbbMaLoaiKH.TabIndex = 6;
             // 
             // MAKH
             // 
