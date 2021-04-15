@@ -36,7 +36,7 @@ namespace BUS
         }
         #endregion
         #region 3. Delete
-        public bool DeleteCustomer(ref string error, ProductDTO pdt)
+        public bool DeleteProduct(ref string error, ProductDTO pdt)
         {
             return productDAO.deleteProduct(ref error, pdt);
         }
