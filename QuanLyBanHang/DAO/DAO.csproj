@@ -47,6 +47,8 @@
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="CustomerTypeDAO.cs" />
     <Compile Include="DBProvider.cs" />
+    <Compile Include="ProductDAO.cs" />
+    <Compile Include="ProductGroupDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
