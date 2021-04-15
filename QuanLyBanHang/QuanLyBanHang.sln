@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "QuanLyBanHang\GUI.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{844F4850-8B31-4228-9CA8-A63328338F13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{3E23DBC0-A752-4BE1-A151-E16F2E0F9907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{ACCDA8D0-FF8F-47D8-AFA8-9F2270834B48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{844F4850-8B31-4228-9CA8-A63328338F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{844F4850-8B31-4228-9CA8-A63328338F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{844F4850-8B31-4228-9CA8-A63328338F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E23DBC0-A752-4BE1-A151-E16F2E0F9907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E23DBC0-A752-4BE1-A151-E16F2E0F9907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E23DBC0-A752-4BE1-A151-E16F2E0F9907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E23DBC0-A752-4BE1-A151-E16F2E0F9907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACCDA8D0-FF8F-47D8-AFA8-9F2270834B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACCDA8D0-FF8F-47D8-AFA8-9F2270834B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACCDA8D0-FF8F-47D8-AFA8-9F2270834B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACCDA8D0-FF8F-47D8-AFA8-9F2270834B48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,7 +26,7 @@ namespace DAO
          * Tham số truyền vào gồm có Câu lệnh truy vấn DB , loại truy vấn , tham số nhận vào
          * Trả về một datatable
          */
-        public DataTable ExecuteQueryDataSet(string strSQL, CommandType ct, params SqlParameter[] p)
+        public DataTable ExecuteQueryDataTable(string strSQL, CommandType ct, params SqlParameter[] p)
         {
             DataTable db = new DataTable();
             cmd.CommandText = strSQL;
