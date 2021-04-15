@@ -47,6 +47,7 @@
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="CustomerTypeDAO.cs" />
     <Compile Include="DBProvider.cs" />
+    <Compile Include="EmployeeDAO.cs" />
     <Compile Include="ProductDAO.cs" />
     <Compile Include="ProductGroupDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

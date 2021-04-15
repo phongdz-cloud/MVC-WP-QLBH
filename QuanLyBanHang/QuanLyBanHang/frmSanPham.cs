@@ -32,6 +32,9 @@ namespace QuanLyBanHang
             MANHOMSP.DataSource = dbProductType;
             MANHOMSP.DisplayMember = "TENNHOMSP";
             MANHOMSP.ValueMember = "MANHOMSP";
+            cbbNhomSP.DataSource = dbProductType;
+            cbbNhomSP.DisplayMember = "MANHOMSP";
+            cbbNhomSP.ValueMember = "MANHOMSP";
             DataTable dbProduct = productBUS.GetProduct();
             dgvProduct.DataSource = dbProduct;
         }
