@@ -11,32 +11,24 @@ using BUS;
 using DTO;
 namespace QuanLyBanHang
 {
-    public partial class frmSanPham : Form
+    public partial class frmNhomSanPham : Form
     {
         #region Khởi tạo các lớp cần có của form khách hàng
-        
+
+        ProductGroupDTO productGroupDTO;
         ProductGroupBUS productGroupBUS = new ProductGroupBUS();
-        ProductBUS productBUS = new ProductBUS();
-        ProductDTO product;
         private string err;
         private int flag;
-        public frmSanPham()
+        public frmNhomSanPham()
         {
             InitializeComponent();
         }
         #endregion
-        #region Phương thức này có chức năng load dữ liệu sản phẩm từ Database
+        #region Phương thức này có chức năng load dữ liệu nhóm sản phẩm từ Database
         private void load()
         {
-            DataTable dbProductType = productGroupBUS.GetProductGroup();
-            MANHOMSP.DataSource = dbProductType;
-            MANHOMSP.DisplayMember = "TENNHOMSP";
-            MANHOMSP.ValueMember = "MANHOMSP";
-            cbbNhomSP.DataSource = dbProductType;
-            cbbNhomSP.DisplayMember = "MANHOMSP";
-            cbbNhomSP.ValueMember = "MANHOMSP";
-            DataTable dbProduct = productBUS.GetProduct();
-            dgvProduct.DataSource = dbProduct;
+            DataTable dbProductGroup = productGroupBUS.GetProductGroup();
+            dgvNhomSanPham.DataSource = dbProductGroup;
         }
         #endregion
         #region Phương thức này có chức năng binding dữ liệu từ view lên property Product
@@ -44,38 +36,33 @@ namespace QuanLyBanHang
         {
             try // ở đây có 1 try catch chưa xử lý !!!
             {
-                txtMaSP.DataBindings.Clear();
-                txtMaSP.DataBindings.Add("Text", dgvProduct.DataSource, "MASANPHAM");
-                txtTenSP.DataBindings.Clear();
-                txtTenSP.DataBindings.Add("Text", dgvProduct.DataSource, "TENSANPHAM");
-                txtGiaBan.DataBindings.Clear();
-                txtGiaBan.DataBindings.Add("Text", dgvProduct.DataSource, "GIABAN");
-                txtSL.DataBindings.Clear();
-                txtSL.DataBindings.Add("Text", dgvProduct.DataSource, "SOLUONGTON");
-                cbbNhomSP.DataBindings.Add("Text", dgvProduct.DataSource, "MANHOMSP");
-                cbbNuocSX.DataBindings.Add("Text", dgvProduct.DataSource, "NUOCSX");
-                dtpNgaySX.DataBindings.Add("Text", dgvProduct.DataSource, "NGAYSX");
-                dtpHanSD.DataBindings.Add("Text", dgvProduct.DataSource, "HANSD");
+                txtMaNhomSP.DataBindings.Clear();
+                txtMaNhomSP.DataBindings.Add("Text", dgvNhomSanPham.DataSource, "MANHOMSP");
+                txtTenNhomSP.DataBindings.Clear();
+                txtTenNhomSP.DataBindings.Add("Text", dgvNhomSanPham.DataSource, "TENNHOMSP");
             }
             catch (Exception ex)
             {
             }
         }
         #endregion
-        #region Chức năng bật tắt property Product
+        #region Phương thức này có chức năng lấy dữ liệu từ các text box vào ProductGroupDTO
+        private ProductGroupDTO getData()
+        {
+            ProductGroupDTO productGroupDTO = new ProductGroupDTO();
+            productGroupDTO.ManhomSP = txtMaNhomSP.Text.Trim();
+            productGroupDTO.TennhomSP = txtTenNhomSP.Text.Trim();
+            return productGroupDTO;
+        }
+        #endregion
+        #region Chức năng bật tắt property Product Group
         /*
-         * Phương thức này có chức năng bật tắt các thuộc tính của sản phẩm
+         * Phương thức này có chức năng bật tắt các thuộc tính của nhóm sản phẩm
          */
         private void dis_en(bool e)
         {
-            txtMaSP.Enabled = e;
-            txtTenSP.Enabled = e;
-            txtGiaBan.Enabled = e;
-            txtSL.Enabled = e;
-            cbbNhomSP.Enabled = e;
-            cbbNuocSX.Enabled = e;
-            dtpNgaySX.Enabled = e;
-            dtpHanSD.Enabled = e;
+            txtMaNhomSP.Enabled = e;
+            txtTenNhomSP.Enabled = e;
             btnThem.Enabled = !e;
             btnXoa.Enabled = !e;
             btnSua.Enabled = !e;
@@ -83,55 +70,40 @@ namespace QuanLyBanHang
             btnHuy.Enabled = e;
         }
         #endregion
-        #region Sự kiện load form
-        private void frmSanPham_Load(object sender, EventArgs e)
+        #region Sự kiện load form nhóm sản phẩm
+        private void frmNhomSanPham_Load(object sender, EventArgs e)
         {
             load();
             binding();
             dis_en(false);
         }
         #endregion
-        #region Phương thức này có chức năng lấy dữ liệu từ các text box vào ProductDTO
-        private ProductDTO getData()
-        {
-            ProductDTO product = new ProductDTO();
-            product.MaSP = txtMaSP.Text;
-            product.TenSP = txtTenSP.Text;
-            product.GiaBan = Int32.Parse(txtGiaBan.Text.Trim());
-            product.SlTon = Int32.Parse(txtSL.Text.Trim());
-            product.ManhomSP = cbbNhomSP.Text;
-            product.NuocSX = cbbNuocSX.Text;
-            product.NgaySX = dtpNgaySX.Text;
-            product.HanSD = dtpHanSD.Text;
-            return product;
-        }
-        #endregion
-        #region Sự kiện Thêm
+        #region Sự kiện thêm 
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 0;
             dis_en(true);
         }
         #endregion
-        #region Sự kiện Sửa
+        #region Sự kiện sửa
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 1;
             dis_en(true);
         }
         #endregion
-        #region Sự kiện Xóa
+        #region Sự kiện xóa
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận hủy",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                product = getData();
-                if (productBUS.DeleteProduct(ref err, product))
+                productGroupDTO = getData();
+                if (productGroupBUS.DeleteProductGroup(ref err, productGroupDTO))
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmSanPham_Load(sender, e);
+                    frmNhomSanPham_Load(sender, e);
                 }
                 else
                 {
@@ -140,7 +112,7 @@ namespace QuanLyBanHang
             }
         }
         #endregion
-        #region Sự kiện Lưu
+        #region Sự kiện lưu
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (flag == 0) // Insert
@@ -149,8 +121,8 @@ namespace QuanLyBanHang
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    product = getData();
-                    if (productBUS.InsertProduct(ref err, product))
+                    productGroupDTO = getData();
+                    if (productGroupBUS.InsertProductGroup(ref err, productGroupDTO))
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -164,8 +136,8 @@ namespace QuanLyBanHang
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    product = getData();
-                    if (productBUS.UpdateProduct(ref err, product))
+                    productGroupDTO = getData();
+                    if (productGroupBUS.UpdateProductGroup(ref err, productGroupDTO))
                     {
                         MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -176,18 +148,18 @@ namespace QuanLyBanHang
             dis_en(false);
         }
         #endregion
-        #region Sự kiện Hiển thị
+        #region Sự kiện hiển thị
         private void btnHienThi_Click(object sender, EventArgs e)
         {
-            frmSanPham_Load(sender, e);
+            frmNhomSanPham_Load(sender, e);
             dis_en(false);
         }
         #endregion
-        #region sự kiện Hủy
+        #region Sự kiện hủy
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có chắc muốn hủy thao tác này?", "Xác nhận hủy",
-              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 dis_en(false);
