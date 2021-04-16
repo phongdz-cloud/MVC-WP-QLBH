@@ -8,8 +8,11 @@ namespace DTO
 {
     public class CustomerTypeDTO
     {
+        #region Attributes Customer Type
         private string maLoaiKH;
         private string tenLoaiKH;
+        #endregion
+        #region Khởi tạo cho CustomerType
         public CustomerTypeDTO()
         {
 
@@ -19,7 +22,10 @@ namespace DTO
             MaLoaiKH = maLoaiKH;
             TenLoaiKH = tenLoaiKH;
         }
+        #endregion
+        #region Property cho CustomerType
         public string MaLoaiKH { get => maLoaiKH; set => maLoaiKH = value; }
         public string TenLoaiKH { get => tenLoaiKH; set => tenLoaiKH = value; }
+        #endregion
     }
 }

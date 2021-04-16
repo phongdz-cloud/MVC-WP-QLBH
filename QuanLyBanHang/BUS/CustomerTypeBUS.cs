@@ -10,7 +10,7 @@ namespace BUS
 {
     public class CustomerTypeBUS
     {
-        #region Khởi tạo cho lớp CusomterBUS
+        #region Khởi tạo cho lớp CusomterTypeBUS
         private  CustomerTypeDAO customerTypeDAO;
         public CustomerTypeBUS()
         {
@@ -21,6 +21,24 @@ namespace BUS
         public  DataTable GetCustomerType()
         {
             return customerTypeDAO.getCustomerType();
+        }
+        #endregion
+        #region 1. Insert
+        public bool InsertCustomerType(ref string error, CustomerTypeDTO ctm)
+        {
+            return customerTypeDAO.insertCustomerType(ref error, ctm);
+        }
+        #endregion
+        #region 2. Update
+        public bool UpdateCustomerType(ref string error, CustomerTypeDTO ctm)
+        {
+            return customerTypeDAO.updateCustomerType(ref error, ctm);
+        }
+        #endregion
+        #region 3. Delete
+        public bool DeleteCustomerType(ref string error, CustomerTypeDTO ctm)
+        {
+            return customerTypeDAO.deleteCustomerType(ref error, ctm);
         }
         #endregion
     }
