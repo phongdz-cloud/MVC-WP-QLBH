@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using DTO;
 using System.Data;
 namespace BUS
 {
@@ -20,6 +21,24 @@ namespace BUS
         public DataTable GetProductGroup()
         {
             return productGroupDAO.getProductGroup();
+        }
+        #endregion
+        #region 1. Insert
+        public bool InsertProductGroup(ref string error, ProductGroupDTO productGroup)
+        {
+            return productGroupDAO.insertProductGroup(ref error, productGroup);
+        }
+        #endregion
+        #region 2. Update
+        public bool UpdateProductGroup(ref string error, ProductGroupDTO productGroup)
+        {
+            return productGroupDAO.updateProductGroup(ref error, productGroup);
+        }
+        #endregion
+        #region 3. Delete
+        public bool DeleteProductGroup(ref string error, ProductGroupDTO productGroup)
+        {
+            return productGroupDAO.deleteProductGroup(ref error, productGroup);
         }
         #endregion
     }
