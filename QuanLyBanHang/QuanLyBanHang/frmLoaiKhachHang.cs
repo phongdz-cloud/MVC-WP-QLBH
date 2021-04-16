@@ -11,58 +11,57 @@ using BUS;
 using DTO;
 namespace QuanLyBanHang
 {
-    public partial class frmNhomSanPham : Form
+    public partial class frmLoaiKhachHang : Form
     {
-        #region Khởi tạo các lớp cần có của form khách hàng
-
-        ProductGroupDTO productGroupDTO;
-        ProductGroupBUS productGroupBUS = new ProductGroupBUS();
+        #region Khởi tạo các thuộc tính cần có của form loại khách hàng
+        CustomerTypeDTO customerTypeDTO;
+        CustomerTypeBUS customerTypeBUS = new CustomerTypeBUS();
         private string err;
         private int flag;
-        public frmNhomSanPham()
+        public frmLoaiKhachHang()
         {
             InitializeComponent();
         }
         #endregion
-        #region Phương thức này có chức năng load dữ liệu nhóm sản phẩm từ Database
+        #region Phương thức này có chức năng load dữ liệu loại khách hàng từ Database
         private void load()
         {
-            DataTable dbProductGroup = productGroupBUS.GetProductGroup();
-            dgvNhomSanPham.DataSource = dbProductGroup;
+            DataTable dbCustomerType = customerTypeBUS.GetCustomerType();
+            dgvLoaiKhachHang.DataSource = dbCustomerType;
         }
         #endregion
-        #region Phương thức này có chức năng binding dữ liệu từ view lên property ProductGroup
+        #region Phương thức này có chức năng binding dữ liệu từ view lên property CustomerType
         private void binding()
         {
             try // ở đây có 1 try catch chưa xử lý !!!
             {
-                txtMaNhomSP.DataBindings.Clear();
-                txtMaNhomSP.DataBindings.Add("Text", dgvNhomSanPham.DataSource, "MANHOMSP");
-                txtTenNhomSP.DataBindings.Clear();
-                txtTenNhomSP.DataBindings.Add("Text", dgvNhomSanPham.DataSource, "TENNHOMSP");
+                txtMaLoaiKH.DataBindings.Clear();
+                txtMaLoaiKH.DataBindings.Add("Text", dgvLoaiKhachHang.DataSource, "MALOAIKH");
+                txtTenLoai.DataBindings.Clear();
+                txtTenLoai.DataBindings.Add("Text", dgvLoaiKhachHang.DataSource, "TENLOAI");
             }
             catch (Exception ex)
             {
             }
         }
         #endregion
-        #region Phương thức này có chức năng lấy dữ liệu từ các text box vào ProductGroupDTO
-        private ProductGroupDTO getData()
+        #region Phương thức này có chức năng lấy dữ liệu từ các text box vào CustomerTypeDTO
+        private CustomerTypeDTO getData()
         {
-            ProductGroupDTO productGroupDTO = new ProductGroupDTO();
-            productGroupDTO.ManhomSP = txtMaNhomSP.Text.Trim();
-            productGroupDTO.TennhomSP = txtTenNhomSP.Text.Trim();
-            return productGroupDTO;
+            CustomerTypeDTO customerTypeDTO = new CustomerTypeDTO();
+            customerTypeDTO.MaLoaiKH = txtMaLoaiKH.Text.Trim();
+            customerTypeDTO.TenLoaiKH = txtTenLoai.Text.Trim();
+            return customerTypeDTO;
         }
         #endregion
-        #region Chức năng bật tắt property Product Group
+        #region Chức năng bật tắt property Customer Type
         /*
-         * Phương thức này có chức năng bật tắt các thuộc tính của nhóm sản phẩm
+         * Phương thức này có chức năng bật tắt các thuộc tính của loại khách hàng
          */
         private void dis_en(bool e)
         {
-            txtMaNhomSP.Enabled = e;
-            txtTenNhomSP.Enabled = e;
+            txtMaLoaiKH.Enabled = e;
+            txtTenLoai.Enabled = e;
             btnThem.Enabled = !e;
             btnXoa.Enabled = !e;
             btnSua.Enabled = !e;
@@ -70,15 +69,15 @@ namespace QuanLyBanHang
             btnHuy.Enabled = e;
         }
         #endregion
-        #region Sự kiện load form nhóm sản phẩm
-        private void frmNhomSanPham_Load(object sender, EventArgs e)
+        #region Sự kiện load form loại khách hàng
+        private void frmLoaiKhachHang_Load(object sender, EventArgs e)
         {
             load();
             binding();
             dis_en(false);
         }
         #endregion
-        #region Sự kiện thêm 
+        #region Sự kiện thêm
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 0;
@@ -99,8 +98,8 @@ namespace QuanLyBanHang
               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                productGroupDTO = getData();
-                if (productGroupBUS.DeleteProductGroup(ref err, productGroupDTO))
+                customerTypeDTO = getData();
+                if (customerTypeBUS.DeleteCustomerType(ref err, customerTypeDTO))
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -111,7 +110,7 @@ namespace QuanLyBanHang
             }
         }
         #endregion
-        #region Sự kiện lưu
+        #region Sự kiện Lưu
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (flag == 0) // Insert
@@ -120,8 +119,8 @@ namespace QuanLyBanHang
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    productGroupDTO = getData();
-                    if (productGroupBUS.InsertProductGroup(ref err, productGroupDTO))
+                    customerTypeDTO = getData();
+                    if (customerTypeBUS.InsertCustomerType(ref err, customerTypeDTO))
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -135,8 +134,8 @@ namespace QuanLyBanHang
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    productGroupDTO = getData();
-                    if (productGroupBUS.UpdateProductGroup(ref err, productGroupDTO))
+                    customerTypeDTO = getData();
+                    if (customerTypeBUS.UpdateCustomerType(ref err, customerTypeDTO))
                     {
                         MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -150,7 +149,7 @@ namespace QuanLyBanHang
         #region Sự kiện hiển thị
         private void btnHienThi_Click(object sender, EventArgs e)
         {
-            frmNhomSanPham_Load(sender, e);
+            frmLoaiKhachHang_Load(sender, e);
             dis_en(false);
         }
         #endregion
@@ -158,7 +157,7 @@ namespace QuanLyBanHang
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có chắc muốn hủy thao tác này?", "Xác nhận hủy",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 dis_en(false);

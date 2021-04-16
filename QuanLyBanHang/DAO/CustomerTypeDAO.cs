@@ -26,5 +26,29 @@ namespace DAO
             return db.ExecuteQueryDataTable("SELECT * FROM LOAIKHACHHANG", CommandType.Text, null);
         }
         #endregion
+        #region Insert CustomerType
+        public bool insertCustomerType(ref string err, CustomerTypeDTO customerTypeDTO)
+        {
+            return db.MyExcuteNonQuery("spInsertLoaiKhachHang", CommandType.StoredProcedure, ref err,
+               new SqlParameter("@MALOAIKH", customerTypeDTO.MaLoaiKH),
+                new SqlParameter("@TENLOAI", customerTypeDTO.TenLoaiKH));
+        }
+        #endregion
+        #region Update CustomerType
+        public bool updateCustomerType(ref string err, CustomerTypeDTO customerTypeDTO)
+        {
+            return db.MyExcuteNonQuery("spUpdateLoaiKhachHang", CommandType.StoredProcedure, ref err,
+               new SqlParameter("@MALOAIKH", customerTypeDTO.MaLoaiKH),
+                new SqlParameter("@TENLOAI", customerTypeDTO.TenLoaiKH));
+        }
+        #endregion
+        #region Delete CustomerType
+        public bool deleteCustomerType(ref string err, CustomerTypeDTO customerTypeDTO)
+        {
+            return db.MyExcuteNonQuery("spDeleteLoaiKhachHang", CommandType.StoredProcedure, ref err,
+               new SqlParameter("@MALOAIKH", customerTypeDTO.MaLoaiKH));
+        }
+        #endregion
+
     }
 }
