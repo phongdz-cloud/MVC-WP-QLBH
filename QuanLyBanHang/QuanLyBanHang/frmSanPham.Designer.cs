@@ -52,6 +52,12 @@ namespace QuanLyBanHang
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.MANCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProd = new System.Windows.Forms.DataGridView();
             this.MASANPHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENSANPHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIABAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +67,7 @@ namespace QuanLyBanHang
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -318,18 +325,70 @@ namespace QuanLyBanHang
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MASANPHAM,
-            this.TENSANPHAM,
-            this.GIABAN,
-            this.SOLUONGTON,
-            this.MANHOMSP,
-            this.NUOCSX});
+            this.MANCC,
+            this.TENNCC,
+            this.DIACHI,
+            this.DIENTHOAI,
+            this.EMAIL});
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduct.Location = new System.Drawing.Point(0, 266);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.Size = new System.Drawing.Size(1385, 259);
             this.dgvProduct.TabIndex = 4;
+            // 
+            // MANCC
+            // 
+            this.MANCC.DataPropertyName = "MANCC";
+            this.MANCC.HeaderText = "Mã nhà cung cấp";
+            this.MANCC.MinimumWidth = 6;
+            this.MANCC.Name = "MANCC";
+            // 
+            // TENNCC
+            // 
+            this.TENNCC.DataPropertyName = "TENNCC";
+            this.TENNCC.HeaderText = "Tên nhà cung cấp";
+            this.TENNCC.MinimumWidth = 6;
+            this.TENNCC.Name = "TENNCC";
+            // 
+            // DIACHI
+            // 
+            this.DIACHI.DataPropertyName = "DIACHI";
+            this.DIACHI.HeaderText = "Địa chỉ";
+            this.DIACHI.MinimumWidth = 6;
+            this.DIACHI.Name = "DIACHI";
+            // 
+            // DIENTHOAI
+            // 
+            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
+            this.DIENTHOAI.HeaderText = "Điện thoại";
+            this.DIENTHOAI.MinimumWidth = 6;
+            this.DIENTHOAI.Name = "DIENTHOAI";
+            // 
+            // EMAIL
+            // 
+            this.EMAIL.DataPropertyName = "EMAIL";
+            this.EMAIL.HeaderText = "Email";
+            this.EMAIL.MinimumWidth = 6;
+            this.EMAIL.Name = "EMAIL";
+            // 
+            // dgvProd
+            // 
+            this.dgvProd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MASANPHAM,
+            this.TENSANPHAM,
+            this.GIABAN,
+            this.SOLUONGTON,
+            this.MANHOMSP,
+            this.NUOCSX});
+            this.dgvProd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProd.Location = new System.Drawing.Point(0, 266);
+            this.dgvProd.Name = "dgvProd";
+            this.dgvProd.RowHeadersWidth = 51;
+            this.dgvProd.Size = new System.Drawing.Size(1385, 259);
+            this.dgvProd.TabIndex = 9;
             // 
             // MASANPHAM
             // 
@@ -378,6 +437,7 @@ namespace QuanLyBanHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1385, 625);
+            this.Controls.Add(this.dgvProd);
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -389,6 +449,7 @@ namespace QuanLyBanHang
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,6 +478,12 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MANCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIACHI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIENTHOAI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL;
+        private System.Windows.Forms.DataGridView dgvProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASANPHAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENSANPHAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIABAN;
