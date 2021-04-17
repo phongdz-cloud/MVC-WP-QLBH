@@ -30,25 +30,6 @@ VALUES
 ('KH018', N'Nguyễn Phước Đăng', N'Nam', N'249 Tam Bình', '0887543129', 'V'),
 ('KH019', N'Nguyễn Đức Trí', N'Nam', N'16 Cách mạng tháng Tám', '0221345621', 'KC'),
 ('KH020', N'Nguyễn Minh Đăng', N'Nam', N'111/4 Tô Hiến Thành', '0665743211', 'BK')
-GO
--- Thêm dữ liệu bảng đơn đặt hàng
-INSERT INTO dbo.DONDATHANG (MADDH, GHICHU, MAKH)
-VALUES
-(   'DH001', N'Đóng gói trong bao bì màu hồng', 'KH012' ),
-(   'DH002', N'Đóng gói trong bao bì giấy', 'KH012' ),
-(   'DH003', NULL, 'KH002' ),
-(   'DH004', NULL, 'KH005' ),
-(   'DH005', N'Đóng gói trong bao bì màu đen', 'KH020' ),
-(   'DH006', NULL, 'KH013' ),
-(   'DH007', NULL, 'KH020' ),
-(   'DH008', N'Hàng cần được giao sớm', 'KH011' ),
-(   'DH009', NULL, 'KH013' ),
-(   'DH010', N'Sản phẩm không được trầy xước', 'KH014' ),
-(   'DH011', NULL, 'KH013' ),
-(   'DH012', NULL, 'KH001' ),
-(   'DH013', N'Sản phẩm không được trầy xước', 'KH008' ),
-(   'DH014', NULL, 'KH007' ),
-(   'DH015', N'Sản phẩm không được trầy xước', 'KH011' )
 GO 
 -- Thêm dữ liệu bảng phiếu thu
 INSERT INTO dbo.PHIEUTHU(MAPHIEUTHU, MADDH, NGAYTHU, SOTIENTHU)
@@ -91,6 +72,25 @@ VALUES
 (   'NV008', N'Nguyễn Thị Ngọc Mai', N'Nữ', '1998-2-12', N'765/12 Trần Hưng Đạo', '0775432942', '2020-11-6', N'Toeic 750' ),
 (   'NV009', N'Đặng Minh Triều', N'Nam', '1992-4-5', N'1012 Âu Cơ', '0945554545', '2021-2-2', NULL ),
 (   'NV010', N'Trần Đông Thịnh', N'Nam', '1998-12-25', N'45/12/2 Lạc Long Quân', '0345554204', '2020-11-9', NULL )
+GO
+-- Thêm dữ liệu bảng đơn đặt hàng
+INSERT INTO dbo.DONDATHANG (MADDH, GHICHU, MAKH, MANV)
+VALUES
+(   'DH001', N'Đóng gói trong bao bì màu hồng', 'KH012', 'NV002' ),
+(   'DH002', N'Đóng gói trong bao bì giấy', 'KH012', 'NV002' ),
+(   'DH003', NULL, 'KH002', 'NV007' ),
+(   'DH004', NULL, 'KH005','NV010' ),
+(   'DH005', N'Đóng gói trong bao bì màu đen', 'KH020','NV006' ),
+(   'DH006', NULL, 'KH013', 'NV001' ),
+(   'DH007', NULL, 'KH020','NV008' ),
+(   'DH008', N'Hàng cần được giao sớm', 'KH011','NV007' ),
+(   'DH009', NULL, 'KH013','NV006' ),
+(   'DH010', N'Sản phẩm không được trầy xước', 'KH014','NV004' ),
+(   'DH011', NULL, 'KH013','NV009' ),
+(   'DH012', NULL, 'KH001','NV005' ),
+(   'DH013', N'Sản phẩm không được trầy xước', 'KH008','NV008' ),
+(   'DH014', NULL, 'KH007','NV003' ),
+(   'DH015', N'Sản phẩm không được trầy xước', 'KH011','NV004' )
 GO
 -- Thêm dữ liệu bảng nhà cung cấp
 INSERT INTO dbo.NHACUNGCAP (MANCC, TENNCC, DIACHI, DIENTHOAI, EMAIL)
@@ -158,7 +158,7 @@ VALUES
 INSERT INTO dbo.SANPHAM (MASANPHAM, TENSANPHAM, GIABAN, SOLUONGTON, MANHOMSP, NUOCSX, NGAYSX, HANSD)
 VALUES
 (   'SP011', N'Áo thun', 200000, 15, 'NSP003', N'Việt Nam'),
-(   'SP012', N'Quần jeans', 400000, 10, 'NSP003'),
+(   'SP012', N'Quần jeans', 400000, 10, 'NSP003',N'Trung Quốc'),
 (   'SP013', N'Đầm', 350000, 8, 'NSP003', N'Hàn'),
 (   'SP014', N'Chân váy', 300000, 6, 'NSP003', N'Việt Nam'),
 (   'SP015', N'Thịt', 100000, 12, 'NSP004', N'Việt Nam'),
@@ -231,3 +231,4 @@ VALUES
 (   'DH008', 'SP015','2021-4-4', 7 ),
 (   'DH002', 'SP038','2021-4-5', 10 ),
 (   'DH007', 'SP040','2020-9-9', 30 )
+
