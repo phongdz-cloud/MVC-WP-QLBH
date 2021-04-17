@@ -54,8 +54,6 @@ namespace QuanLyBanHang
                 txtSL.DataBindings.Add("Text", dgvProduct.DataSource, "SOLUONGTON");
                 cbbNhomSP.DataBindings.Add("Text", dgvProduct.DataSource, "MANHOMSP");
                 cbbNuocSX.DataBindings.Add("Text", dgvProduct.DataSource, "NUOCSX");
-                dtpNgaySX.DataBindings.Add("Text", dgvProduct.DataSource, "NGAYSX");
-                dtpHanSD.DataBindings.Add("Text", dgvProduct.DataSource, "HANSD");
             }
             catch (Exception ex)
             {
@@ -74,8 +72,6 @@ namespace QuanLyBanHang
             txtSL.Enabled = e;
             cbbNhomSP.Enabled = e;
             cbbNuocSX.Enabled = e;
-            dtpNgaySX.Enabled = e;
-            dtpHanSD.Enabled = e;
             btnThem.Enabled = !e;
             btnXoa.Enabled = !e;
             btnSua.Enabled = !e;
@@ -101,8 +97,6 @@ namespace QuanLyBanHang
             product.SlTon = Int32.Parse(txtSL.Text.Trim());
             product.ManhomSP = cbbNhomSP.Text;
             product.NuocSX = cbbNuocSX.Text;
-            product.NgaySX = dtpNgaySX.Text;
-            product.HanSD = dtpHanSD.Text;
             return product;
         }
         #endregion
@@ -194,5 +188,7 @@ namespace QuanLyBanHang
             }
         }
         #endregion
+
+
     }
 }

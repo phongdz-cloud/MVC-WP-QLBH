@@ -36,9 +36,7 @@ namespace DAO
                 new SqlParameter("@giaban", product.GiaBan),
                 new SqlParameter("@soluongton", product.SlTon),
                 new SqlParameter("@manhomsp", product.ManhomSP),
-                new SqlParameter("@nuocsx", product.NuocSX),
-                new SqlParameter("@ngaysx", product.NgaySX),
-                new SqlParameter("@hansd", product.HanSD));
+                new SqlParameter("@nuocsx", product.NuocSX));
         }
         #endregion
         #region Update product
@@ -50,9 +48,7 @@ namespace DAO
                 new SqlParameter("@giaban", product.GiaBan),
                 new SqlParameter("@soluongton", product.SlTon),
                 new SqlParameter("@manhomsp", product.ManhomSP),
-                new SqlParameter("@nuocsx", product.NuocSX),
-                new SqlParameter("@ngaysx", product.NgaySX),
-                new SqlParameter("@hansd", product.HanSD));
+                new SqlParameter("@nuocsx", product.NuocSX));
         }
         #endregion
         #region Delete product
