@@ -15,8 +15,6 @@ namespace DTO
         private int slTon;
         private string manhomSP;
         private string nuocSX;
-        private string ngaySX;
-        private string hanSD;
         #endregion
         #region Khởi tạo cho Product
         public ProductDTO()
@@ -25,7 +23,7 @@ namespace DTO
         }
 
         public ProductDTO(string maSP, string tenSP, int giaBan, int slTon, string manhomSP,
-            string nuocSX, string ngaySX, string hanSD)
+            string nuocSX)
         {
             MaSP = maSP;
             TenSP = tenSP;
@@ -33,8 +31,6 @@ namespace DTO
             SlTon = slTon;
             ManhomSP = manhomSP;
             NuocSX = nuocSX;
-            NgaySX = ngaySX;
-            HanSD = hanSD;
         }
         #endregion
         #region Property cho lớp Product
@@ -44,8 +40,6 @@ namespace DTO
         public int SlTon { get => slTon; set => slTon = value; }
         public string ManhomSP { get => manhomSP; set => manhomSP = value; }
         public string NuocSX { get => nuocSX; set => nuocSX = value; }
-        public string NgaySX { get => ngaySX; set => ngaySX = value; }
-        public string HanSD { get => hanSD; set => hanSD = value; }
         #endregion
     }
 }
