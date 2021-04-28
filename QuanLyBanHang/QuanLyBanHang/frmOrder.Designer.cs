@@ -30,17 +30,16 @@ namespace QuanLyBanHang
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbMaKH = new System.Windows.Forms.ComboBox();
+            this.cbbDiaChi = new System.Windows.Forms.ComboBox();
+            this.cbbTenKH = new System.Windows.Forms.ComboBox();
+            this.cbbSDT = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbTenNV = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,46 +48,53 @@ namespace QuanLyBanHang
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvProd = new System.Windows.Forms.DataGridView();
+            this.MASANPHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSANPHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIABAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONGTON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MANHOMSP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NUOCSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDong = new System.Windows.Forms.Button();
+            this.btnInHD = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.cbbMaSP = new System.Windows.Forms.ComboBox();
+            this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtGiaSP = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSL = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbbTenSP = new System.Windows.Forms.ComboBox();
+            this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbbMaNV);
+            this.groupBox1.Controls.Add(this.cbbMaKH);
+            this.groupBox1.Controls.Add(this.cbbDiaChi);
+            this.groupBox1.Controls.Add(this.cbbTenKH);
+            this.groupBox1.Controls.Add(this.cbbSDT);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbbTenNV);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dtpNgayBan);
             this.groupBox1.Controls.Add(this.label3);
@@ -103,13 +109,40 @@ namespace QuanLyBanHang
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
             // 
-            // comboBox2
+            // cbbMaKH
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(691, 162);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 24);
-            this.comboBox2.TabIndex = 17;
+            this.cbbMaKH.Enabled = false;
+            this.cbbMaKH.FormattingEnabled = true;
+            this.cbbMaKH.Location = new System.Drawing.Point(691, 43);
+            this.cbbMaKH.Name = "cbbMaKH";
+            this.cbbMaKH.Size = new System.Drawing.Size(192, 24);
+            this.cbbMaKH.TabIndex = 20;
+            // 
+            // cbbDiaChi
+            // 
+            this.cbbDiaChi.Enabled = false;
+            this.cbbDiaChi.FormattingEnabled = true;
+            this.cbbDiaChi.Location = new System.Drawing.Point(691, 123);
+            this.cbbDiaChi.Name = "cbbDiaChi";
+            this.cbbDiaChi.Size = new System.Drawing.Size(192, 24);
+            this.cbbDiaChi.TabIndex = 19;
+            // 
+            // cbbTenKH
+            // 
+            this.cbbTenKH.FormattingEnabled = true;
+            this.cbbTenKH.Location = new System.Drawing.Point(691, 84);
+            this.cbbTenKH.Name = "cbbTenKH";
+            this.cbbTenKH.Size = new System.Drawing.Size(192, 24);
+            this.cbbTenKH.TabIndex = 18;
+            // 
+            // cbbSDT
+            // 
+            this.cbbSDT.Enabled = false;
+            this.cbbSDT.FormattingEnabled = true;
+            this.cbbSDT.Location = new System.Drawing.Point(691, 162);
+            this.cbbSDT.Name = "cbbSDT";
+            this.cbbSDT.Size = new System.Drawing.Size(192, 24);
+            this.cbbSDT.TabIndex = 17;
             // 
             // label6
             // 
@@ -120,13 +153,6 @@ namespace QuanLyBanHang
             this.label6.TabIndex = 16;
             this.label6.Text = "Điện thoại";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(691, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 22);
-            this.textBox3.TabIndex = 15;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -135,14 +161,6 @@ namespace QuanLyBanHang
             this.label7.Size = new System.Drawing.Size(55, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Địa chỉ:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(691, 91);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(192, 22);
-            this.dateTimePicker2.TabIndex = 13;
             // 
             // label8
             // 
@@ -153,13 +171,6 @@ namespace QuanLyBanHang
             this.label8.TabIndex = 12;
             this.label8.Text = "Tên khách hàng:";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(691, 48);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 22);
-            this.textBox4.TabIndex = 11;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -169,13 +180,13 @@ namespace QuanLyBanHang
             this.label9.TabIndex = 10;
             this.label9.Text = "Mã khách hàng:";
             // 
-            // comboBox1
+            // cbbTenNV
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(247, 166);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 24);
-            this.comboBox1.TabIndex = 9;
+            this.cbbTenNV.FormattingEnabled = true;
+            this.cbbTenNV.Location = new System.Drawing.Point(247, 166);
+            this.cbbTenNV.Name = "cbbTenNV";
+            this.cbbTenNV.Size = new System.Drawing.Size(179, 24);
+            this.cbbTenNV.TabIndex = 9;
             // 
             // label5
             // 
@@ -185,13 +196,6 @@ namespace QuanLyBanHang
             this.label5.Size = new System.Drawing.Size(103, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Tên nhân viên:";
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(247, 127);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(179, 22);
-            this.txtMaNV.TabIndex = 6;
             // 
             // label4
             // 
@@ -268,16 +272,143 @@ namespace QuanLyBanHang
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin các mặt hàng";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dgvProd);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(998, 184);
+            this.panel3.TabIndex = 21;
+            // 
+            // dgvProd
+            // 
+            this.dgvProd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MASANPHAM,
+            this.TENSANPHAM,
+            this.GIABAN,
+            this.SOLUONGTON,
+            this.MANHOMSP,
+            this.NUOCSX});
+            this.dgvProd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProd.Location = new System.Drawing.Point(0, 0);
+            this.dgvProd.Name = "dgvProd";
+            this.dgvProd.RowHeadersWidth = 51;
+            this.dgvProd.Size = new System.Drawing.Size(998, 184);
+            this.dgvProd.TabIndex = 10;
+            // 
+            // MASANPHAM
+            // 
+            this.MASANPHAM.DataPropertyName = "MASANPHAM";
+            this.MASANPHAM.HeaderText = "Mã sản phẩm";
+            this.MASANPHAM.MinimumWidth = 6;
+            this.MASANPHAM.Name = "MASANPHAM";
+            // 
+            // TENSANPHAM
+            // 
+            this.TENSANPHAM.DataPropertyName = "TENSANPHAM";
+            this.TENSANPHAM.HeaderText = "Tên sản phẩm";
+            this.TENSANPHAM.MinimumWidth = 6;
+            this.TENSANPHAM.Name = "TENSANPHAM";
+            // 
+            // GIABAN
+            // 
+            this.GIABAN.DataPropertyName = "GIABAN";
+            this.GIABAN.HeaderText = "Giá bán";
+            this.GIABAN.MinimumWidth = 6;
+            this.GIABAN.Name = "GIABAN";
+            // 
+            // SOLUONGTON
+            // 
+            this.SOLUONGTON.DataPropertyName = "SOLUONGTON";
+            this.SOLUONGTON.HeaderText = "Số lượng";
+            this.SOLUONGTON.MinimumWidth = 6;
+            this.SOLUONGTON.Name = "SOLUONGTON";
+            // 
+            // MANHOMSP
+            // 
+            this.MANHOMSP.DataPropertyName = "MANHOMSP";
+            this.MANHOMSP.HeaderText = "Nhóm sản phẩm";
+            this.MANHOMSP.MinimumWidth = 6;
+            this.MANHOMSP.Name = "MANHOMSP";
+            // 
+            // NUOCSX
+            // 
+            this.NUOCSX.DataPropertyName = "NUOCSX";
+            this.NUOCSX.HeaderText = "Nước sản xuất";
+            this.NUOCSX.MinimumWidth = 6;
+            this.NUOCSX.Name = "NUOCSX";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnDong);
+            this.panel2.Controls.Add(this.btnInHD);
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnLuu);
+            this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 307);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(998, 73);
+            this.panel2.TabIndex = 20;
+            // 
+            // btnDong
+            // 
+            this.btnDong.Location = new System.Drawing.Point(783, 39);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(102, 23);
+            this.btnDong.TabIndex = 23;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            // 
+            // btnInHD
+            // 
+            this.btnInHD.Location = new System.Drawing.Point(602, 39);
+            this.btnInHD.Name = "btnInHD";
+            this.btnInHD.Size = new System.Drawing.Size(102, 23);
+            this.btnInHD.TabIndex = 22;
+            this.btnInHD.Text = "In hóa đơn";
+            this.btnInHD.UseVisualStyleBackColor = true;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(434, 39);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(102, 23);
+            this.btnHuy.TabIndex = 21;
+            this.btnHuy.Text = "Hủy hóa đơn";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(281, 39);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(102, 23);
+            this.btnLuu.TabIndex = 20;
+            this.btnLuu.Text = "Lưu hóa đơn";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(113, 39);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(108, 23);
+            this.btnThem.TabIndex = 19;
+            this.btnThem.Text = "Thêm hóa đơn";
+            this.btnThem.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.cbbTenSP);
+            this.panel1.Controls.Add(this.cbbMaSP);
+            this.panel1.Controls.Add(this.txtThanhTien);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.txtGiaSP);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtSL);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -286,20 +417,21 @@ namespace QuanLyBanHang
             this.panel1.Size = new System.Drawing.Size(998, 105);
             this.panel1.TabIndex = 19;
             // 
-            // comboBox3
+            // cbbMaSP
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(264, 10);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(179, 24);
-            this.comboBox3.TabIndex = 23;
+            this.cbbMaSP.Enabled = false;
+            this.cbbMaSP.FormattingEnabled = true;
+            this.cbbMaSP.Location = new System.Drawing.Point(264, 10);
+            this.cbbMaSP.Name = "cbbMaSP";
+            this.cbbMaSP.Size = new System.Drawing.Size(179, 24);
+            this.cbbMaSP.TabIndex = 23;
             // 
-            // textBox9
+            // txtThanhTien
             // 
-            this.textBox9.Location = new System.Drawing.Point(660, 73);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(179, 22);
-            this.textBox9.TabIndex = 22;
+            this.txtThanhTien.Location = new System.Drawing.Point(660, 73);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(179, 22);
+            this.txtThanhTien.TabIndex = 22;
             // 
             // label14
             // 
@@ -310,12 +442,13 @@ namespace QuanLyBanHang
             this.label14.TabIndex = 21;
             this.label14.Text = "Thành tiền:";
             // 
-            // textBox8
+            // txtGiaSP
             // 
-            this.textBox8.Location = new System.Drawing.Point(660, 42);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(179, 22);
-            this.textBox8.TabIndex = 20;
+            this.txtGiaSP.Enabled = false;
+            this.txtGiaSP.Location = new System.Drawing.Point(660, 42);
+            this.txtGiaSP.Name = "txtGiaSP";
+            this.txtGiaSP.Size = new System.Drawing.Size(179, 22);
+            this.txtGiaSP.TabIndex = 20;
             // 
             // label13
             // 
@@ -326,13 +459,6 @@ namespace QuanLyBanHang
             this.label13.TabIndex = 19;
             this.label13.Text = "Đơn giá:";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(660, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 22);
-            this.textBox7.TabIndex = 18;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -342,12 +468,12 @@ namespace QuanLyBanHang
             this.label12.TabIndex = 17;
             this.label12.Text = "Tên hàng:";
             // 
-            // textBox6
+            // txtSL
             // 
-            this.textBox6.Location = new System.Drawing.Point(264, 47);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(179, 22);
-            this.textBox6.TabIndex = 16;
+            this.txtSL.Location = new System.Drawing.Point(264, 47);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(179, 22);
+            this.txtSL.TabIndex = 16;
             // 
             // label11
             // 
@@ -367,83 +493,22 @@ namespace QuanLyBanHang
             this.label10.TabIndex = 14;
             this.label10.Text = "Mã sản phẩm:";
             // 
-            // panel2
+            // cbbTenSP
             // 
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 307);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(998, 73);
-            this.panel2.TabIndex = 20;
+            this.cbbTenSP.FormattingEnabled = true;
+            this.cbbTenSP.Location = new System.Drawing.Point(660, 5);
+            this.cbbTenSP.Name = "cbbTenSP";
+            this.cbbTenSP.Size = new System.Drawing.Size(179, 24);
+            this.cbbTenSP.TabIndex = 24;
             // 
-            // button5
+            // cbbMaNV
             // 
-            this.button5.Location = new System.Drawing.Point(783, 39);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Đóng";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(602, 39);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "In hóa đơn";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(434, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Hủy hóa đơn";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(281, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Lưu hóa đơn";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(113, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Thêm hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 123);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(998, 184);
-            this.panel3.TabIndex = 21;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(998, 184);
-            this.dataGridView1.TabIndex = 0;
+            this.cbbMaNV.Enabled = false;
+            this.cbbMaNV.FormattingEnabled = true;
+            this.cbbMaNV.Location = new System.Drawing.Point(247, 121);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(179, 24);
+            this.cbbMaNV.TabIndex = 21;
             // 
             // frmOrder
             // 
@@ -455,14 +520,15 @@ namespace QuanLyBanHang
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOrder";
             this.Text = "Hóa đơn bán hàng";
+            this.Load += new System.EventHandler(this.frmOrder_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -470,13 +536,11 @@ namespace QuanLyBanHang
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbSDT;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbTenNV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpNgayBan;
         private System.Windows.Forms.Label label3;
@@ -485,28 +549,36 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDong;
+        private System.Windows.Forms.Button btnInHD;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.ComboBox cbbMaSP;
+        private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtGiaSP;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbbDiaChi;
+        private System.Windows.Forms.ComboBox cbbTenKH;
+        private System.Windows.Forms.ComboBox cbbMaKH;
+        private System.Windows.Forms.DataGridView dgvProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MASANPHAM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENSANPHAM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIABAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONGTON;
+        private System.Windows.Forms.DataGridViewComboBoxColumn MANHOMSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NUOCSX;
+        private System.Windows.Forms.ComboBox cbbTenSP;
+        private System.Windows.Forms.ComboBox cbbMaNV;
     }
 }
