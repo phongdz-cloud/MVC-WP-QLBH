@@ -269,9 +269,11 @@ namespace QuanLyBanHang
             // 
             // txtMaSP
             // 
+            this.txtMaSP.CausesValidation = false;
             this.txtMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSP.Location = new System.Drawing.Point(371, 55);
             this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.ReadOnly = true;
             this.txtMaSP.Size = new System.Drawing.Size(226, 27);
             this.txtMaSP.TabIndex = 3;
             // 

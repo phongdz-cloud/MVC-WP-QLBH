@@ -39,6 +39,9 @@
     <Reference Include="DTO">
       <HintPath>..\BUS\bin\Debug\DTO.dll</HintPath>
     </Reference>
+    <Reference Include="Function">
+      <HintPath>..\Function\bin\Debug\Function.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
