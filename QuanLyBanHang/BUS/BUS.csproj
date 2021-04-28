@@ -50,6 +50,7 @@
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="CustomerTypeBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
+    <Compile Include="OrderBUS.cs" />
     <Compile Include="ProductBUS.cs" />
     <Compile Include="ProductGroupBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

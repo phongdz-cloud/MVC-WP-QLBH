@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +19,11 @@ namespace DAO
         public DBProvider()
         {
             conn = new SqlConnection(strConnect);
-            cmd = conn.CreateCommand();
+            cmd = Conn.CreateCommand();
         }
+
+        public SqlConnection Conn { get => conn; }
+        public SqlCommand Cmd { get => cmd; }
         /*
          * Phương thức này có chức năng lấy dữ liệu từ Database để hiển thị trên form khách hàng
          * Tham số truyền vào gồm có Câu lệnh truy vấn DB , loại truy vấn , tham số nhận vào
@@ -45,7 +48,7 @@ namespace DAO
             , ref string error, params SqlParameter[] p)
         {
             bool f = false;
-            conn.Open();
+            Conn.Open();
             cmd.Parameters.Clear();
             cmd.CommandText = strSQL;
             cmd.CommandType = ct;
@@ -64,7 +67,7 @@ namespace DAO
             }
             finally
             {
-                conn.Close();
+                Conn.Close();
             }
             return f;
         }

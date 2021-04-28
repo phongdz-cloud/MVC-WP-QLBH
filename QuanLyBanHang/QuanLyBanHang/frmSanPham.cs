@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Function;
 namespace QuanLyBanHang
 {
     public partial class frmSanPham : Form
@@ -103,8 +104,15 @@ namespace QuanLyBanHang
         #region Sự kiện Thêm
         private void btnThem_Click(object sender, EventArgs e)
         {
-            flag = 0;
-            dis_en(true);
+            try
+            {
+                flag = 0;
+                dis_en(true);
+                txtMaSP.Text=Func.taoID(1,ref err);
+            }catch
+            {
+                MessageBox.Show("Vao day");
+            }
         }
         #endregion
         #region Sự kiện Sửa

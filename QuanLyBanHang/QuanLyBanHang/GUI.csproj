@@ -39,6 +39,9 @@
     <Reference Include="DTO">
       <HintPath>..\BUS\bin\Debug\DTO.dll</HintPath>
     </Reference>
+    <Reference Include="Function">
+      <HintPath>..\Function\bin\Debug\Function.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +91,12 @@
     <Compile Include="frmNhomSanPham.Designer.cs">
       <DependentUpon>frmNhomSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhomSanPham.resx">
       <DependentUpon>frmNhomSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
