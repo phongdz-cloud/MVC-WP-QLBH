@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Function;
 namespace QuanLyBanHang
 {
     public partial class frmKhachHang : Form
@@ -101,6 +102,7 @@ namespace QuanLyBanHang
         {
             flag = 0;
             dis_en(true);
+            txtMaKhachHang.Text = Func.taoID(3, ref err);
         }
         #endregion
         #region Sự kiện sửa click
@@ -144,6 +146,7 @@ namespace QuanLyBanHang
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        Func.updateAutoID();
                     }
                     else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

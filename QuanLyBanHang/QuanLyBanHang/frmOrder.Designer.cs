@@ -30,6 +30,7 @@ namespace QuanLyBanHang
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.cbbMaKH = new System.Windows.Forms.ComboBox();
             this.cbbDiaChi = new System.Windows.Forms.ComboBox();
             this.cbbTenKH = new System.Windows.Forms.ComboBox();
@@ -63,6 +64,7 @@ namespace QuanLyBanHang
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbTenSP = new System.Windows.Forms.ComboBox();
             this.cbbMaSP = new System.Windows.Forms.ComboBox();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -72,8 +74,10 @@ namespace QuanLyBanHang
             this.txtSL = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbbTenSP = new System.Windows.Forms.ComboBox();
-            this.cbbMaNV = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lbToTal = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -108,6 +112,15 @@ namespace QuanLyBanHang
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
+            // 
+            // cbbMaNV
+            // 
+            this.cbbMaNV.Enabled = false;
+            this.cbbMaNV.FormattingEnabled = true;
+            this.cbbMaNV.Location = new System.Drawing.Point(247, 121);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(179, 24);
+            this.cbbMaNV.TabIndex = 21;
             // 
             // cbbMaKH
             // 
@@ -343,6 +356,10 @@ namespace QuanLyBanHang
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtTongTien);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.lbToTal);
+            this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.btnDong);
             this.panel2.Controls.Add(this.btnInHD);
             this.panel2.Controls.Add(this.btnHuy);
@@ -356,7 +373,7 @@ namespace QuanLyBanHang
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(783, 39);
+            this.btnDong.Location = new System.Drawing.Point(761, 47);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(102, 23);
             this.btnDong.TabIndex = 23;
@@ -365,7 +382,7 @@ namespace QuanLyBanHang
             // 
             // btnInHD
             // 
-            this.btnInHD.Location = new System.Drawing.Point(602, 39);
+            this.btnInHD.Location = new System.Drawing.Point(580, 47);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(102, 23);
             this.btnInHD.TabIndex = 22;
@@ -374,7 +391,7 @@ namespace QuanLyBanHang
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(434, 39);
+            this.btnHuy.Location = new System.Drawing.Point(412, 47);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(102, 23);
             this.btnHuy.TabIndex = 21;
@@ -383,7 +400,7 @@ namespace QuanLyBanHang
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(281, 39);
+            this.btnLuu.Location = new System.Drawing.Point(259, 47);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(102, 23);
             this.btnLuu.TabIndex = 20;
@@ -392,7 +409,7 @@ namespace QuanLyBanHang
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(113, 39);
+            this.btnThem.Location = new System.Drawing.Point(91, 47);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 23);
             this.btnThem.TabIndex = 19;
@@ -416,6 +433,14 @@ namespace QuanLyBanHang
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(998, 105);
             this.panel1.TabIndex = 19;
+            // 
+            // cbbTenSP
+            // 
+            this.cbbTenSP.FormattingEnabled = true;
+            this.cbbTenSP.Location = new System.Drawing.Point(660, 5);
+            this.cbbTenSP.Name = "cbbTenSP";
+            this.cbbTenSP.Size = new System.Drawing.Size(179, 24);
+            this.cbbTenSP.TabIndex = 24;
             // 
             // cbbMaSP
             // 
@@ -493,22 +518,40 @@ namespace QuanLyBanHang
             this.label10.TabIndex = 14;
             this.label10.Text = "Mã sản phẩm:";
             // 
-            // cbbTenSP
+            // label15
             // 
-            this.cbbTenSP.FormattingEnabled = true;
-            this.cbbTenSP.Location = new System.Drawing.Point(660, 5);
-            this.cbbTenSP.Name = "cbbTenSP";
-            this.cbbTenSP.Size = new System.Drawing.Size(179, 24);
-            this.cbbTenSP.TabIndex = 24;
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label15.Location = new System.Drawing.Point(22, 7);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(76, 17);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Bằng chữ: ";
             // 
-            // cbbMaNV
+            // lbToTal
             // 
-            this.cbbMaNV.Enabled = false;
-            this.cbbMaNV.FormattingEnabled = true;
-            this.cbbMaNV.Location = new System.Drawing.Point(247, 121);
-            this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.Size = new System.Drawing.Size(179, 24);
-            this.cbbMaNV.TabIndex = 21;
+            this.lbToTal.AutoSize = true;
+            this.lbToTal.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbToTal.Location = new System.Drawing.Point(115, 7);
+            this.lbToTal.Name = "lbToTal";
+            this.lbToTal.Size = new System.Drawing.Size(0, 17);
+            this.lbToTal.TabIndex = 25;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(714, 7);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 17);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Tổng tiền: ";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(787, 7);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(202, 22);
+            this.txtTongTien.TabIndex = 27;
             // 
             // frmOrder
             // 
@@ -527,6 +570,7 @@ namespace QuanLyBanHang
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -580,5 +624,9 @@ namespace QuanLyBanHang
         private System.Windows.Forms.DataGridViewTextBoxColumn NUOCSX;
         private System.Windows.Forms.ComboBox cbbTenSP;
         private System.Windows.Forms.ComboBox cbbMaNV;
+        private System.Windows.Forms.Label lbToTal;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label label16;
     }
 }

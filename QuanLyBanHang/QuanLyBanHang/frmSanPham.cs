@@ -156,6 +156,7 @@ namespace QuanLyBanHang
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        Func.updateAutoID();
                     }
                     else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Function;
 namespace QuanLyBanHang
 {
     public partial class frmOrder : Form
@@ -18,6 +19,8 @@ namespace QuanLyBanHang
         ProductGroupBUS productGroupBUS = new ProductGroupBUS();
         EmployeeBUS employeeBUS = new EmployeeBUS();
         ProductBUS productBUS = new ProductBUS();
+        private static double total = 0;
+
         public frmOrder()
         {
             InitializeComponent();
@@ -29,8 +32,22 @@ namespace QuanLyBanHang
             loadKH();
             loadNV();
             loadSP();
+            TotalPrice();
+
         }
-        
+        private void TotalPrice()
+        {
+            string s = "";
+            for(int i =0; i< dgvProd.Rows.Count;i++)
+            {
+                if (dgvProd.Rows[i].Cells[2].Value != null)
+                {
+                    total += Convert.ToDouble(dgvProd.Rows[i].Cells[2].Value.ToString());
+                }
+            }
+            txtTongTien.Text = total.ToString();
+            lbToTal.Text = Func.NumbertoWord(total);
+        }
         #endregion
         #region Phương thức có chức năng load form KH
         
