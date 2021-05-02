@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using Function;
 namespace QuanLyBanHang
 {
     public partial class frmNhaCungCap : Form
@@ -96,6 +97,7 @@ namespace QuanLyBanHang
         {
             flag = 0;
             dis_en(true);
+            txtMaNCC.Text = Func.taoID(5,ref err);
         }
         #endregion
         #region sự kiện sửa
@@ -139,6 +141,7 @@ namespace QuanLyBanHang
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        Func.updateAutoID();
                     }
                     else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

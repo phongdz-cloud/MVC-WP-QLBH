@@ -14,7 +14,21 @@ namespace Function
         private static DBProvider dBProvider = new DBProvider();
         private static SqlConnection conn = dBProvider.Conn;
         private static SqlCommand cmd = dBProvider.Cmd;
+        private static string getTienTo = "";
         #endregion
+        #region autoid
+        public static void updateAutoID()
+        {
+            conn.Open();
+            cmd.Parameters.Clear();
+            cmd.CommandText = "spUpdateAutoID";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@TienTo",getTienTo);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        #endregion
+
         #region Tạo auto id
         public static string taoID(int maAutoID,ref string error)
         {
@@ -23,6 +37,7 @@ namespace Function
                 conn.Open();
                 string sql = String.Format("Select * from AutoID where Ma={0}", maAutoID);
                 cmd.CommandText = sql;
+                cmd.CommandType = CommandType.Text;
                 SqlDataReader read = cmd.ExecuteReader();
                 string tiento, result = "";
                 int value;
@@ -30,6 +45,7 @@ namespace Function
                 {
                     value = (int)read.GetValue(3);
                     tiento = read.GetValue(2).ToString();
+                    getTienTo = read.GetValue(2).ToString();
                     if (value == 0)
                     {
                         result = tiento + "00001";
@@ -58,7 +74,6 @@ namespace Function
             }
             finally
             {
-                cmd.Dispose();
                 conn.Close();
             }
         }
