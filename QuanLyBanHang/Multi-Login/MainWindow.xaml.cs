@@ -57,7 +57,7 @@ namespace Multi_Login
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DragMove();
+           // DragMove();
         }
 
 
@@ -80,7 +80,7 @@ namespace Multi_Login
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+           Application.Current.Shutdown();
         }
     }
 }
