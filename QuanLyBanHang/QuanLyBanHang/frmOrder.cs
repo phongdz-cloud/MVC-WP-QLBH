@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
-using DTO;
 using Function;
 namespace QuanLyBanHang
 {
@@ -37,7 +36,6 @@ namespace QuanLyBanHang
         }
         private void TotalPrice()
         {
-            string s = "";
             for(int i =0; i< dgvProd.Rows.Count;i++)
             {
                 if (dgvProd.Rows[i].Cells[2].Value != null)
