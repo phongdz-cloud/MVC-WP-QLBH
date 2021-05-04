@@ -1,5 +1,0 @@
-C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\MultiLogin\obj\Debug\MultiLogin.csprojAssemblyReference.cache
-C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\MultiLogin\obj\Debug\MainWindow.g.cs
-C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\MultiLogin\obj\Debug\App.g.cs
-C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\MultiLogin\obj\Debug\MultiLogin_MarkupCompile.cache
-C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\MultiLogin\obj\Debug\MultiLogin_MarkupCompile.lref

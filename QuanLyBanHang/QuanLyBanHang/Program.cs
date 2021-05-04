@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Multi_Login;
+
 namespace QuanLyBanHang
 {
     static class Program
@@ -16,11 +16,8 @@ namespace QuanLyBanHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainWindow main = new MainWindow();
-            if (main.Checklogin == true)
-            {
-                Application.Run(new frmMain());
-            }
+            
+            Application.Run(new frmLogin());
         }
     }
 }
