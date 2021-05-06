@@ -26,4 +26,5 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyB
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmEmployeeGuna.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmViewEmployee.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmDetailEmloyee.resources
+C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmCustomer.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\GUI.csprojAssemblyReference.cache
