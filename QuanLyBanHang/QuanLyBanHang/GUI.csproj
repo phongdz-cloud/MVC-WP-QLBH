@@ -36,8 +36,13 @@
     <Reference Include="BUS">
       <HintPath>..\BUS\bin\Debug\BUS.dll</HintPath>
     </Reference>
-    <Reference Include="DTO">
-      <HintPath>..\BUS\bin\Debug\DTO.dll</HintPath>
+    <Reference Include="DAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DAO\bin\Debug\DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DAO\bin\Debug\DTO.dll</HintPath>
     </Reference>
     <Reference Include="Function">
       <HintPath>..\Function\bin\Debug\Function.dll</HintPath>
@@ -49,6 +54,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,17 +66,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmKhachHang.cs">
+    <Compile Include="frmViewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhachHang.Designer.cs">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <Compile Include="frmViewEmployee.Designer.cs">
+      <DependentUpon>frmViewEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoaiKhachHang.cs">
+    <Compile Include="frmDetailEmloyee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoaiKhachHang.Designer.cs">
-      <DependentUpon>frmLoaiKhachHang.cs</DependentUpon>
+    <Compile Include="frmDetailEmloyee.Designer.cs">
+      <DependentUpon>frmDetailEmloyee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeGuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeGuna.Designer.cs">
+      <DependentUpon>frmEmployeeGuna.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -90,37 +102,40 @@
     <Compile Include="frmNhaCungCap.Designer.cs">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNhanVien.Designer.cs">
-      <DependentUpon>FrmNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNhomSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNhomSanPham.Designer.cs">
-      <DependentUpon>frmNhomSanPham.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOrder.Designer.cs">
       <DependentUpon>frmOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSanPham.cs">
+    <Compile Include="frmSanPhamGuna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSanPham.Designer.cs">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
+    <Compile Include="frmSanPhamGuna.Designer.cs">
+      <DependentUpon>frmSanPhamGuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSell_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSell_.Designer.cs">
+      <DependentUpon>frmSell_.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmKhachHang.resx">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmViewEmployee.resx">
+      <DependentUpon>frmViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoaiKhachHang.resx">
-      <DependentUpon>frmLoaiKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmDetailEmloyee.resx">
+      <DependentUpon>frmDetailEmloyee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeGuna.resx">
+      <DependentUpon>frmEmployeeGuna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -131,17 +146,17 @@
     <EmbeddedResource Include="frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmNhanVien.resx">
-      <DependentUpon>FrmNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNhomSanPham.resx">
-      <DependentUpon>frmNhomSanPham.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmOrder.resx">
       <DependentUpon>frmOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSanPham.resx">
-      <DependentUpon>frmSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="frmSanPhamGuna.resx">
+      <DependentUpon>frmSanPhamGuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSell_.resx">
+      <DependentUpon>frmSell_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +181,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\DSC3605.jpg" />
     <Content Include="Image\Logo Project AM.png" />
     <Content Include="Image\Mesa de trabajo 1 copia%404x.png" />
   </ItemGroup>
