@@ -37,7 +37,7 @@ namespace DAO
                 new SqlParameter("@DIACHI", employee.DiaChi),
                 new SqlParameter("@DIENTHOAI", employee.DienThoai),
                 new SqlParameter("@NGAYVAOLAM", employee.NgayVaoLam),
-                new SqlParameter("@GHICHU", employee.GhiChu));
+                new SqlParameter("@IMAGES", employee.Images));
         }
         #endregion
         #region Update Employee
@@ -51,7 +51,7 @@ namespace DAO
                 new SqlParameter("@DIACHI", employee.DiaChi),
                 new SqlParameter("@DIENTHOAI", employee.DienThoai),
                 new SqlParameter("@NGAYVAOLAM", employee.NgayVaoLam),
-                new SqlParameter("@GHICHU", employee.GhiChu));
+                new SqlParameter("@IMAGES", employee.Images));
         }
         #endregion
         #region Delete Employee

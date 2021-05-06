@@ -131,6 +131,7 @@ namespace QuanLyBanHang
             this.MainMenuStrip = this.mnuTepTin;
             this.Name = "frmMain";
             this.Text = "Chương trình quản lý bán hàng";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.mnuTepTin.ResumeLayout(false);
             this.mnuTepTin.PerformLayout();
             this.ResumeLayout(false);
