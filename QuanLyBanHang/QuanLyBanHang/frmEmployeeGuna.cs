@@ -19,6 +19,7 @@ namespace QuanLyBanHang
         static DataTable dbAll;
         DBProvider dBProvider = new DBProvider();
         private bool flag = false;
+        private string err;
         private EmployeeDTO employeeDTO;
         public frmEmployeeGuna()
         {
@@ -101,6 +102,24 @@ namespace QuanLyBanHang
             employeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
             frmViewEmployee frmViewEmployee = new frmViewEmployee(employeeDTO);
             frmViewEmployee.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận hủy",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                employeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
+                if(employeeBUS.DeleteEmployee(ref err,employeeDTO))
+                {
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dbAll = null;
+                    frmEmployeeGuna_Load(sender, e);
+                }
+                else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

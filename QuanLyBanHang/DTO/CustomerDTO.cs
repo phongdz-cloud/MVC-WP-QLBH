@@ -15,6 +15,7 @@ namespace DTO
         private string diaChi;
         private string dienThoai;
         private string maLoaiKH;
+        private string images;
         #endregion
         #region Khởi tạo cho Customer
         public CustomerDTO()
@@ -39,6 +40,7 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string DienThoai { get => dienThoai; set => dienThoai = value; }
         public string MaLoaiKH { get => maLoaiKH; set => maLoaiKH = value; }
+        public string Images { get => images; set => images = value; }
         #endregion
     }
 }

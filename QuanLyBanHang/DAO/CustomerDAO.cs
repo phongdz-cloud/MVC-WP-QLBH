@@ -35,7 +35,8 @@ namespace DAO
                 new SqlParameter("@GIOITINH", customer.GioiTinh),
                 new SqlParameter("@DIACHI", customer.DiaChi),
                 new SqlParameter("@DIENTHOAI", customer.DienThoai),
-                new SqlParameter("@MALOAIKH", customer.MaLoaiKH));
+                new SqlParameter("@MALOAIKH", customer.MaLoaiKH),
+                new SqlParameter("@IMAGES", customer.Images));
         }
         #endregion
         #region Update customer
@@ -47,7 +48,8 @@ namespace DAO
                 new SqlParameter("@GIOITINH", customer.GioiTinh),
                 new SqlParameter("@DIACHI", customer.DiaChi),
                 new SqlParameter("@DIENTHOAI", customer.DienThoai),
-                new SqlParameter("@MALOAIKH", customer.MaLoaiKH));
+                new SqlParameter("@MALOAIKH", customer.MaLoaiKH),
+                new SqlParameter("@IMAGES", customer.Images));
         }
         #endregion
         #region Delete customer
