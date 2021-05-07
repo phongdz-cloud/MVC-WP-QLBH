@@ -10,22 +10,17 @@ namespace Function
 {
     public static class Func
     {
-        #region Mở cổng kết nối
-        private static DBProvider dBProvider = new DBProvider();
-        private static SqlConnection conn = dBProvider.Conn;
-        private static SqlCommand cmd = dBProvider.Cmd;
         private static string getTienTo = "";
-        #endregion
         #region autoid
         public static void updateAutoID()
         {
-            conn.Open();
-            cmd.Parameters.Clear();
-            cmd.CommandText = "spUpdateAutoID";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@TienTo",getTienTo);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            DBProvider.Instance.Conn.Open();
+            DBProvider.Instance.Cmd.Parameters.Clear();
+            DBProvider.Instance.Cmd.CommandText = "spUpdateAutoID";
+            DBProvider.Instance.Cmd.CommandType = CommandType.StoredProcedure;
+            DBProvider.Instance.Cmd.Parameters.Add("@TienTo", getTienTo);
+            DBProvider.Instance.Cmd.ExecuteNonQuery();
+            DBProvider.Instance.Conn.Close();
         }
         #endregion
 
@@ -34,11 +29,11 @@ namespace Function
         {
             try
             {
-                conn.Open();
+                DBProvider.Instance.Conn.Open();
                 string sql = String.Format("Select * from AutoID where Ma={0}", maAutoID);
-                cmd.CommandText = sql;
-                cmd.CommandType = CommandType.Text;
-                SqlDataReader read = cmd.ExecuteReader();
+                DBProvider.Instance.Cmd.CommandText = sql;
+                DBProvider.Instance.Cmd.CommandType = CommandType.Text;
+                SqlDataReader read = DBProvider.Instance.Cmd.ExecuteReader();
                 string tiento, result = "";
                 int value;
                 while (read.Read())
@@ -74,7 +69,8 @@ namespace Function
             }
             finally
             {
-                conn.Close();
+                DBProvider.Instance.Conn.Close();
+                DBProvider.Instance.Cmd.Dispose();
             }
         }
         #endregion

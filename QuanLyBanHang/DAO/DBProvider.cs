@@ -9,32 +9,45 @@ namespace DAO
 {
     public class DBProvider
     {
-        SqlConnection conn;
-        SqlCommand cmd;
-        SqlDataAdapter adp;
+        private static DBProvider instance;
+        private SqlConnection conn;
+        private SqlCommand cmd;
+        private SqlDataAdapter adp;
         string strConnect = "Data Source=(local);Initial Catalog=PROJECT_DBMS;Integrated Security=True";
         /*
+         * 
          * Hàm khởi tạo có chức năng thực hiện kết nối tới Database trên local 
          */
         public DBProvider()
         {
             conn = new SqlConnection(strConnect);
-            cmd = Conn.CreateCommand();
+            Cmd = Conn.CreateCommand();
         }
-
+        
+        public static DBProvider Instance { 
+            get
+            {
+                if (instance == null) { 
+                    instance = new DBProvider();
+                };
+                return DBProvider.instance;
+            }
+            private set { DBProvider.instance = value; }
+        }
         public SqlConnection Conn { get => conn; }
-        public SqlCommand Cmd { get => cmd; }
+        public SqlCommand Cmd { get => cmd; set => cmd = value; }
+
         /*
-         * Phương thức này có chức năng lấy dữ liệu từ Database để hiển thị trên form khách hàng
-         * Tham số truyền vào gồm có Câu lệnh truy vấn DB , loại truy vấn , tham số nhận vào
-         * Trả về một datatable
-         */
+* Phương thức này có chức năng lấy dữ liệu từ Database để hiển thị trên form khách hàng
+* Tham số truyền vào gồm có Câu lệnh truy vấn DB , loại truy vấn , tham số nhận vào
+* Trả về một datatable
+*/
         public DataTable ExecuteQueryDataTable(string strSQL, CommandType ct, params SqlParameter[] p)
         {
             DataTable db = new DataTable();
-            cmd.CommandText = strSQL;
-            cmd.CommandType = ct;
-            adp = new SqlDataAdapter(cmd);
+            Cmd.CommandText = strSQL;
+            Cmd.CommandType = ct;
+            adp = new SqlDataAdapter(Cmd);
             db.Clear();
             adp.Fill(db);
             return db;
@@ -49,16 +62,16 @@ namespace DAO
         {
             bool f = false;
             Conn.Open();
-            cmd.Parameters.Clear();
-            cmd.CommandText = strSQL;
-            cmd.CommandType = ct;
+            Cmd.Parameters.Clear();
+            Cmd.CommandText = strSQL;
+            Cmd.CommandType = ct;
             foreach (var item in p)
             {
-                cmd.Parameters.Add(item);
+                Cmd.Parameters.Add(item);
             }
             try
             {
-                cmd.ExecuteNonQuery();
+                Cmd.ExecuteNonQuery();
                 f = true;
             }
             catch (SqlException ex)

@@ -17,7 +17,6 @@ namespace QuanLyBanHang
     {
         private EmployeeBUS employeeBUS = new EmployeeBUS();
         static DataTable dbAll;
-        DBProvider dBProvider = new DBProvider();
         private bool flag = false;
         private string err;
         private EmployeeDTO employeeDTO;
@@ -71,7 +70,7 @@ namespace QuanLyBanHang
             {
                 flag = true;
                 string sql = "SELECT * FROM dbo.NHANVIEN WHERE HOTEN LIKE '%" + txtSearch.Text + "%'";
-                dgvEmployee.DataSource = dBProvider.ExecuteQueryDataTable(sql,CommandType.Text,null);
+                dgvEmployee.DataSource = DBProvider.Instance.ExecuteQueryDataTable(sql,CommandType.Text,null);
             }
         }
        

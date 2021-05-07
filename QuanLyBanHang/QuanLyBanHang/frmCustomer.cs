@@ -19,7 +19,6 @@ namespace QuanLyBanHang
         private CustomerBUS customerBUS = new CustomerBUS();
         private CustomerTypeBUS customerTypeBUS = new CustomerTypeBUS();
         private CustomerDTO customer;
-        private DBProvider dBProvider = new DBProvider();
         private bool flag;
         private bool flag_method;
         private string err;
@@ -63,7 +62,6 @@ namespace QuanLyBanHang
             }
             dis_en(false);
         }
-
         private void btnSeach_Click(object sender, EventArgs e)
         {
             Search();
@@ -74,7 +72,7 @@ namespace QuanLyBanHang
             {
                 flag = true;
                 string sql = "SELECT * FROM dbo.KHACHHANG WHERE TENKH LIKE '%" + txtSearch.Text + "%'";
-                dgvCustomer.DataSource = dBProvider.ExecuteQueryDataTable(sql, CommandType.Text, null);
+                dgvCustomer.DataSource = DBProvider.Instance.ExecuteQueryDataTable(sql, CommandType.Text, null);
             }
         }
         private CustomerDTO getData(int rowIndex)

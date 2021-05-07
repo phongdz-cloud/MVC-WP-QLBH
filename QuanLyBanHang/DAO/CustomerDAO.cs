@@ -10,26 +10,22 @@ namespace DAO
 {
     public class CustomerDAO
     {
-        #region Mở kết nối 
-        DBProvider db;
         public CustomerDAO()
         {
-            db = new DBProvider();
         }
-        #endregion
         #region Lấy dữ liệu từ DataBase
         /*
          * Phương thức này có chức năng đưa dữ liệu từ khách hàng xuống
          */
         public DataTable getCustomer()
         {
-            return db.ExecuteQueryDataTable("SELECT * FROM KHACHHANG", CommandType.Text, null);
+            return DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM KHACHHANG", CommandType.Text, null);
         }
         #endregion
         #region Insert customer
         public bool insertCustomer(ref string err, CustomerDTO customer)
         {
-            return db.MyExcuteNonQuery("spInsertKhachHang", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spInsertKhachHang", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MAKH", customer.MaKH),
                 new SqlParameter("@TENKH", customer.TenKH),
                 new SqlParameter("@GIOITINH", customer.GioiTinh),
@@ -42,7 +38,7 @@ namespace DAO
         #region Update customer
         public bool updateCustomer(ref string err, CustomerDTO customer)
         {
-            return db.MyExcuteNonQuery("spUpdateKhachHang", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spUpdateKhachHang", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MAKH", customer.MaKH),
                 new SqlParameter("@TENKH", customer.TenKH),
                 new SqlParameter("@GIOITINH", customer.GioiTinh),
@@ -55,7 +51,7 @@ namespace DAO
         #region Delete customer
         public bool deleteCustomer(ref string err, CustomerDTO customer)
         {
-            return db.MyExcuteNonQuery("spDeleteKhachHang", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spDeleteKhachHang", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MAKH", customer.MaKH));
         }
         #endregion

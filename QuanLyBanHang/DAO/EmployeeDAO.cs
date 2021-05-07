@@ -10,26 +10,22 @@ namespace DAO
 {
     public class EmployeeDAO
     {
-        #region Mở kết nối 
-        DBProvider db;
         public EmployeeDAO()
         {
-            db = new DBProvider();
         }
-        #endregion
         #region Lấy dữ liệu từ DataBase
         /*
          * Phương thức này có chức năng đưa dữ liệu từ bảng nhân viên xuống
          */
         public DataTable getEmployee()
         {
-            return db.ExecuteQueryDataTable("SELECT * FROM NHANVIEN", CommandType.Text, null);
+            return DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM NHANVIEN", CommandType.Text, null);
         }
         #endregion
         #region Insert Employee
         public bool insertEmployee(ref string err, EmployeeDTO employee)
         {
-            return db.MyExcuteNonQuery("spInsertNhanVien", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spInsertNhanVien", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MANV", employee.MaNV),
                 new SqlParameter("@HOTEN", employee.HoTen),
                 new SqlParameter("@GIOITINH", employee.GioiTinh),
@@ -43,7 +39,7 @@ namespace DAO
         #region Update Employee
         public bool updateEmployee(ref string err, EmployeeDTO employee)
         {
-            return db.MyExcuteNonQuery("spUpdateNhanVien", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spUpdateNhanVien", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MANV", employee.MaNV),
                 new SqlParameter("@HOTEN", employee.HoTen),
                 new SqlParameter("@GIOITINH", employee.GioiTinh),
@@ -57,7 +53,7 @@ namespace DAO
         #region Delete Employee
         public bool deleteEmployee(ref string err, EmployeeDTO employee)
         {
-            return db.MyExcuteNonQuery("spDeleteNhanVien", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spDeleteNhanVien", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MANV", employee.MaNV));
 
         }

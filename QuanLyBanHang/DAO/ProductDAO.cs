@@ -11,26 +11,24 @@ namespace DAO
 {
     public class ProductDAO
     {
-        #region Mở kết nối 
-        DBProvider db;
+
         public ProductDAO()
         {
-            db = new DBProvider();
+
         }
-        #endregion
         #region Lấy dữ liệu từ DataBase của sản phẩm
         /*
          * Phương thức này có chức năng đưa dữ liệu từ sản phẩm xuống
          */
         public DataTable getProduct()
         {
-            return db.ExecuteQueryDataTable("SELECT * FROM SANPHAM", CommandType.Text, null);
+            return DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM SANPHAM", CommandType.Text, null);
         }
         #endregion
         #region Insert product
         public bool insertProduct(ref string err, ProductDTO product)
         {
-            return db.MyExcuteNonQuery("spInsertSanPham", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spInsertSanPham", CommandType.StoredProcedure, ref err,
                new SqlParameter("@maSP", product.MaSP),
                 new SqlParameter("@tenSP", product.TenSP),
                 new SqlParameter("@giaban", product.GiaBan),
@@ -42,7 +40,7 @@ namespace DAO
         #region Update product
         public bool updateProduct(ref string err, ProductDTO product)
         {
-            return db.MyExcuteNonQuery("spUpdateSanPham", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spUpdateSanPham", CommandType.StoredProcedure, ref err,
                new SqlParameter("@maSP", product.MaSP),
                 new SqlParameter("@tenSP", product.TenSP),
                 new SqlParameter("@giaban", product.GiaBan),
@@ -54,7 +52,7 @@ namespace DAO
         #region Delete product
         public bool deleteProduct(ref string err, ProductDTO product)
         {
-            return db.MyExcuteNonQuery("spDeleteSanPham", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spDeleteSanPham", CommandType.StoredProcedure, ref err,
                new SqlParameter("@maSP", product.MaSP));
         }
         #endregion
