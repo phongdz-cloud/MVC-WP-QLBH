@@ -19,24 +19,35 @@ namespace QuanLyBanHang
         private CustomerBUS customerBUS = new CustomerBUS();
         private CustomerTypeBUS customerTypeBUS = new CustomerTypeBUS();
         private CustomerDTO customer;
+        private static frmCustomer instance;
         private bool flag;
         private bool flag_method;
         private string err;
         private string autoID = null;
         private string fileName = null;
-        static DataTable dbAll;
+        private DataTable dbAll;
+        private DataTable dbCustomerALL;
+        public static frmCustomer Instance { 
+            get { if (instance == null)
+                 instance = new frmCustomer();  return frmCustomer.instance; } 
+            private set => instance = value; }
+
+        public DataTable DbAll { get => dbAll; private set => dbAll = value; }
+        public DataTable DbCustomerALL { get => dbCustomerALL;private set => dbCustomerALL = value; }
+
         public frmCustomer()
         {
             InitializeComponent();
+            load();
         }
         private void load()
         {
-            DataTable db = new DataTable();
-            db = customerTypeBUS.GetCustomerType();
-            MALOAIKH.DataSource = db;
+            DbCustomerALL = new DataTable();
+            DbCustomerALL = customerTypeBUS.GetCustomerType();
+            MALOAIKH.DataSource = DbCustomerALL;
             MALOAIKH.DisplayMember = "TENLOAI";
             MALOAIKH.ValueMember = "MALOAIKH";
-            cbbType.DataSource = db;
+            cbbType.DataSource = DbCustomerALL;
             cbbType.DisplayMember = "TENLOAI";
             cbbType.ValueMember = "MALOAIKH";
             dgvCustomer.DataSource = customerBUS.GetCustomer();
@@ -50,15 +61,15 @@ namespace QuanLyBanHang
             }
             lbMale.Text = countMale.ToString() + " Male";
             lbFemale.Text = countFemale.ToString() + " Female";
-            dbAll = new DataTable();
-            dbAll = (DataTable)dgvCustomer.DataSource;
+            DbAll = new DataTable();
+            DbAll = (DataTable)dgvCustomer.DataSource;
         }
         private void frmCustomer_Load(object sender, EventArgs e)
         {
             if (flag == false)
             {
-                if (dbAll == null) load();
-                else dgvCustomer.DataSource = dbAll;
+                if (DbAll == null) load();
+                else dgvCustomer.DataSource = DbAll;
             }
             dis_en(false);
         }
@@ -167,7 +178,7 @@ namespace QuanLyBanHang
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     flag = false;
-                    dbAll = null;
+                    DbAll = null;
                     frmCustomer_Load(sender, e);
                 }
                 else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -195,7 +206,7 @@ namespace QuanLyBanHang
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         flag = false;
-                        dbAll = null;
+                        DbAll = null;
                         Func.updateAutoID();
                         autoID = null;
                         fileName = null;
@@ -215,7 +226,7 @@ namespace QuanLyBanHang
                     {
                         MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         flag = false;
-                        dbAll = null;
+                        DbAll = null;
                         fileName = null;
                         frmCustomer_Load(sender, e);
                     }

@@ -14,13 +14,21 @@ namespace QuanLyBanHang
 {
     public partial class frmSanPhamGuna : Form
     {
-        ProductGroupBUS productGroupBUS = new ProductGroupBUS();
-        ProductBUS productBUS = new ProductBUS();
+        private ProductGroupBUS productGroupBUS = new ProductGroupBUS();
+        private ProductBUS productBUS = new ProductBUS();
+        private static frmSanPhamGuna instance;
         private int flag = -1;
         private string err;
+        private DataTable dbProductType;
+
+        public static frmSanPhamGuna Instance { get { if (instance == null) instance = new frmSanPhamGuna(); return frmSanPhamGuna.instance; } private set => instance = value; }
+
+        public DataTable DbProductType { get => dbProductType; set => dbProductType = value; }
+
         public frmSanPhamGuna()
         {
             InitializeComponent();
+            load();
         }
         /// <summary>
         /// Form load sản phẩm
@@ -29,8 +37,8 @@ namespace QuanLyBanHang
         /// <param name="e"></param>
         private void load()
         {
-            DataTable dbProductType = productGroupBUS.GetProductGroup();
-            MANHOMSP.DataSource = dbProductType;
+            DbProductType = productGroupBUS.GetProductGroup();
+            MANHOMSP.DataSource = DbProductType;
             MANHOMSP.DisplayMember = "TENNHOMSP";
             MANHOMSP.ValueMember = "MANHOMSP";
             DataTable dbProduct = productBUS.GetProduct();
