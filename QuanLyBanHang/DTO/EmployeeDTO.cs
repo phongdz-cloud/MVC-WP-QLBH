@@ -35,6 +35,7 @@ namespace DTO
             NgayVaoLam = ngayVaoLam;
             Images = images;
         }
+
         #endregion
         #region Property cho lớp Employee
         public string MaNV { get => maNV; set => maNV = value; }

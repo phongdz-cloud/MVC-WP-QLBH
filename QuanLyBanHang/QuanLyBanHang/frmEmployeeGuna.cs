@@ -16,15 +16,22 @@ namespace QuanLyBanHang
     public partial class frmEmployeeGuna : Form
     {
         private EmployeeBUS employeeBUS = new EmployeeBUS();
-        static DataTable dbAll;
+        private static frmEmployeeGuna instance;
+        private DataTable dbAll;
         private bool flag = false;
         private string err;
         private EmployeeDTO employeeDTO;
+        public static frmEmployeeGuna Instance { get { if (instance == null) 
+            instance = new frmEmployeeGuna(); return frmEmployeeGuna.instance; } 
+            set => instance = value; }
+
+        public DataTable DbAll { get => dbAll; set => dbAll = value; }
+
         public frmEmployeeGuna()
         {
             InitializeComponent();
+            load();
         }
-
         private EmployeeDTO getData(int RowIndex)
         {
             EmployeeDTO employee = new EmployeeDTO();
@@ -42,8 +49,8 @@ namespace QuanLyBanHang
         {
             if(flag == false)
             {
-                if (dbAll == null) load();
-                else dgvEmployee.DataSource = dbAll;
+                if (DbAll == null) load();
+                else dgvEmployee.DataSource = DbAll;
             }
         }
         private void load()
@@ -61,8 +68,8 @@ namespace QuanLyBanHang
             }
             lbMale.Text = countMale.ToString() + " Male";
             lbFemale.Text = countFemale.ToString() + " Female";
-            dbAll = new DataTable();
-            dbAll = (DataTable)dgvEmployee.DataSource;
+            DbAll = new DataTable();
+            DbAll = (DataTable)dgvEmployee.DataSource;
         }
         private void btnSeach_Click(object sender, EventArgs e)
         {
@@ -92,7 +99,7 @@ namespace QuanLyBanHang
             frmDetailEmloyee.loadForm(ref flag);
             if(flag == true)
             {
-                dbAll = null;
+                DbAll = null;
                 frmEmployeeGuna_Load(sender,e);
             }
         }
@@ -114,7 +121,7 @@ namespace QuanLyBanHang
                 if(employeeBUS.DeleteEmployee(ref err,employeeDTO))
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dbAll = null;
+                    DbAll = null;
                     frmEmployeeGuna_Load(sender, e);
                 }
                 else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
