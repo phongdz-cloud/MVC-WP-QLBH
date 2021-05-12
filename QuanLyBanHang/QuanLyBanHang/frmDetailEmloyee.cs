@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using DTO;
+using System.IO; 
 using BUS;
 using Function;
 namespace QuanLyBanHang
 {
     public partial class frmDetailEmloyee : Form
     {
-        private EmployeeDTO employeeDTO = new EmployeeDTO();
         private EmployeeBUS employeeBUS = new EmployeeBUS();
+        private Byte[] ImageByteArray;
         private string nvID = null;
         private string err;
         private bool flag = false;
@@ -24,36 +23,44 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
         }
-        public frmDetailEmloyee( EmployeeDTO employee)
-        {
-            InitializeComponent();
-            employeeDTO = employee;
-        }
         private void btnBrown_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if(open.ShowDialog() == DialogResult.OK)
+            try
             {
-                txtFileName.Text = open.FileName;
-                pbAvatar.Image = new Bitmap(open.FileName);
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    txtFileName.Text = open.FileName;
+                }
+                Image temp = new Bitmap(open.FileName);
+                MemoryStream strm = new MemoryStream();
+                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                ImageByteArray = strm.ToArray();
+                pbAvatar.Image = Image.FromStream(new MemoryStream(ImageByteArray));
             }
-        }
+            catch (Exception ex)
+            { }
 
+        }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận hủy",
+                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+                this.Close();
         }
         private void getData()
         {
-            employeeDTO.MaNV = txtID.Text.Trim();
-            employeeDTO.HoTen = txtName.Text.Trim();
-            employeeDTO.GioiTinh = cbbSex.Text;
-            employeeDTO.NgaySinh = dtpNgaySinh.Text;
-            employeeDTO.DiaChi = txtDiaChi.Text;
-            employeeDTO.DienThoai = txtPhone.Text.Trim();
-            employeeDTO.NgayVaoLam = dtpNgayVaoLam.Text;
-            employeeDTO.Images = txtFileName.Text;
+            frmEmployeeGuna.Instance.EmployeeDTO.MaNV = txtID.Text.Trim();
+            frmEmployeeGuna.Instance.EmployeeDTO.HoTen = txtName.Text.Trim();
+            frmEmployeeGuna.Instance.EmployeeDTO.GioiTinh = cbbSex.Text;
+            frmEmployeeGuna.Instance.EmployeeDTO.NgaySinh = dtpNgaySinh.Text;
+            frmEmployeeGuna.Instance.EmployeeDTO.DiaChi = txtDiaChi.Text;
+            frmEmployeeGuna.Instance.EmployeeDTO.DienThoai = txtPhone.Text.Trim();
+            frmEmployeeGuna.Instance.EmployeeDTO.NgayVaoLam = dtpNgayVaoLam.Text;
+            frmEmployeeGuna.Instance.EmployeeDTO.Salary = Convert.ToInt32(txtSalary.Text);
+            frmEmployeeGuna.Instance.EmployeeDTO.Images = ImageByteArray;
         }
         private void btnRest_Click(object sender, EventArgs e)
         {
@@ -64,31 +71,21 @@ namespace QuanLyBanHang
             txtDiaChi.ResetText();
             txtPhone.ResetText();
             dtpNgayVaoLam.Value = DateTime.Now;
-            pbAvatar.Image = Image.FromFile(@"C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\Image\DSC3605.jpg");
         }
 
         private void frmRegisterEmployee_Load(object sender, EventArgs e)
         {
-            txtID.Text = employeeDTO.MaNV;
-            txtName.Text = employeeDTO.HoTen;
-            cbbSex.Text = employeeDTO.GioiTinh;
-            dtpNgaySinh.Text = employeeDTO.NgaySinh;
-            txtDiaChi.Text = employeeDTO.DiaChi;
-            txtPhone.Text = employeeDTO.DienThoai;
-            dtpNgayVaoLam.Text = employeeDTO.NgayVaoLam;
-            OpenFileDialog open = new OpenFileDialog();
-            if (employeeDTO.Images.Length <= 0)
-            {
-                pbAvatar.Image = Image.FromFile(@"C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\Image\DSC3605.jpg");
-                open.FileName = @"C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\Image\DSC3605.jpg";
-                txtFileName.Text = open.FileName;
-            }
-            else
-            {
-                pbAvatar.Image = Image.FromFile(@employeeDTO.Images);
-                open.FileName = @employeeDTO.Images;
-                txtFileName.Text = open.FileName;
-            }
+            txtID.Text = frmEmployeeGuna.Instance.EmployeeDTO.MaNV;
+            txtName.Text = frmEmployeeGuna.Instance.EmployeeDTO.HoTen;
+            cbbSex.Text = frmEmployeeGuna.Instance.EmployeeDTO.GioiTinh;
+            dtpNgaySinh.Text = frmEmployeeGuna.Instance.EmployeeDTO.NgaySinh;
+            txtDiaChi.Text = frmEmployeeGuna.Instance.EmployeeDTO.DiaChi;
+            txtPhone.Text = frmEmployeeGuna.Instance.EmployeeDTO.DienThoai;
+            dtpNgayVaoLam.Text = frmEmployeeGuna.Instance.EmployeeDTO.NgayVaoLam;
+            txtSalary.Text = frmEmployeeGuna.Instance.EmployeeDTO.Salary.ToString();
+            pbAvatar.Image = 
+                Image.FromStream(
+                    new MemoryStream(frmEmployeeGuna.Instance.EmployeeDTO.Images));
         }
         public void loadForm(ref bool flag1)
         {
@@ -105,12 +102,13 @@ namespace QuanLyBanHang
                 if (dr == DialogResult.Yes)
                 {
                     getData();
-                    if (employeeBUS.InsertEmployee(ref err, employeeDTO))
+                    if (employeeBUS.InsertEmployee(ref err, frmEmployeeGuna.Instance.EmployeeDTO))
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         nvID = null;
                         flag = true;
                         Func.updateAutoID();
+                        
                     }
                     else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -124,7 +122,7 @@ namespace QuanLyBanHang
             if (dr == DialogResult.Yes)
             {
                 getData();
-                if (employeeBUS.UpdateEmployee(ref err, employeeDTO))
+                if (employeeBUS.UpdateEmployee(ref err, frmEmployeeGuna.Instance.EmployeeDTO))
                 {
                     MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     flag = true;
@@ -132,5 +130,7 @@ namespace QuanLyBanHang
                 else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

@@ -11,15 +11,15 @@ using System.Windows.Forms;
 using DAO;
 using System.Data.SqlClient;
 using Guna.UI2;
+using DTO;
 namespace QuanLyBanHang
 {
     public partial class Test : Form
     {
+        private EmployeeDTO emloyee;
         String filename;
-        Image DefaultImage;
         Byte[] ImageByteArray;
         PictureBox pic;
-        static int i = 0;
         string err;
         public Test()
         {
@@ -28,9 +28,8 @@ namespace QuanLyBanHang
 
         private void Test_Load(object sender, EventArgs e)
         {
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.HorizontalScroll.Enabled = true;
-            flowLayoutPanel1.HorizontalScroll.Visible = true;
+
+
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -53,6 +52,7 @@ namespace QuanLyBanHang
             pic.Height = 200;
             pic.Image = Image.FromStream(new MemoryStream(ImageByteArray));
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
+            txtImage.Text = ImageByteArray.ToString();
             flowLayoutPanel1.Controls.Add(pic);
         }
         private void loadImage(DataGridView dgv, FlowLayoutPanel flowlayout)
@@ -72,22 +72,40 @@ namespace QuanLyBanHang
                 flowlayout.Controls.Add(pic);
             }
         }
-
+        private EmployeeDTO getData(int RowIndex)
+        {
+            EmployeeDTO employee = new EmployeeDTO();
+            employee.MaNV = dgvEmployee.Rows[RowIndex].Cells[0].Value.ToString();
+            employee.HoTen = dgvEmployee.Rows[RowIndex].Cells[1].Value.ToString();
+            employee.GioiTinh = dgvEmployee.Rows[RowIndex].Cells[2].Value.ToString();
+            employee.NgaySinh = dgvEmployee.Rows[RowIndex].Cells[3].Value.ToString();
+            employee.DiaChi = dgvEmployee.Rows[RowIndex].Cells[4].Value.ToString();
+            employee.DienThoai = dgvEmployee.Rows[RowIndex].Cells[5].Value.ToString();
+            employee.NgayVaoLam = dgvEmployee.Rows[RowIndex].Cells[6].Value.ToString();
+            employee.Salary = Convert.ToInt32(dgvEmployee.Rows[RowIndex].Cells[7].Value.ToString());
+           // employee.Images = (byte[])dgvEmployee.Rows[RowIndex].Cells[8].Value;
+            return employee;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                emloyee = getData(dgvEmployee.CurrentCell.RowIndex);
                 ImageByteArray = new byte[] { };
                 Image temp = new Bitmap(filename);
                 MemoryStream strm = new MemoryStream();
                 temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
                 ImageByteArray = strm.ToArray();
-                DBProvider.Instance.MyExcuteNonQuery("InsertListImageNhomSP",
-                                                     CommandType.StoredProcedure, ref err,
-                                                     new SqlParameter("@MANHOMSP",txtMaNhomSP.Text.Trim()),
-                                                     new SqlParameter("@TENNHOMSP", txtTenNhomSp.Text.Trim()),
-                                                     new SqlParameter("@FILENAME", label2.Text),
-                                                     new SqlParameter("@Data", ImageByteArray));
+                DBProvider.Instance.MyExcuteNonQuery("spUpdateNhanVien", CommandType.StoredProcedure, ref err,
+                new SqlParameter("@MANV",emloyee.MaNV),
+                 new SqlParameter("@HOTEN", emloyee.HoTen),
+                 new SqlParameter("@GIOITINH", emloyee.GioiTinh),
+                 new SqlParameter("@NGAYSINH", emloyee.NgaySinh),
+                 new SqlParameter("@DIACHI", emloyee.DiaChi),
+                 new SqlParameter("@DIENTHOAI", emloyee.DienThoai),
+                 new SqlParameter("@NGAYVAOLAM", emloyee.NgayVaoLam),
+                 new SqlParameter("@SALARY", emloyee.Salary),
+                 new SqlParameter("@IMAGES", ImageByteArray));
                 MessageBox.Show("Save success!");
             }
             catch(SqlException ex)
@@ -96,13 +114,12 @@ namespace QuanLyBanHang
             }
 
         }
-
         private void btnLoad_Click(object sender, EventArgs e)
         {
             try
             {
                 DBProvider.Instance.Conn.Open();
-                dgvList.DataSource = DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM dbo.SANPHAM", CommandType.Text, null);
+                dgvEmployee.DataSource = DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM dbo.NHANVIEN", CommandType.Text, null);
               //  loadImage(dgvList, flowLayoutPanel1);
             }catch(Exception ex)
             {
@@ -116,8 +133,6 @@ namespace QuanLyBanHang
 
         private void dgvList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaNhomSP.Text = dgvList.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtTenNhomSp.Text = dgvList.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

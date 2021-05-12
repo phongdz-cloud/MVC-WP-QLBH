@@ -31,8 +31,9 @@ namespace QuanLyBanHang
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetailEmloyee));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.dtpNgayVaoLam = new System.Windows.Forms.DateTimePicker();
@@ -54,9 +55,10 @@ namespace QuanLyBanHang
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.btnRest = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -72,18 +74,10 @@ namespace QuanLyBanHang
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Avatar";
             // 
-            // pbAvatar
-            // 
-            this.pbAvatar.Location = new System.Drawing.Point(0, 41);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.ShadowDecoration.Parent = this.pbAvatar;
-            this.pbAvatar.Size = new System.Drawing.Size(280, 372);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAvatar.TabIndex = 0;
-            this.pbAvatar.TabStop = false;
-            // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.txtSalary);
+            this.guna2GroupBox2.Controls.Add(this.label3);
             this.guna2GroupBox2.Controls.Add(this.btnUpdate);
             this.guna2GroupBox2.Controls.Add(this.guna2TileButton1);
             this.guna2GroupBox2.Controls.Add(this.dtpNgayVaoLam);
@@ -110,6 +104,42 @@ namespace QuanLyBanHang
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Nhập thông tin nhân viên";
             // 
+            // txtSalary
+            // 
+            this.txtSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSalary.DefaultText = "";
+            this.txtSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.DisabledState.Parent = this.txtSalary;
+            this.txtSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.FocusedState.Parent = this.txtSalary;
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSalary.HoverState.Parent = this.txtSalary;
+            this.txtSalary.Location = new System.Drawing.Point(231, 316);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(6);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.PasswordChar = '\0';
+            this.txtSalary.PlaceholderText = "";
+            this.txtSalary.ReadOnly = true;
+            this.txtSalary.SelectedText = "";
+            this.txtSalary.ShadowDecoration.Parent = this.txtSalary;
+            this.txtSalary.Size = new System.Drawing.Size(267, 30);
+            this.txtSalary.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(46, 323);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 23);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Salary:";
+            // 
             // btnUpdate
             // 
             this.btnUpdate.BorderRadius = 5;
@@ -122,7 +152,7 @@ namespace QuanLyBanHang
             this.btnUpdate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(146)))), ((int)(((byte)(231)))));
             this.btnUpdate.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(395, 344);
+            this.btnUpdate.Location = new System.Drawing.Point(537, 360);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(136, 40);
@@ -143,7 +173,7 @@ namespace QuanLyBanHang
             this.guna2TileButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(146)))), ((int)(((byte)(231)))));
             this.guna2TileButton1.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Location = new System.Drawing.Point(222, 344);
+            this.guna2TileButton1.Location = new System.Drawing.Point(364, 360);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
             this.guna2TileButton1.Size = new System.Drawing.Size(136, 40);
@@ -155,7 +185,7 @@ namespace QuanLyBanHang
             // 
             this.dtpNgayVaoLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayVaoLam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayVaoLam.Location = new System.Drawing.Point(222, 291);
+            this.dtpNgayVaoLam.Location = new System.Drawing.Point(231, 280);
             this.dtpNgayVaoLam.Name = "dtpNgayVaoLam";
             this.dtpNgayVaoLam.Size = new System.Drawing.Size(267, 27);
             this.dtpNgayVaoLam.TabIndex = 22;
@@ -174,7 +204,7 @@ namespace QuanLyBanHang
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.HoverState.Parent = this.txtPhone;
-            this.txtPhone.Location = new System.Drawing.Point(222, 259);
+            this.txtPhone.Location = new System.Drawing.Point(231, 248);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(11, 14, 11, 14);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
@@ -198,7 +228,7 @@ namespace QuanLyBanHang
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
-            this.txtDiaChi.Location = new System.Drawing.Point(222, 220);
+            this.txtDiaChi.Location = new System.Drawing.Point(231, 209);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(11, 14, 11, 14);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
@@ -212,7 +242,7 @@ namespace QuanLyBanHang
             // 
             this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(222, 177);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(231, 166);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(267, 27);
             this.dtpNgaySinh.TabIndex = 19;
@@ -224,7 +254,7 @@ namespace QuanLyBanHang
             this.cbbSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbbSex.Location = new System.Drawing.Point(222, 133);
+            this.cbbSex.Location = new System.Drawing.Point(231, 122);
             this.cbbSex.Name = "cbbSex";
             this.cbbSex.Size = new System.Drawing.Size(267, 28);
             this.cbbSex.TabIndex = 18;
@@ -243,7 +273,7 @@ namespace QuanLyBanHang
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(222, 97);
+            this.txtName.Location = new System.Drawing.Point(231, 86);
             this.txtName.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -267,7 +297,7 @@ namespace QuanLyBanHang
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(222, 59);
+            this.txtID.Location = new System.Drawing.Point(231, 48);
             this.txtID.Margin = new System.Windows.Forms.Padding(6);
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '\0';
@@ -283,7 +313,7 @@ namespace QuanLyBanHang
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(37, 298);
+            this.label6.Location = new System.Drawing.Point(46, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 23);
             this.label6.TabIndex = 14;
@@ -294,7 +324,7 @@ namespace QuanLyBanHang
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(37, 259);
+            this.label8.Location = new System.Drawing.Point(46, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 23);
             this.label8.TabIndex = 13;
@@ -305,7 +335,7 @@ namespace QuanLyBanHang
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(37, 220);
+            this.label11.Location = new System.Drawing.Point(46, 209);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 23);
             this.label11.TabIndex = 12;
@@ -316,7 +346,7 @@ namespace QuanLyBanHang
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(37, 177);
+            this.label9.Location = new System.Drawing.Point(46, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 23);
             this.label9.TabIndex = 6;
@@ -327,7 +357,7 @@ namespace QuanLyBanHang
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 134);
+            this.label7.Location = new System.Drawing.Point(46, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 23);
             this.label7.TabIndex = 4;
@@ -338,7 +368,7 @@ namespace QuanLyBanHang
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 97);
+            this.label5.Location = new System.Drawing.Point(46, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 23);
             this.label5.TabIndex = 2;
@@ -349,7 +379,7 @@ namespace QuanLyBanHang
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 59);
+            this.label2.Location = new System.Drawing.Point(46, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 23);
             this.label2.TabIndex = 0;
@@ -436,7 +466,16 @@ namespace QuanLyBanHang
             this.guna2CircleButton1.TabIndex = 9;
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
-            // frmRegisterEmployee
+            // pbAvatar
+            // 
+            this.pbAvatar.Location = new System.Drawing.Point(0, 38);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(280, 375);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
+            // 
+            // frmDetailEmloyee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -449,14 +488,14 @@ namespace QuanLyBanHang
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmRegisterEmployee";
+            this.Name = "frmDetailEmloyee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDetailEmployee";
             this.Load += new System.EventHandler(this.frmRegisterEmployee_Load);
             this.guna2GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +506,6 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
@@ -488,5 +526,8 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2TileButton btnUpdate;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSalary;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbAvatar;
     }
 }

@@ -198,28 +198,6 @@
         jDebjPEBQB4oig25y3AAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAYFJREFUWEft
-        mDtLw1AYQDvr/2oxEEXbxblOovgXBEFbm7ZUEAS1+FicfICIg3tiGrUtjVoRxK2hFaoBH02Tz17IkJSb
-        cNuQx3APnCE35LuHZAhJjEKJCuyqNMFwwhqbF1tTWUFLZHgISjPBmXiuNslyYj29L6t7widcNPtw9WoE
-        IlEgkxPW02VZxQ3wW6LAae5WKYtftovC0kyyk8jyxtljzxa4I+mB6xw4OMHdKNEOTG3d6dbAUfjRALq/
-        AE9tAy5fDOzmJLoGLuzW9VRJ6qM7OWrgMC0V4KSBj3DTNbDZ6UPh+l1PliQDHQcpUeBb1whFGuhVGuhV
-        GujVSASi+eNo5gUTiFt3kwZaHZ6/fCTDyrFsWxs21MDFgwYsHUY4kEQaaBXNH0czz/9AN9He9E3iRaJA
-        ZlP4e25r2AF+i6Ksmkl2Zgti9bz6gR3gt45RVuIZnp3fvldlpYcd4qdEgYiZfCUz+Oz8Pn3oQJCPmzgQ
-        kdgQknPFSi1yv98olNCIxf4Bu7Q2mqbgHOsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAARJJREFUSEtj
-        GAVkA5OpLz9q9b/4TSkGmQM1EhO4L3jz2Wnu6/+UYpA5UCMxQf/Jnw8mnPr5n1IMMgdqJCagiyVABdv6
-        T/28QCkGmQM1EhOELntnE7jsrStBvO6TWseZ//wTT/xQxYb7j39XgBqJCUApQ67j6X9C2GHum1P9p39k
-        IwcRMsYbXMkbPr1OXPfxPyGcsfnzUrItITbigeHeTRdLJpz6ZQpU34AVn/5RADUSEwAVEO+TU78MJpz+
-        UYoNTzz9Kw1qJCYgyZJhEyd0saTnzH8RULxgw5NO/NSCGokJSPLJqZ9BQPZRHHgN1EhMMOiCi2xLJpz6
-        cQSkgCA+9bMSmBdiscoBMcgcqJGjgFTAwAAAtUdRqYLoNIgAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAQtJREFUSEvt
@@ -299,7 +277,7 @@
         QmCC
 </value>
   </data>
-  <data name="guna2Button10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAupJREFUaEPt
         mMtPE1EUh2ui/BdSoLSUzpTpFN2auDW4JfrH6MLElQlgxAVbijwqDy1taadTunJh1BUP0aW003aeEUyI

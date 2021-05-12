@@ -520,10 +520,10 @@ namespace QuanLyBanHang
             this.guna2GradientPanel3.Controls.Add(this.guna2CheckBox1);
             this.guna2GradientPanel3.Controls.Add(this.label3);
             this.guna2GradientPanel3.Controls.Add(this.label2);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(728, 588);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(663, 578);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.ShadowDecoration.Parent = this.guna2GradientPanel3;
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(383, 219);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(448, 229);
             this.guna2GradientPanel3.TabIndex = 1;
             // 
             // btnPay
@@ -680,9 +680,9 @@ namespace QuanLyBanHang
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.guna2GradientPanel1);
-            this.panel1.Location = new System.Drawing.Point(728, 194);
+            this.panel1.Location = new System.Drawing.Point(663, 194);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 378);
+            this.panel1.Size = new System.Drawing.Size(448, 378);
             this.panel1.TabIndex = 2;
             // 
             // guna2GradientPanel1
@@ -690,10 +690,10 @@ namespace QuanLyBanHang
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(128)))), ((int)(((byte)(69)))));
             this.guna2GradientPanel1.Controls.Add(this.label8);
             this.guna2GradientPanel1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 31);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 3);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(412, 40);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(436, 60);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // label8
@@ -712,7 +712,7 @@ namespace QuanLyBanHang
             this.flowLayoutList.AutoScroll = true;
             this.flowLayoutList.Location = new System.Drawing.Point(6, 194);
             this.flowLayoutList.Name = "flowLayoutList";
-            this.flowLayoutList.Size = new System.Drawing.Size(716, 622);
+            this.flowLayoutList.Size = new System.Drawing.Size(651, 622);
             this.flowLayoutList.TabIndex = 1;
             this.flowLayoutList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
