@@ -288,7 +288,7 @@ namespace QuanLyBanHang
             this.guna2CircleButton1.TabIndex = 10;
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
-            // frmEmployeeDetailGuna
+            // frmViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -298,7 +298,7 @@ namespace QuanLyBanHang
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEmployeeDetailGuna";
+            this.Name = "frmViewEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEmployeeDetailGuna";
             this.Load += new System.EventHandler(this.frmEmployeeDetailGuna_Load);

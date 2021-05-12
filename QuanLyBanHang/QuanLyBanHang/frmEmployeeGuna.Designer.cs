@@ -36,14 +36,6 @@ namespace QuanLyBanHang
             this.btnView = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
             this.dgvEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYVAOLAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Images = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -51,6 +43,7 @@ namespace QuanLyBanHang
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lbFemale = new System.Windows.Forms.Label();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -65,6 +58,14 @@ namespace QuanLyBanHang
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSeach = new Guna.UI2.WinForms.Guna2Button();
             this.btnShowList = new Guna.UI2.WinForms.Guna2Button();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYVAOLAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SALARY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -138,7 +139,7 @@ namespace QuanLyBanHang
             this.DIACHI,
             this.DIENTHOAI,
             this.NGAYVAOLAM,
-            this.Images});
+            this.SALARY});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -180,75 +181,6 @@ namespace QuanLyBanHang
             this.dgvEmployee.ThemeStyle.RowsStyle.Height = 60;
             this.dgvEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(210)))));
             this.dgvEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            // 
-            // MANV
-            // 
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "ID";
-            this.MANV.MinimumWidth = 6;
-            this.MANV.Name = "MANV";
-            this.MANV.ReadOnly = true;
-            // 
-            // HOTEN
-            // 
-            this.HOTEN.DataPropertyName = "HOTEN";
-            this.HOTEN.HeaderText = "Name";
-            this.HOTEN.MinimumWidth = 6;
-            this.HOTEN.Name = "HOTEN";
-            this.HOTEN.ReadOnly = true;
-            // 
-            // GIOITINH
-            // 
-            this.GIOITINH.DataPropertyName = "GIOITINH";
-            this.GIOITINH.HeaderText = "Sex";
-            this.GIOITINH.MinimumWidth = 6;
-            this.GIOITINH.Name = "GIOITINH";
-            this.GIOITINH.ReadOnly = true;
-            // 
-            // NGAYSINH
-            // 
-            this.NGAYSINH.DataPropertyName = "NGAYSINH";
-            this.NGAYSINH.HeaderText = "Birthday";
-            this.NGAYSINH.MinimumWidth = 6;
-            this.NGAYSINH.Name = "NGAYSINH";
-            this.NGAYSINH.ReadOnly = true;
-            // 
-            // DIACHI
-            // 
-            this.DIACHI.DataPropertyName = "DIACHI";
-            this.DIACHI.HeaderText = "Address";
-            this.DIACHI.MinimumWidth = 6;
-            this.DIACHI.Name = "DIACHI";
-            this.DIACHI.ReadOnly = true;
-            this.DIACHI.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DIACHI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DIENTHOAI
-            // 
-            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
-            this.DIENTHOAI.HeaderText = "Phone";
-            this.DIENTHOAI.MinimumWidth = 6;
-            this.DIENTHOAI.Name = "DIENTHOAI";
-            this.DIENTHOAI.ReadOnly = true;
-            // 
-            // NGAYVAOLAM
-            // 
-            this.NGAYVAOLAM.DataPropertyName = "NGAYVAOLAM";
-            this.NGAYVAOLAM.HeaderText = "Day to work";
-            this.NGAYVAOLAM.MinimumWidth = 6;
-            this.NGAYVAOLAM.Name = "NGAYVAOLAM";
-            this.NGAYVAOLAM.ReadOnly = true;
-            // 
-            // Images
-            // 
-            this.Images.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Images.DataPropertyName = "IMAGES";
-            this.Images.HeaderText = "Images";
-            this.Images.MinimumWidth = 3;
-            this.Images.Name = "Images";
-            this.Images.ReadOnly = true;
-            this.Images.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Images.Width = 21;
             // 
             // btnDelete
             // 
@@ -361,6 +293,7 @@ namespace QuanLyBanHang
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel2.Controls.Add(this.btnExit);
             this.guna2Panel2.Controls.Add(this.lbFemale);
             this.guna2Panel2.Controls.Add(this.guna2CircleButton3);
             this.guna2Panel2.Controls.Add(this.guna2CircleButton2);
@@ -379,6 +312,26 @@ namespace QuanLyBanHang
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1209, 96);
             this.guna2Panel2.TabIndex = 20;
+            // 
+            // btnExit
+            // 
+            this.btnExit.CheckedState.Parent = this.btnExit;
+            this.btnExit.CustomImages.Parent = this.btnExit;
+            this.btnExit.FillColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.HoverState.Parent = this.btnExit;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Location = new System.Drawing.Point(1148, 4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnExit.Size = new System.Drawing.Size(58, 49);
+            this.btnExit.TabIndex = 13;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lbFemale
             // 
@@ -468,7 +421,7 @@ namespace QuanLyBanHang
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button4.Location = new System.Drawing.Point(897, 6);
+            this.guna2Button4.Location = new System.Drawing.Point(840, 7);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(48, 38);
@@ -488,7 +441,7 @@ namespace QuanLyBanHang
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageOffset = new System.Drawing.Point(3, 0);
             this.guna2Button5.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button5.Location = new System.Drawing.Point(951, 8);
+            this.guna2Button5.Location = new System.Drawing.Point(894, 9);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(121, 36);
@@ -505,7 +458,7 @@ namespace QuanLyBanHang
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(67)))));
             this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Location = new System.Drawing.Point(1078, 8);
+            this.guna2Button6.Location = new System.Drawing.Point(1021, 9);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
             this.guna2Button6.Size = new System.Drawing.Size(121, 36);
@@ -634,6 +587,72 @@ namespace QuanLyBanHang
             this.btnShowList.Text = "Show list";
             this.btnShowList.Click += new System.EventHandler(this.btnShowList_Click);
             // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "ID";
+            this.MANV.MinimumWidth = 6;
+            this.MANV.Name = "MANV";
+            this.MANV.ReadOnly = true;
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.DataPropertyName = "HOTEN";
+            this.HOTEN.HeaderText = "Name";
+            this.HOTEN.MinimumWidth = 6;
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.ReadOnly = true;
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.DataPropertyName = "GIOITINH";
+            this.GIOITINH.HeaderText = "Sex";
+            this.GIOITINH.MinimumWidth = 6;
+            this.GIOITINH.Name = "GIOITINH";
+            this.GIOITINH.ReadOnly = true;
+            // 
+            // NGAYSINH
+            // 
+            this.NGAYSINH.DataPropertyName = "NGAYSINH";
+            this.NGAYSINH.HeaderText = "Birthday";
+            this.NGAYSINH.MinimumWidth = 6;
+            this.NGAYSINH.Name = "NGAYSINH";
+            this.NGAYSINH.ReadOnly = true;
+            // 
+            // DIACHI
+            // 
+            this.DIACHI.DataPropertyName = "DIACHI";
+            this.DIACHI.HeaderText = "Address";
+            this.DIACHI.MinimumWidth = 6;
+            this.DIACHI.Name = "DIACHI";
+            this.DIACHI.ReadOnly = true;
+            this.DIACHI.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DIACHI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DIENTHOAI
+            // 
+            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
+            this.DIENTHOAI.HeaderText = "Phone";
+            this.DIENTHOAI.MinimumWidth = 6;
+            this.DIENTHOAI.Name = "DIENTHOAI";
+            this.DIENTHOAI.ReadOnly = true;
+            // 
+            // NGAYVAOLAM
+            // 
+            this.NGAYVAOLAM.DataPropertyName = "NGAYVAOLAM";
+            this.NGAYVAOLAM.HeaderText = "Day to work";
+            this.NGAYVAOLAM.MinimumWidth = 6;
+            this.NGAYVAOLAM.Name = "NGAYVAOLAM";
+            this.NGAYVAOLAM.ReadOnly = true;
+            // 
+            // SALARY
+            // 
+            this.SALARY.DataPropertyName = "SALARY";
+            this.SALARY.HeaderText = "Salary";
+            this.SALARY.MinimumWidth = 6;
+            this.SALARY.Name = "SALARY";
+            this.SALARY.ReadOnly = true;
+            // 
             // frmEmployeeGuna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -689,6 +708,7 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2Button btnSeach;
         private Guna.UI2.WinForms.Guna2Button btnShowList;
+        private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;
@@ -696,6 +716,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.DataGridViewTextBoxColumn DIACHI;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIENTHOAI;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYVAOLAM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Images;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SALARY;
     }
 }

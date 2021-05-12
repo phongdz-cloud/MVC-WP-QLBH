@@ -36,11 +36,11 @@ namespace QuanLyBanHang
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaNhomSP = new System.Windows.Forms.TextBox();
-            this.txtTenNhomSp = new System.Windows.Forms.TextBox();
-            this.dgvList = new System.Windows.Forms.DataGridView();
+            this.txtLuongNV = new System.Windows.Forms.TextBox();
+            this.txtImage = new System.Windows.Forms.TextBox();
+            this.dgvEmployee = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -112,33 +112,33 @@ namespace QuanLyBanHang
             this.label2.TabIndex = 3;
             this.label2.Text = "?";
             // 
-            // txtMaNhomSP
+            // txtLuongNV
             // 
-            this.txtMaNhomSP.Location = new System.Drawing.Point(12, 139);
-            this.txtMaNhomSP.Multiline = true;
-            this.txtMaNhomSP.Name = "txtMaNhomSP";
-            this.txtMaNhomSP.Size = new System.Drawing.Size(143, 38);
-            this.txtMaNhomSP.TabIndex = 8;
+            this.txtLuongNV.Location = new System.Drawing.Point(141, 267);
+            this.txtLuongNV.Multiline = true;
+            this.txtLuongNV.Name = "txtLuongNV";
+            this.txtLuongNV.Size = new System.Drawing.Size(143, 38);
+            this.txtLuongNV.TabIndex = 8;
             // 
-            // txtTenNhomSp
+            // txtImage
             // 
-            this.txtTenNhomSp.Location = new System.Drawing.Point(12, 202);
-            this.txtTenNhomSp.Multiline = true;
-            this.txtTenNhomSp.Name = "txtTenNhomSp";
-            this.txtTenNhomSp.Size = new System.Drawing.Size(166, 41);
-            this.txtTenNhomSp.TabIndex = 9;
+            this.txtImage.Location = new System.Drawing.Point(315, 267);
+            this.txtImage.Multiline = true;
+            this.txtImage.Name = "txtImage";
+            this.txtImage.Size = new System.Drawing.Size(739, 41);
+            this.txtImage.TabIndex = 9;
             // 
-            // dgvList
+            // dgvEmployee
             // 
-            this.dgvList.BackgroundColor = System.Drawing.Color.White;
-            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvList.Location = new System.Drawing.Point(12, 315);
-            this.dgvList.Name = "dgvList";
-            this.dgvList.RowHeadersWidth = 51;
-            this.dgvList.RowTemplate.Height = 24;
-            this.dgvList.Size = new System.Drawing.Size(1021, 332);
-            this.dgvList.TabIndex = 10;
-            this.dgvList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellClick);
+            this.dgvEmployee.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployee.Location = new System.Drawing.Point(12, 315);
+            this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.RowHeadersWidth = 51;
+            this.dgvEmployee.RowTemplate.Height = 24;
+            this.dgvEmployee.Size = new System.Drawing.Size(1021, 332);
+            this.dgvEmployee.TabIndex = 10;
+            this.dgvEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellClick);
             // 
             // Test
             // 
@@ -147,9 +147,9 @@ namespace QuanLyBanHang
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1084, 686);
-            this.Controls.Add(this.dgvList);
-            this.Controls.Add(this.txtTenNhomSp);
-            this.Controls.Add(this.txtMaNhomSP);
+            this.Controls.Add(this.dgvEmployee);
+            this.Controls.Add(this.txtImage);
+            this.Controls.Add(this.txtLuongNV);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
@@ -161,7 +161,7 @@ namespace QuanLyBanHang
             this.Text = "Test";
             this.Load += new System.EventHandler(this.Test_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,8 +175,8 @@ namespace QuanLyBanHang
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMaNhomSP;
-        private System.Windows.Forms.TextBox txtTenNhomSp;
-        private System.Windows.Forms.DataGridView dgvList;
+        private System.Windows.Forms.TextBox txtLuongNV;
+        private System.Windows.Forms.TextBox txtImage;
+        private System.Windows.Forms.DataGridView dgvEmployee;
     }
 }

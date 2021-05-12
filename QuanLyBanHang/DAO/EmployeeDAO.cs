@@ -19,20 +19,22 @@ namespace DAO
          */
         public DataTable getEmployee()
         {
+            // SQLDataReader 
             return DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM NHANVIEN", CommandType.Text, null);
         }
         #endregion
         #region Insert Employee
-        public bool insertEmployee(ref string err, EmployeeDTO employee)
+        public bool insertEmployee(ref string err, EmployeeDTO employee) // StoreProcedure <=> void ->> func -> return
         {
             return DBProvider.Instance.MyExcuteNonQuery("spInsertNhanVien", CommandType.StoredProcedure, ref err,
-               new SqlParameter("@MANV", employee.MaNV),
+                new SqlParameter("@MANV", employee.MaNV),
                 new SqlParameter("@HOTEN", employee.HoTen),
                 new SqlParameter("@GIOITINH", employee.GioiTinh),
                 new SqlParameter("@NGAYSINH", employee.NgaySinh),
                 new SqlParameter("@DIACHI", employee.DiaChi),
                 new SqlParameter("@DIENTHOAI", employee.DienThoai),
                 new SqlParameter("@NGAYVAOLAM", employee.NgayVaoLam),
+                new SqlParameter("@SALARY", employee.Salary),
                 new SqlParameter("@IMAGES", employee.Images));
         }
         #endregion
@@ -47,6 +49,7 @@ namespace DAO
                 new SqlParameter("@DIACHI", employee.DiaChi),
                 new SqlParameter("@DIENTHOAI", employee.DienThoai),
                 new SqlParameter("@NGAYVAOLAM", employee.NgayVaoLam),
+                new SqlParameter("@SALARY", employee.Salary),
                 new SqlParameter("@IMAGES", employee.Images));
         }
         #endregion
@@ -55,7 +58,6 @@ namespace DAO
         {
             return DBProvider.Instance.MyExcuteNonQuery("spDeleteNhanVien", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MANV", employee.MaNV));
-
         }
         #endregion
     }

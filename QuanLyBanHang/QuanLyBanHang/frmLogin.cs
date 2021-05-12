@@ -14,7 +14,6 @@ namespace QuanLyBanHang
 {
     public partial class frmLogin : Form
     {
-        private frmSell frmSell;
         public frmLogin()
         {
             InitializeComponent();
@@ -31,15 +30,14 @@ namespace QuanLyBanHang
                 if(read.Read())
                 {
                     MessageBox.Show("Chúc mừng bạn đã đăng nhập thành công","Login thành công",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmSell = new frmSell();
                     this.Hide();
                     if(guna2ToggleSwitch1.Checked == false)
                     {
                         txtID.ResetText();
                         txtPassword.ResetText();
                     }
-                    frmSell.ShowDialog();
-                    this.Show();
+                    read.Close();
+                    read.Dispose();
                 }
                 else
                 {
@@ -53,6 +51,8 @@ namespace QuanLyBanHang
             {
                 DBProvider.Instance.Conn.Close();
                 DBProvider.Instance.Cmd.Dispose();
+                frmSell.Intance.ShowDialog();
+                this.Show();
             }
         }
 

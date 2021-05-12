@@ -23,9 +23,10 @@ namespace QuanLyBanHang
         private EmployeeDTO employeeDTO;
         public static frmEmployeeGuna Instance { get { if (instance == null) 
             instance = new frmEmployeeGuna(); return frmEmployeeGuna.instance; } 
-            set => instance = value; }
+            private set => instance = value; }
 
-        public DataTable DbAll { get => dbAll; set => dbAll = value; }
+        public DataTable DbAll { get => dbAll; set => dbAll = value;}
+        public EmployeeDTO EmployeeDTO { get => employeeDTO; set => employeeDTO = value; }
 
         public frmEmployeeGuna()
         {
@@ -42,11 +43,13 @@ namespace QuanLyBanHang
             employee.DiaChi = dgvEmployee.Rows[RowIndex].Cells[4].Value.ToString();
             employee.DienThoai = dgvEmployee.Rows[RowIndex].Cells[5].Value.ToString();
             employee.NgayVaoLam = dgvEmployee.Rows[RowIndex].Cells[6].Value.ToString();
-            employee.Images = dgvEmployee.Rows[RowIndex].Cells[7].Value.ToString();
+            employee.Salary = Convert.ToInt32(dgvEmployee.Rows[RowIndex].Cells[7].Value.ToString());
+            employee.Images = (byte [])dgvEmployee.Rows[RowIndex].Cells[8].Value;
             return employee;
         }
         private void frmEmployeeGuna_Load(object sender, EventArgs e)
         {
+            
             if(flag == false)
             {
                 if (DbAll == null) load();
@@ -58,7 +61,6 @@ namespace QuanLyBanHang
             DataTable db = new DataTable();
             db = employeeBUS.GetEmployee();
             dgvEmployee.DataSource = db;
-            lbEmployee.Text = (dgvEmployee.Rows.Count - 1).ToString() + " Employee";
             int countMale = 0;
             int countFemale = 0;
             for (int i = 0; i <= dgvEmployee.Rows.Count - 2; i++)
@@ -93,8 +95,8 @@ namespace QuanLyBanHang
         }
         private void btnDetail_Click_1(object sender, EventArgs e)
         {
-            employeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
-            frmDetailEmloyee frmDetailEmloyee = new frmDetailEmloyee(employeeDTO);
+            EmployeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
+            frmDetailEmloyee frmDetailEmloyee = new frmDetailEmloyee();
             frmDetailEmloyee.ShowDialog();
             frmDetailEmloyee.loadForm(ref flag);
             if(flag == true)
@@ -105,8 +107,8 @@ namespace QuanLyBanHang
         }
         private void btnView_Click(object sender, EventArgs e)
         {
-            employeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
-            frmViewEmployee frmViewEmployee = new frmViewEmployee(employeeDTO);
+            EmployeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
+            frmViewEmployee frmViewEmployee = new frmViewEmployee();
             frmViewEmployee.ShowDialog();
         }
 
@@ -117,8 +119,8 @@ namespace QuanLyBanHang
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                employeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
-                if(employeeBUS.DeleteEmployee(ref err,employeeDTO))
+                EmployeeDTO = getData(dgvEmployee.CurrentCell.RowIndex);
+                if(employeeBUS.DeleteEmployee(ref err,EmployeeDTO))
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DbAll = null;
@@ -126,6 +128,19 @@ namespace QuanLyBanHang
                 }
                 else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận hủy",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void frmEmployeeGuna_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

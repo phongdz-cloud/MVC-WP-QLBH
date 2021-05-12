@@ -34,12 +34,12 @@ namespace QuanLyBanHang
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +47,6 @@ namespace QuanLyBanHang
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -69,6 +67,7 @@ namespace QuanLyBanHang
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -83,7 +82,7 @@ namespace QuanLyBanHang
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.pnEmployee = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEmployee = new Guna.UI2.WinForms.Guna2Button();
@@ -99,12 +98,12 @@ namespace QuanLyBanHang
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1.SuspendLayout();
             this.guna_container.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
@@ -114,7 +113,6 @@ namespace QuanLyBanHang
             this.pnEmployee.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -126,8 +124,6 @@ namespace QuanLyBanHang
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.guna2Button7);
             this.guna2Panel1.Controls.Add(this.guna2Button5);
-            this.guna2Panel1.Controls.Add(this.guna2Button3);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.guna2Separator1);
             this.guna2Panel1.Controls.Add(this.guna2CircleButton1);
@@ -172,7 +168,7 @@ namespace QuanLyBanHang
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button6.Location = new System.Drawing.Point(24, 496);
+            this.guna2Button6.Location = new System.Drawing.Point(24, 394);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
             this.guna2Button6.Size = new System.Drawing.Size(182, 45);
@@ -193,7 +189,7 @@ namespace QuanLyBanHang
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button4.Location = new System.Drawing.Point(24, 394);
+            this.guna2Button4.Location = new System.Drawing.Point(24, 292);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(182, 45);
@@ -213,7 +209,7 @@ namespace QuanLyBanHang
             this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button7.Location = new System.Drawing.Point(24, 445);
+            this.guna2Button7.Location = new System.Drawing.Point(24, 343);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
             this.guna2Button7.Size = new System.Drawing.Size(182, 45);
@@ -233,53 +229,12 @@ namespace QuanLyBanHang
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button5.Location = new System.Drawing.Point(24, 343);
+            this.guna2Button5.Location = new System.Drawing.Point(24, 241);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(182, 45);
             this.guna2Button5.TabIndex = 6;
             this.guna2Button5.Text = "Statistics";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(108)))), ((int)(((byte)(111)))));
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button3.Location = new System.Drawing.Point(24, 292);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(182, 45);
-            this.guna2Button3.TabIndex = 5;
-            this.guna2Button3.Text = "Wallet";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(108)))), ((int)(((byte)(111)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(182)))), ((int)(((byte)(255)))));
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button2.Location = new System.Drawing.Point(24, 241);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(182, 45);
-            this.guna2Button2.TabIndex = 4;
-            this.guna2Button2.Text = "Products";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -546,6 +501,23 @@ namespace QuanLyBanHang
             this.panel5.Size = new System.Drawing.Size(894, 300);
             this.panel5.TabIndex = 34;
             // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(453, 40);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(438, 250);
+            this.chart2.TabIndex = 20;
+            this.chart2.Text = "chart2";
+            // 
             // chart1
             // 
             chartArea2.Name = "ChartArea1";
@@ -729,7 +701,7 @@ namespace QuanLyBanHang
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.guna2Button10);
+            this.panel3.Controls.Add(this.btnCustomer);
             this.panel3.Location = new System.Drawing.Point(485, 118);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(220, 54);
@@ -745,23 +717,24 @@ namespace QuanLyBanHang
             this.label3.TabIndex = 38;
             this.label3.Text = "Customer";
             // 
-            // guna2Button10
+            // btnCustomer
             // 
-            this.guna2Button10.BorderRadius = 3;
-            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
-            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
-            this.guna2Button10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(235)))));
-            this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button10.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.HoverState.Parent = this.guna2Button10;
-            this.guna2Button10.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button10.Image")));
-            this.guna2Button10.Location = new System.Drawing.Point(12, 6);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(235)))));
-            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
-            this.guna2Button10.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.guna2Button10.Size = new System.Drawing.Size(40, 40);
-            this.guna2Button10.TabIndex = 13;
+            this.btnCustomer.BorderRadius = 3;
+            this.btnCustomer.CheckedState.Parent = this.btnCustomer;
+            this.btnCustomer.CustomImages.Parent = this.btnCustomer;
+            this.btnCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(235)))));
+            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.HoverState.Parent = this.btnCustomer;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.Location = new System.Drawing.Point(12, 6);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(235)))));
+            this.btnCustomer.ShadowDecoration.Parent = this.btnCustomer;
+            this.btnCustomer.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.btnCustomer.Size = new System.Drawing.Size(40, 40);
+            this.btnCustomer.TabIndex = 13;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // pnEmployee
             // 
@@ -816,11 +789,11 @@ namespace QuanLyBanHang
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 15);
+            this.label2.Location = new System.Drawing.Point(58, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 23);
+            this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 37;
-            this.label2.Text = "History Transaction";
+            this.label2.Text = "Products";
             // 
             // guna2Button8
             // 
@@ -839,6 +812,7 @@ namespace QuanLyBanHang
             this.guna2Button8.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 5);
             this.guna2Button8.Size = new System.Drawing.Size(40, 40);
             this.guna2Button8.TabIndex = 13;
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // guna2CircleButton4
             // 
@@ -972,23 +946,6 @@ namespace QuanLyBanHang
             this.guna2TextBox1.Size = new System.Drawing.Size(281, 36);
             this.guna2TextBox1.TabIndex = 18;
             // 
-            // chart2
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(453, 40);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(438, 250);
-            this.chart2.TabIndex = 20;
-            this.chart2.Text = "chart2";
-            // 
             // frmSell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1011,6 +968,7 @@ namespace QuanLyBanHang
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -1025,7 +983,6 @@ namespace QuanLyBanHang
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1033,7 +990,6 @@ namespace QuanLyBanHang
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
@@ -1041,7 +997,6 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Panel guna_container;
@@ -1066,7 +1021,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button11;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private System.Windows.Forms.Panel pnEmployee;
         private Guna.UI2.WinForms.Guna2Button btnEmployee;
         private System.Windows.Forms.Panel panel1;

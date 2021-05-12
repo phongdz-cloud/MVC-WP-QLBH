@@ -16,7 +16,8 @@ namespace DTO
         private string diaChi;
         private string dienThoai;
         private string ngayVaoLam;
-        private string images;
+        private int salary;
+        private Byte[] images;
         #endregion
         #region Khởi tạo cho Employee
         public EmployeeDTO()
@@ -24,7 +25,7 @@ namespace DTO
 
         }
         public EmployeeDTO(string maNV, string hoTen, string gioiTinh, string ngaySinh, string diaChi
-            , string dienThoai, string ngayVaoLam, string images)
+            , string dienThoai, string ngayVaoLam,int salary ,byte[] images)
         {
             MaNV = maNV;
             HoTen = hoTen;
@@ -33,6 +34,7 @@ namespace DTO
             DiaChi = diaChi;
             DienThoai = dienThoai;
             NgayVaoLam = ngayVaoLam;
+            Salary = salary;
             Images = images;
         }
 
@@ -45,7 +47,8 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string DienThoai { get => dienThoai; set => dienThoai = value; }
         public string NgayVaoLam { get => ngayVaoLam; set => ngayVaoLam = value; }
-        public string Images { get => images; set => images = value; }
+        public int Salary { get => salary; set => salary = value; }
+        public byte[] Images { get => images; set => images = value; }
 
         #endregion
     }
