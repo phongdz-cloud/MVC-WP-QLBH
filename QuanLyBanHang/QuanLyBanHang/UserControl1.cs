@@ -7,19 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Guna.UI2.WinForms;
 namespace QuanLyBanHang
 {
-    public partial class frmMain : Form
+    public partial class UserControl1 : UserControl
     {
-        public frmMain()
+        public UserControl1(int amount)
         {
             InitializeComponent();
+            numericSL.Maximum = amount;
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

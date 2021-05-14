@@ -13,7 +13,7 @@ namespace QuanLyBanHang
 {
     public partial class frmViewEmployee : Form
     {
-        private PictureBox pic;
+
         public frmViewEmployee()
         {
             InitializeComponent();

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using BUS;
 using DTO;
 using DAO;
+using Function;
 using System.IO;
 namespace QuanLyBanHang
 {
     public partial class frmEmployeeGuna : Form
     {
         private EmployeeBUS employeeBUS = new EmployeeBUS();
+
         private static frmEmployeeGuna instance;
         private DataTable dbAll;
         private bool flag = false;

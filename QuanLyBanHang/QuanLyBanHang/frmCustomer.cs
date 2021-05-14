@@ -19,12 +19,12 @@ namespace QuanLyBanHang
         private CustomerBUS customerBUS = new CustomerBUS();
         private CustomerTypeBUS customerTypeBUS = new CustomerTypeBUS();
         private CustomerDTO customer;
+        private Byte[] ImageByteArray;
         private static frmCustomer instance;
         private bool flag;
         private bool flag_method;
         private string err;
         private string autoID = null;
-        private string fileName = null;
         private DataTable dbAll;
         private DataTable dbCustomerALL;
         public static frmCustomer Instance { 
@@ -95,8 +95,7 @@ namespace QuanLyBanHang
             customer.DiaChi = dgvCustomer.Rows[rowIndex].Cells[3].Value.ToString();
             customer.DienThoai = dgvCustomer.Rows[rowIndex].Cells[4].Value.ToString();
             customer.MaLoaiKH = dgvCustomer.Rows[rowIndex].Cells[5].Value.ToString();
-            if (fileName != null) customer.Images = fileName;
-            else customer.Images = @"C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\Image\DSC3605.jpg";
+            customer.Images = ImageByteArray;
             return customer;
         }
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -112,30 +111,39 @@ namespace QuanLyBanHang
 
         private void btnBrown_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
+            try
             {
-                fileName = open.FileName;
-                pbAvatar.Image = new Bitmap(open.FileName);
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    Image temp = new Bitmap(open.FileName);
+                    MemoryStream strm = new MemoryStream();
+                    temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    ImageByteArray = strm.ToArray();
+                    pbAvatar.Image = Image.FromStream(new MemoryStream(ImageByteArray));
+                }
             }
+            catch (Exception ex)
+            { }
         }
 
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (txtID.Text != dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[0].Value.ToString())
+            try
             {
+
                 txtID.Text = dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[0].Value.ToString();
                 txtName.Text = dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[1].Value.ToString();
                 cbbSex.Text = dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[2].Value.ToString();
                 txtDiaChi.Text = dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[3].Value.ToString();
                 txtPhone.Text = dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[4].Value.ToString();
                 cbbType.Text = dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[5].Value.ToString();
-                if (dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[6].Value.ToString().Length <= 0)
-                    pbAvatar.Image = Image.FromFile(@"C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\Image\DSC3605.jpg");
-                else
-                    pbAvatar.Image = Image.FromFile(@dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[6].Value.ToString());
+                pbAvatar.Image = Image.FromStream
+                    (new MemoryStream((byte[])dgvCustomer.Rows[dgvCustomer.CurrentCell.RowIndex].Cells[6].Value));
             }
+            catch (Exception ex)
+            { }
             dis_en(false);
         }
         private void dis_en(bool e)
@@ -209,7 +217,6 @@ namespace QuanLyBanHang
                         DbAll = null;
                         Func.updateAutoID();
                         autoID = null;
-                        fileName = null;
                         frmCustomer_Load(sender, e);
                     }
                     else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -227,7 +234,6 @@ namespace QuanLyBanHang
                         MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         flag = false;
                         DbAll = null;
-                        fileName = null;
                         frmCustomer_Load(sender, e);
                     }
                     else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

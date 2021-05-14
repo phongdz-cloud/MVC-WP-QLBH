@@ -43,8 +43,7 @@ namespace QuanLyBanHang
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cbbID = new System.Windows.Forms.ComboBox();
             this.cbbType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnInsert = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label14 = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,27 +55,31 @@ namespace QuanLyBanHang
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbValue = new System.Windows.Forms.Label();
+            this.tBPrice = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.flowBestSeller = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flpProductGroup = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbSubTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label8 = new System.Windows.Forms.Label();
+            this.floPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutList = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -243,8 +246,7 @@ namespace QuanLyBanHang
             // 
             this.guna2GroupBox1.Controls.Add(this.cbbID);
             this.guna2GroupBox1.Controls.Add(this.cbbType);
-            this.guna2GroupBox1.Controls.Add(this.guna2GradientButton2);
-            this.guna2GroupBox1.Controls.Add(this.guna2GradientButton1);
+            this.guna2GroupBox1.Controls.Add(this.btnInsert);
             this.guna2GroupBox1.Controls.Add(this.label14);
             this.guna2GroupBox1.Controls.Add(this.txtPhone);
             this.guna2GroupBox1.Controls.Add(this.label13);
@@ -292,47 +294,27 @@ namespace QuanLyBanHang
             this.cbbType.Size = new System.Drawing.Size(273, 36);
             this.cbbType.TabIndex = 15;
             // 
-            // guna2GradientButton2
+            // btnInsert
             // 
-            this.guna2GradientButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton2.BorderRadius = 5;
-            this.guna2GradientButton2.BorderThickness = 1;
-            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton2.Image")));
-            this.guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(189, 279);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Size = new System.Drawing.Size(136, 41);
-            this.guna2GradientButton2.TabIndex = 14;
-            this.guna2GradientButton2.Text = "Edit";
-            // 
-            // guna2GradientButton1
-            // 
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton1.BorderRadius = 5;
-            this.guna2GradientButton1.BorderThickness = 1;
-            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton1.Image")));
-            this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(27, 279);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(136, 41);
-            this.guna2GradientButton1.TabIndex = 13;
-            this.guna2GradientButton1.Text = "Insert";
+            this.btnInsert.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnInsert.BorderRadius = 5;
+            this.btnInsert.BorderThickness = 1;
+            this.btnInsert.CheckedState.Parent = this.btnInsert;
+            this.btnInsert.CustomImages.Parent = this.btnInsert;
+            this.btnInsert.FillColor = System.Drawing.Color.White;
+            this.btnInsert.FillColor2 = System.Drawing.Color.White;
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnInsert.HoverState.Parent = this.btnInsert;
+            this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
+            this.btnInsert.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInsert.Location = new System.Drawing.Point(85, 278);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.ShadowDecoration.Parent = this.btnInsert;
+            this.btnInsert.Size = new System.Drawing.Size(282, 41);
+            this.btnInsert.TabIndex = 13;
+            this.btnInsert.Text = "Insert & Edit";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label14
             // 
@@ -486,6 +468,9 @@ namespace QuanLyBanHang
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.panel2);
+            this.guna2Panel2.Controls.Add(this.flowBestSeller);
+            this.guna2Panel2.Controls.Add(this.guna2GroupBox3);
             this.guna2Panel2.Controls.Add(this.flpProductGroup);
             this.guna2Panel2.Controls.Add(this.guna2GradientPanel3);
             this.guna2Panel2.Controls.Add(this.panel1);
@@ -497,34 +482,96 @@ namespace QuanLyBanHang
             this.guna2Panel2.Size = new System.Drawing.Size(1114, 819);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lbValue);
+            this.panel2.Controls.Add(this.tBPrice);
+            this.panel2.Location = new System.Drawing.Point(8, 731);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(631, 76);
+            this.panel2.TabIndex = 5;
+            // 
+            // lbValue
+            // 
+            this.lbValue.AutoSize = true;
+            this.lbValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValue.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbValue.Location = new System.Drawing.Point(484, 23);
+            this.lbValue.Name = "lbValue";
+            this.lbValue.Size = new System.Drawing.Size(63, 28);
+            this.lbValue.TabIndex = 19;
+            this.lbValue.Text = "Value";
+            // 
+            // tBPrice
+            // 
+            this.tBPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.tBPrice.HoverState.Parent = this.tBPrice;
+            this.tBPrice.Location = new System.Drawing.Point(112, 28);
+            this.tBPrice.Maximum = 15000000;
+            this.tBPrice.Name = "tBPrice";
+            this.tBPrice.Size = new System.Drawing.Size(336, 23);
+            this.tBPrice.TabIndex = 15;
+            this.tBPrice.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(128)))), ((int)(((byte)(69)))));
+            this.tBPrice.ValueChanged += new System.EventHandler(this.tBPrice_ValueChanged);
+            // 
+            // flowBestSeller
+            // 
+            this.flowBestSeller.AutoScroll = true;
+            this.flowBestSeller.Location = new System.Drawing.Point(645, 40);
+            this.flowBestSeller.Name = "flowBestSeller";
+            this.flowBestSeller.Size = new System.Drawing.Size(457, 151);
+            this.flowBestSeller.TabIndex = 0;
+            // 
+            // guna2GroupBox3
+            // 
+            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(128)))), ((int)(((byte)(69)))));
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
+            this.guna2GroupBox3.Location = new System.Drawing.Point(645, 3);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
+            this.guna2GroupBox3.Size = new System.Drawing.Size(457, 185);
+            this.guna2GroupBox3.TabIndex = 4;
+            this.guna2GroupBox3.Text = "Best Seller";
+            // 
             // flpProductGroup
             // 
             this.flpProductGroup.AutoScroll = true;
             this.flpProductGroup.BackColor = System.Drawing.Color.White;
             this.flpProductGroup.Location = new System.Drawing.Point(6, 3);
             this.flpProductGroup.Name = "flpProductGroup";
-            this.flpProductGroup.Size = new System.Drawing.Size(1096, 185);
+            this.flpProductGroup.Size = new System.Drawing.Size(633, 185);
             this.flpProductGroup.TabIndex = 3;
             this.flpProductGroup.WrapContents = false;
             // 
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel3.Controls.Add(this.lbTotal);
             this.guna2GradientPanel3.Controls.Add(this.btnPay);
-            this.guna2GradientPanel3.Controls.Add(this.btnSave);
-            this.guna2GradientPanel3.Controls.Add(this.label7);
+            this.guna2GradientPanel3.Controls.Add(this.lbSubTotal);
             this.guna2GradientPanel3.Controls.Add(this.label6);
             this.guna2GradientPanel3.Controls.Add(this.label5);
-            this.guna2GradientPanel3.Controls.Add(this.label4);
             this.guna2GradientPanel3.Controls.Add(this.guna2CheckBox2);
-            this.guna2GradientPanel3.Controls.Add(this.guna2CheckBox1);
-            this.guna2GradientPanel3.Controls.Add(this.label3);
             this.guna2GradientPanel3.Controls.Add(this.label2);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(663, 578);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(645, 578);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.ShadowDecoration.Parent = this.guna2GradientPanel3;
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(448, 229);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(466, 229);
             this.guna2GradientPanel3.TabIndex = 1;
+            this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbTotal.Location = new System.Drawing.Point(137, 15);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(77, 28);
+            this.lbTotal.TabIndex = 10;
+            this.lbTotal.Text = "250,00";
             // 
             // btnPay
             // 
@@ -540,51 +587,31 @@ namespace QuanLyBanHang
             this.btnPay.HoverState.Parent = this.btnPay;
             this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
             this.btnPay.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPay.Location = new System.Drawing.Point(198, 153);
+            this.btnPay.Location = new System.Drawing.Point(259, 153);
             this.btnPay.Name = "btnPay";
             this.btnPay.ShadowDecoration.Parent = this.btnPay;
             this.btnPay.Size = new System.Drawing.Size(180, 63);
             this.btnPay.TabIndex = 9;
             this.btnPay.Text = "Pay now";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
-            // btnSave
+            // lbSubTotal
             // 
-            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnSave.BorderRadius = 5;
-            this.btnSave.BorderThickness = 1;
-            this.btnSave.CheckedState.Parent = this.btnSave;
-            this.btnSave.CustomImages.Parent = this.btnSave;
-            this.btnSave.FillColor = System.Drawing.Color.White;
-            this.btnSave.FillColor2 = System.Drawing.Color.White;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnSave.HoverState.Parent = this.btnSave;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSave.Location = new System.Drawing.Point(19, 164);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.ShadowDecoration.Parent = this.btnSave;
-            this.btnSave.Size = new System.Drawing.Size(130, 52);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Save";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label7.Location = new System.Drawing.Point(287, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 28);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "250,00";
+            this.lbSubTotal.AutoSize = true;
+            this.lbSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubTotal.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbSubTotal.Location = new System.Drawing.Point(138, 57);
+            this.lbSubTotal.Name = "lbSubTotal";
+            this.lbSubTotal.Size = new System.Drawing.Size(58, 20);
+            this.lbSubTotal.TabIndex = 7;
+            this.lbSubTotal.Text = "250,00";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label6.Location = new System.Drawing.Point(424, 92);
+            this.label6.Location = new System.Drawing.Point(138, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 20);
             this.label6.TabIndex = 6;
@@ -595,22 +622,11 @@ namespace QuanLyBanHang
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(15, 129);
+            this.label5.Location = new System.Drawing.Point(15, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "SubTotal";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label4.Location = new System.Drawing.Point(312, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "-19%";
             // 
             // guna2CheckBox2
             // 
@@ -634,37 +650,6 @@ namespace QuanLyBanHang
             this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.White;
             this.guna2CheckBox2.UseVisualStyleBackColor = false;
             // 
-            // guna2CheckBox1
-            // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.BackColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.Gray;
-            this.guna2CheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.OrangeRed;
-            this.guna2CheckBox1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2CheckBox1.Location = new System.Drawing.Point(19, 59);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(94, 21);
-            this.guna2CheckBox1.TabIndex = 2;
-            this.guna2CheckBox1.Text = "Day event";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.Gray;
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(288, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "SubTotal";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -672,17 +657,18 @@ namespace QuanLyBanHang
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(15, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "SubTotal";
+            this.label2.Text = "Total";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.guna2GradientPanel1);
-            this.panel1.Location = new System.Drawing.Point(663, 194);
+            this.panel1.Controls.Add(this.floPanel);
+            this.panel1.Location = new System.Drawing.Point(645, 194);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(448, 378);
+            this.panel1.Size = new System.Drawing.Size(466, 378);
             this.panel1.TabIndex = 2;
             // 
             // guna2GradientPanel1
@@ -690,10 +676,10 @@ namespace QuanLyBanHang
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(128)))), ((int)(((byte)(69)))));
             this.guna2GradientPanel1.Controls.Add(this.label8);
             this.guna2GradientPanel1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 3);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(436, 60);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(463, 60);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // label8
@@ -707,12 +693,20 @@ namespace QuanLyBanHang
             this.label8.TabIndex = 0;
             this.label8.Text = "New order";
             // 
+            // floPanel
+            // 
+            this.floPanel.AutoScroll = true;
+            this.floPanel.Location = new System.Drawing.Point(3, 69);
+            this.floPanel.Name = "floPanel";
+            this.floPanel.Size = new System.Drawing.Size(460, 306);
+            this.floPanel.TabIndex = 0;
+            // 
             // flowLayoutList
             // 
             this.flowLayoutList.AutoScroll = true;
             this.flowLayoutList.Location = new System.Drawing.Point(6, 194);
             this.flowLayoutList.Name = "flowLayoutList";
-            this.flowLayoutList.Size = new System.Drawing.Size(651, 622);
+            this.flowLayoutList.Size = new System.Drawing.Size(633, 522);
             this.flowLayoutList.TabIndex = 1;
             this.flowLayoutList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
@@ -737,6 +731,8 @@ namespace QuanLyBanHang
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -754,14 +750,10 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2GradientButton btnPay;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSave;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbSubTotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutList;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
@@ -769,8 +761,7 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnInsert;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private System.Windows.Forms.Label label13;
@@ -790,5 +781,12 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2ComboBox cbbType;
         private System.Windows.Forms.ComboBox cbbID;
         private System.Windows.Forms.FlowLayoutPanel flpProductGroup;
+        private System.Windows.Forms.FlowLayoutPanel floPanel;
+        private System.Windows.Forms.Label lbTotal;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private System.Windows.Forms.FlowLayoutPanel flowBestSeller;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2TrackBar tBPrice;
+        private System.Windows.Forms.Label lbValue;
     }
 }
