@@ -15,7 +15,7 @@ namespace DTO
         private string diaChi;
         private string dienThoai;
         private string maLoaiKH;
-        private string images;
+        private Byte[] images;
         #endregion
         #region Khởi tạo cho Customer
         public CustomerDTO()
@@ -23,7 +23,7 @@ namespace DTO
 
         }
         public CustomerDTO(string maKH, string tenKH, string gioiTinh, 
-            string diaChi , string dienThoai, string maloaiKH)
+            string diaChi , string dienThoai, string maloaiKH,byte[] images)
         {
             MaKH = maKH;
             TenKH = tenKH;
@@ -31,6 +31,7 @@ namespace DTO
             DiaChi = diaChi;
             DienThoai = dienThoai;
             MaLoaiKH = maLoaiKH;
+            Images = images;
         }
         #endregion
         #region Property cho lớp khách hàng
@@ -40,7 +41,7 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string DienThoai { get => dienThoai; set => dienThoai = value; }
         public string MaLoaiKH { get => maLoaiKH; set => maLoaiKH = value; }
-        public string Images { get => images; set => images = value; }
+        public byte[] Images { get => images; set => images = value; }
         #endregion
     }
 }

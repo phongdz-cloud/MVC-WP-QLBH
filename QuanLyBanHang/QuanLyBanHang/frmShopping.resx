@@ -118,19 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2GradientButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAXZJREFUSEvt
-        lL1KxEAUhSMiipWWdj6C4AtYbOJ/ubWPYKewFjspZFcrEQut7SysbEXE1sIXUMTaShCTLRxvknO9MUzC
-        gnOxcD84kJt7Zs5OZmeCEf+HxEQbqQmfSFZJj4kJ1xAnUOOlYtTQM+IEh0lFiBNcJg0hTnCZNIQ4wWXS
-        EOKE2oYnRsHfuBoDE96QrlHmNfuaVB7DcA+l4GrQTXNHukWZ1+xrUnkMwz2UQm3DE38WTJ9/wZqlKZSC
-        K9jnHtfCg1DmeN7jDumVtINXBTwIpVes2Zymue85I41be2jpBQ/iaMser07a3vqshLfe0NYJpvn6mPeq
-        Et6BxX8wzcWhrCKcBEsBG1D+CpqnGlooDtuwCE7j8Lq0Z4sT9KvH6CgdOfqfSRxuI+onDvOwOrcX7fFs
-        juwzUn1Q6Wcr3c378Knwvr88VwqtX6kv6DqcwWPwYVbm6cgc8kpVodvqlC6GLsog23M86pLG0QP9sU6y
-        s4pXDQTBF9r8mPGV5N7HAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="guna2GradientButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnInsert.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAABVRJREFUaEPt
         WVuIHEUUnfh+RFER/fCB+iM+ECQoiiAhW127a0xEYaOgKP6I4FuR+CFaPWOImhAh4Ec+RDEKvhBEhChK
@@ -592,16 +580,6 @@
         xPZS2cU2bMYFKXg41rUhFNNebhT5Jx3V/KGpuCmYpVEovtiek1WUe5dvyYXm5zGNZ7M0CsW0FyzsaWYS
         Z/W8KY0UKpKJQbFse04+UJbL/TfhOL5jGiVdG0Jx2/a87KDvar7Z0rUhFPvR96mEO/Q9qfCGfbo2Dg35
         LXxKqkFkdkrX/QkymS+WLJO4fqkKXwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAPFJREFUSEvl
-        lkEKgkAUhiWwC7mNiBYzXsALNOIZWrRwVVfxAt2nTQXSqgu8HtPL5o+JUh4u6oM/+P2d/4mVY0JVltIq
-        35GzBxYp6Eou31BdT5IQGYInl/lC4l5QaZZBT0NFMZWIQ2ePQegl0Udia8Jj5My+G4bBXT74gtia8Jio
-        8bcxEmgP4q/CrMcZ5OxlrEH0J4P4vzWTdb3gn/M82sd6ewXa+vVBA59xMV6eezhIzlEDusEoA91glIFu
-        MMpANxhloBuMMtANRhnoBqMMdINRBrr549wZZR69rBO+bg3cHmLglmG24Qtk+wzU1PruKktvHfhK5xWI
-        4y4AAAAASUVORK5CYII=
 </value>
   </data>
 </root>

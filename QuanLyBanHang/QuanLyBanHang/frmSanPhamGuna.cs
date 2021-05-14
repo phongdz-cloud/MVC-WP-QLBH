@@ -20,10 +20,12 @@ namespace QuanLyBanHang
         private int flag = -1;
         private string err;
         private DataTable dbProductType;
+        private DataTable dbProduct;
 
         public static frmSanPhamGuna Instance { get { if (instance == null) instance = new frmSanPhamGuna(); return frmSanPhamGuna.instance; } private set => instance = value; }
 
         public DataTable DbProductType { get => dbProductType; set => dbProductType = value; }
+        public DataTable DbProduct { get => dbProduct; set => dbProduct = value; }
 
         public frmSanPhamGuna()
         {
@@ -41,8 +43,8 @@ namespace QuanLyBanHang
             MANHOMSP.DataSource = DbProductType;
             MANHOMSP.DisplayMember = "TENNHOMSP";
             MANHOMSP.ValueMember = "MANHOMSP";
-            DataTable dbProduct = productBUS.GetProduct();
-            dgvProduct.DataSource = dbProduct;
+            DbProduct = productBUS.GetProduct();
+            dgvProduct.DataSource = DbProduct;
             lbSoLuong.Text = (dgvProduct.Rows.Count -2).ToString();
         }
         private void frmSanPhamGuna_Load(object sender, EventArgs e)

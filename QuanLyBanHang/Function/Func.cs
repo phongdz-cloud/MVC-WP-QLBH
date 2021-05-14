@@ -77,64 +77,70 @@ namespace Function
         #region Đổi số thành chữ
         public static string NumbertoWord(double inputNumber)
         {
-            string result = "";
-            bool isNegative = false;
-            string[] unitNumbers = new string[] { "không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy",
+            try
+            {
+                string result = "";
+                bool isNegative = false;
+                string[] unitNumbers = new string[] { "không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy",
                                                     "tám","chín"};
-            string[] placeNumbers = new string[] { "", "nghìn", "triệu", "tỷ" };
-            string sNumber = inputNumber.ToString("#"); // bỏ đi dấu ,
-            double number = Convert.ToDouble(sNumber);
-            if (number < 0)
-            {
-                number *= -1; // đưa về số dương để đọc các chữ số
-                isNegative = true;
-            }
-            if (number == 0) return result + unitNumbers[0];
-            else
-            {
-                // 1    .   ###
-                // 2 nghìn. ###,###
-                // 3 triệu. ###,###,###
-                // 4 tỷ   . ###,###,###,###  
-                int positionDigit = sNumber.Length;
-                int ones, tens, hundreds, placeNumber;  //321312321
-                placeNumber = 0;
-                while (positionDigit > 0)
+                string[] placeNumbers = new string[] { "", "nghìn", "triệu", "tỷ" };
+                string sNumber = inputNumber.ToString("#"); // bỏ đi dấu ,
+                double number = Convert.ToDouble(sNumber);
+                if (number < 0)
                 {
-                    tens = hundreds = -1;
-                    ones = Convert.ToInt32(sNumber.Substring(positionDigit-- - 1, 1));
-                    if (positionDigit > 0)
-                        tens = Convert.ToInt32(sNumber.Substring(positionDigit-- - 1, 1));
-                    if (positionDigit > 0)
-                        hundreds = Convert.ToInt32(sNumber.Substring(positionDigit-- - 1, 1));
-                    if ((ones >= 0) || (tens >= 0) || (hundreds >= 0) || (placeNumber == 3))
-                        result = placeNumbers[placeNumber++] + result;
-                    if (placeNumber > 3) placeNumber = 1;
-                    if (ones == 1 && tens > 1) result = unitNumbers[ones] + " " + result;
-                    else
-                    {
-                        if (ones == 5 && tens > 0) result = "lăm " + result;
-                        else if (ones > 0) result = unitNumbers[ones] + " " + result;
-                    }
-                    if (tens < 0) break;
-                    else
-                    {
-                        if (tens == 0 && ones > 0) result = "lẻ " + result;
-                        if (tens == 1) result = "mười " + result;
-                        if (tens > 1) result = unitNumbers[tens] + " mươi " + result;
-                    }
-                    if (hundreds < 0) break;
-                    else
-                    {
-                        if ((hundreds > 0) || (tens > 0) || (ones > 0))
-                            result = unitNumbers[hundreds] + " trăm " + result;
-                    }
-                    result = " " + result;
+                    number *= -1; // đưa về số dương để đọc các chữ số
+                    isNegative = true;
                 }
+                if (number == 0) return result + unitNumbers[0];
+                else
+                {
+                    // 1    .   ###
+                    // 2 nghìn. ###,###
+                    // 3 triệu. ###,###,###
+                    // 4 tỷ   . ###,###,###,###  
+                    int positionDigit = sNumber.Length;
+                    int ones, tens, hundreds, placeNumber;  //321312321
+                    placeNumber = 0;
+                    while (positionDigit > 0)
+                    {
+                        tens = hundreds = -1;
+                        ones = Convert.ToInt32(sNumber.Substring(positionDigit-- - 1, 1));
+                        if (positionDigit > 0)
+                            tens = Convert.ToInt32(sNumber.Substring(positionDigit-- - 1, 1));
+                        if (positionDigit > 0)
+                            hundreds = Convert.ToInt32(sNumber.Substring(positionDigit-- - 1, 1));
+                        if ((ones >= 0) || (tens >= 0) || (hundreds >= 0) || (placeNumber == 3))
+                            result = placeNumbers[placeNumber++] + result;
+                        if (placeNumber > 3) placeNumber = 1;
+                        if (ones == 1 && tens > 1) result = unitNumbers[ones] + " " + result;
+                        else
+                        {
+                            if (ones == 5 && tens > 0) result = "lăm " + result;
+                            else if (ones > 0) result = unitNumbers[ones] + " " + result;
+                        }
+                        if (tens < 0) break;
+                        else
+                        {
+                            if (tens == 0 && ones > 0) result = "lẻ " + result;
+                            if (tens == 1) result = "mười " + result;
+                            if (tens > 1) result = unitNumbers[tens] + " mươi " + result;
+                        }
+                        if (hundreds < 0) break;
+                        else
+                        {
+                            if ((hundreds > 0) || (tens > 0) || (ones > 0))
+                                result = unitNumbers[hundreds] + " trăm " + result;
+                        }
+                        result = " " + result;
+                    }
+                }
+                result = result.Trim() + " đồng";
+                if (isNegative) return "Âm " + result;
+                return result;
+            }catch(Exception ex)
+            {
+                return "";
             }
-            result = result.Trim();
-            if (isNegative) return "Âm " + result;
-            return result;
         }
         #endregion
     }

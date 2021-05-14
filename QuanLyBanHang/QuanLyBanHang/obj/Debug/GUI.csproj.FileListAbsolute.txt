@@ -1,7 +1,6 @@
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
-C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmMain.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\GUI.csproj.CoreCompileInputs.cache
@@ -28,4 +27,5 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyB
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmCustomer.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmShopping.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Test.resources
+C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControl1.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\GUI.csprojAssemblyReference.cache
