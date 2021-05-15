@@ -28,4 +28,5 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyB
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmShopping.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Test.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.UserControl1.resources
+C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmInsertProduct.resources
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\QuanLyBanHang\obj\Debug\GUI.csprojAssemblyReference.cache

@@ -125,7 +125,7 @@ namespace QuanLyBanHang
                 }
             }
             catch (Exception ex)
-            { }
+            { MessageBox.Show(ex.Message); }
         }
 
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -15,17 +15,20 @@ namespace QuanLyBanHang
     public partial class frmSanPhamGuna : Form
     {
         private ProductGroupBUS productGroupBUS = new ProductGroupBUS();
+        private SupllierBUS supllierBUS = new SupllierBUS();
         private ProductBUS productBUS = new ProductBUS();
         private static frmSanPhamGuna instance;
-        private int flag = -1;
+        private ProductDTO product;
+        private int flag;
         private string err;
         private DataTable dbProductType;
         private DataTable dbProduct;
-
         public static frmSanPhamGuna Instance { get { if (instance == null) instance = new frmSanPhamGuna(); return frmSanPhamGuna.instance; } private set => instance = value; }
 
         public DataTable DbProductType { get => dbProductType; set => dbProductType = value; }
         public DataTable DbProduct { get => dbProduct; set => dbProduct = value; }
+        public int Flag { get => flag; set => flag = value; }
+        public ProductDTO Product { get => product; set => product = value; }
 
         public frmSanPhamGuna()
         {
@@ -39,24 +42,20 @@ namespace QuanLyBanHang
         /// <param name="e"></param>
         private void load()
         {
+
             DbProductType = productGroupBUS.GetProductGroup();
-            MANHOMSP.DataSource = DbProductType;
+            MANHOMSP.DataSource = DbProductType ;
             MANHOMSP.DisplayMember = "TENNHOMSP";
             MANHOMSP.ValueMember = "MANHOMSP";
             DbProduct = productBUS.GetProduct();
             dgvProduct.DataSource = DbProduct;
-            lbSoLuong.Text = (dgvProduct.Rows.Count -2).ToString();
+            dgvSupplier.DataSource = supllierBUS.GetSupllier();
+            lbSoLuong.Text = (dgvProduct.Rows.Count).ToString();
         }
         private void frmSanPhamGuna_Load(object sender, EventArgs e)
         {
             load();
-            dis_en(false);
         }
-        /// <summary>
-        /// Sự kiện này có chức năng sắp xếp các sản phẩm theo người dùng
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void cbbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cbbSort.SelectedItem.ToString() == "Ascending Numbers")
@@ -80,78 +79,32 @@ namespace QuanLyBanHang
             product.NuocSX = dgvProduct.Rows[RowIndex].Cells["NUOCSX"].Value.ToString();
             return product;
         }
-        private void dis_en(bool e)
-        {
-            btnSave.Enabled = e;
-            btnCancel.Enabled = e;
-            btnDelete.Enabled = !e;
-            btnEdit.Enabled = !e;
-        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            flag = 1;
-            dis_en(true);
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận hủy",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                Product = getData(dgvProduct.CurrentCell.RowIndex);
+                if (productBUS.DeleteProduct(ref err, Product))
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            flag = 0;
-            dis_en(true);
+            Flag = 0;
+            product = getData(dgvProduct.CurrentRow.Index);
+            frmInsertProduct frmInsertProduct = new frmInsertProduct();
+            frmInsertProduct.ShowDialog();
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            if(flag != -1)
+            if(Flag != -1)
             {
                 frmSanPhamGuna_Load(sender, e);
-                flag = -1;
+                Flag = -1;
             }
-        }
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (dgvProduct.Rows[dgvProduct.CurrentCell.RowIndex].Cells[0].Value.ToString() != "")
-            {
-                if (flag == 1)
-                {
-                    DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận hủy",
-                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    ProductDTO product = getData(dgvProduct.CurrentCell.RowIndex);
-                    if (dr == DialogResult.Yes)
-                    {
-                        if (productBUS.DeleteProduct(ref err, product))
-                            MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                if (flag == 0)
-                {
-                    DialogResult dr = MessageBox.Show("Bạn có chắc muốn sửa không?", "Xác nhận hủy",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr == DialogResult.Yes)
-                    {
-                        ProductDTO product = getData(dgvProduct.CurrentCell.RowIndex);
-                        if (productBUS.UpdateProduct(ref err, product))
-                            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                        else MessageBox.Show(err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                dis_en(false);
-            }
-            else
-            {
-                MessageBox.Show("Không tồn tại chỉ mục?", "Xác nhận hủy",
-                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận hủy",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                flag = -1;
-                dis_en(false);
-            }
-            
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -165,6 +118,18 @@ namespace QuanLyBanHang
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void btInsert_Click(object sender, EventArgs e)
+        {
+            Flag = -1;
+            frmInsertProduct frmInsertProduct = new frmInsertProduct();
+            frmInsertProduct.ShowDialog();
+        }
+
+        private void guna2GroupBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
