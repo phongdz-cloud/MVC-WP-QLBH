@@ -130,7 +130,5 @@ namespace QuanLyBanHang
                 else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
     }
 }

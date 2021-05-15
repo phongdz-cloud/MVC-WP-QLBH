@@ -16,6 +16,7 @@ namespace QuanLyBanHang
 {
     public partial class frmShopping : Form
     {
+        private static frmShopping instance;
         private ReceiptDAO receiptDAO = new ReceiptDAO();
         private DetailReceiptDAO detailReceiptDAO = new DetailReceiptDAO();
         private DataTable dblistImageGroupProduct;
@@ -34,6 +35,10 @@ namespace QuanLyBanHang
         List<PictureBox> row;
         List<double> listPriceMax = new List<double>();
         Dictionary<string, UserControl1> newOrder = new Dictionary<string, UserControl1>();
+
+        public DataTable DblistImageProduct { get => dblistImageProduct; set => dblistImageProduct = value; }
+        public static frmShopping Instance { get { if (instance == null) instance = new frmShopping(); return frmShopping.instance; } set => instance = value; }
+
         public frmShopping()
         {
             InitializeComponent();
@@ -110,7 +115,7 @@ namespace QuanLyBanHang
             cbbIDEmployee.DisplayMember = "HOTEN";
             cbbIDEmployee.ValueMember = "MANV";
              if (dblistImageGroupProduct == null) loadListNhomSP();
-             if (dblistImageProduct == null) loadListSP();
+             if (DblistImageProduct == null) loadListSP();
             searchPriceMax();
 
         }
@@ -134,12 +139,12 @@ namespace QuanLyBanHang
             string[] s;
             for (int i = 0; i <= dbBestSeller.Rows.Count - 1; i++)
             {
-                for (int j = 0; j < dblistImageProduct.Rows.Count - 1; j++)
+                for (int j = 0; j < DblistImageProduct.Rows.Count - 1; j++)
                 {
-                    if (dblistImageProduct.Rows[j][0].ToString() == dbBestSeller.Rows[i][0].ToString())
+                    if (DblistImageProduct.Rows[j][0].ToString() == dbBestSeller.Rows[i][0].ToString())
                     {
-                        s = searchProduct(dblistImageProduct.Rows[j][0].ToString());
-                        byte[] ImageArray = (byte[])dblistImageProduct.Rows[j][3];
+                        s = searchProduct(DblistImageProduct.Rows[j][0].ToString());
+                        byte[] ImageArray = (byte[])DblistImageProduct.Rows[j][3];
                         ImageByteArray = ImageArray;
                         pic = new PictureBox();
                         pic.Width = 150;
@@ -163,17 +168,17 @@ namespace QuanLyBanHang
         void loadListSP()
         {
 
-            dblistImageProduct = DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM dbo.ListImageSP", CommandType.Text, null);
+            DblistImageProduct = DBProvider.Instance.ExecuteQueryDataTable("SELECT * FROM dbo.ListImageSP", CommandType.Text, null);
             string[] s;
             for (int i = 0; i <= dblistImageGroupProduct.Rows.Count - 1; i++)
             {
                 row = new List<PictureBox>();
-                for (int j = 0; j <= dblistImageProduct.Rows.Count - 1; j++)
+                for (int j = 0; j <= DblistImageProduct.Rows.Count - 1; j++)
                 {
-                    if (dblistImageGroupProduct.Rows[i][0].ToString() == dblistImageProduct.Rows[j][1].ToString())
+                    if (dblistImageGroupProduct.Rows[i][0].ToString() == DblistImageProduct.Rows[j][1].ToString())
                     {
-                        s = searchProduct(dblistImageProduct.Rows[j][0].ToString());
-                        byte[] ImageArray = (byte[])dblistImageProduct.Rows[j][3];
+                        s = searchProduct(DblistImageProduct.Rows[j][0].ToString());
+                        byte[] ImageArray = (byte[])DblistImageProduct.Rows[j][3];
                         ImageByteArray = ImageArray;
                         pic = new PictureBox();
                         pic.Width = 150;
@@ -201,7 +206,7 @@ namespace QuanLyBanHang
                         status.Height = 50;
                         status.TextAlign = HorizontalAlignment.Center;
                         status.Location = new Point(100, 80);
-                        status.Tag = dblistImageProduct.Rows[j][0].ToString(); // lấy ra mã sản phẩm
+                        status.Tag = DblistImageProduct.Rows[j][0].ToString(); // lấy ra mã sản phẩm
                         status.Visible = false;
                         status.Image = Image.FromFile(@"C:\Users\dell\Desktop\Image\checkmark_50pxwhite.png");
                         status.ImageAlign = HorizontalAlignment.Center;
