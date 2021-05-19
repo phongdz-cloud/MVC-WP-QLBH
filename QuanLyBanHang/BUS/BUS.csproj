@@ -50,13 +50,15 @@
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="CustomerTypeBUS.cs" />
     <Compile Include="DetailReceiptBUS.cs" />
+    <Compile Include="DetailSupllierContractBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
-    <Compile Include="OrderBUS.cs" />
+    <Compile Include="PaymentBUS.cs" />
     <Compile Include="ProductBUS.cs" />
     <Compile Include="ProductGroupBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceiptBUS.cs" />
     <Compile Include="SupllierBUS.cs" />
+    <Compile Include="SupllierContractBUS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

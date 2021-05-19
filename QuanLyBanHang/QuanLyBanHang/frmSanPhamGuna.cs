@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
-using Function;
+using Guna.UI2.WinForms;
 namespace QuanLyBanHang
 {
     public partial class frmSanPhamGuna : Form
@@ -23,12 +23,16 @@ namespace QuanLyBanHang
         private string err;
         private DataTable dbProductType;
         private DataTable dbProduct;
+        private Dictionary<string, UserControl2> updateOrder = new Dictionary<string, UserControl2>();
+
         public static frmSanPhamGuna Instance { get { if (instance == null) instance = new frmSanPhamGuna(); return frmSanPhamGuna.instance; } private set => instance = value; }
 
         public DataTable DbProductType { get => dbProductType; set => dbProductType = value; }
         public DataTable DbProduct { get => dbProduct; set => dbProduct = value; }
         public int Flag { get => flag; set => flag = value; }
         public ProductDTO Product { get => product; set => product = value; }
+        public Dictionary<string, UserControl2> UpdateOrder { get => updateOrder; set => updateOrder = value; }
+
 
         public frmSanPhamGuna()
         {
@@ -40,6 +44,7 @@ namespace QuanLyBanHang
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        
         private void load()
         {
 
@@ -51,6 +56,39 @@ namespace QuanLyBanHang
             dgvProduct.DataSource = DbProduct;
             dgvSupplier.DataSource = supllierBUS.GetSupllier();
             lbSoLuong.Text = (dgvProduct.Rows.Count).ToString();
+        }
+        UserControl2 orderProduct(string nameProduct, string price, string idSP)
+        {
+            UserControl2 ctl2 = new UserControl2(1);
+            if (!UpdateOrder.ContainsKey(nameProduct))
+            {
+                double priceSupllier = Convert.ToDouble(price) * 0.7;
+                ctl2.Controls["lbSP"].Text = nameProduct;
+                ctl2.Controls["lbPrice"].Text = priceSupllier.ToString() + "đ";
+                ctl2.Controls["lbPrice"].Tag = idSP; // luu idSP
+                ctl2.Controls["btnRemove"].Click += eventButtonClick;
+                ctl2.Controls["btnRemove"].Tag = nameProduct;
+                UpdateOrder.Add(nameProduct, ctl2);
+            }
+            return ctl2;
+        }
+        private void eventButtonClick(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm khỏi giỏ hàng không ?", "Xác nhận hủy",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                Guna2Button button = (Guna2Button)sender;
+                foreach (UserControl item in newOrder.Controls)
+                {
+                    if (item.Controls["btnRemove"].Tag.ToString() == button.Tag.ToString())
+                    {
+                        newOrder.Controls.Remove(item);
+                        UpdateOrder.Remove(item.Controls["btnRemove"].Tag.ToString());
+                        break;
+                    }
+                }
+            }
         }
         private void frmSanPhamGuna_Load(object sender, EventArgs e)
         {
@@ -94,7 +132,7 @@ namespace QuanLyBanHang
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Flag = 0;
-            product = getData(dgvProduct.CurrentRow.Index);
+            Product = getData(dgvProduct.CurrentRow.Index);
             frmInsertProduct frmInsertProduct = new frmInsertProduct();
             frmInsertProduct.ShowDialog();
         }
@@ -130,6 +168,32 @@ namespace QuanLyBanHang
         private void guna2GroupBox4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Product = getData(dgvProduct.CurrentCell.RowIndex);
+            if (!UpdateOrder.ContainsKey(dgvProduct.Rows[dgvProduct.CurrentCell.RowIndex].Cells[1].ToString()))
+            {
+                newOrder.Controls.Add(orderProduct(Product.TenSP, Product.GiaBan.ToString(), product.MaSP));
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa hết sản phẩm muốn nhập ?", "Xác nhận hủy",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr == DialogResult.Yes)
+            {
+                newOrder.Controls.Clear();
+                UpdateOrder.Clear();
+            }
+        }
+
+        private void btnInput_Click(object sender, EventArgs e)
+        {
+            frmDetailContract frmDetail = new frmDetailContract();
+            frmDetail.ShowDialog();
         }
     }
 }

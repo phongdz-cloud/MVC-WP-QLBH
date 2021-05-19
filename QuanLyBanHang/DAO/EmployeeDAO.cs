@@ -24,7 +24,7 @@ namespace DAO
         }
         #endregion
         #region Insert Employee
-        public bool insertEmployee(ref string err, EmployeeDTO employee) // StoreProcedure <=> void ->> func -> return
+        public bool insertEmployee(ref string err, EmployeeDTO employee) 
         {
             return DBProvider.Instance.MyExcuteNonQuery("spInsertNhanVien", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@MANV", employee.MaNV),
@@ -41,8 +41,8 @@ namespace DAO
         #region Update Employee
         public bool updateEmployee(ref string err, EmployeeDTO employee)
         {
-            return DBProvider.Instance.MyExcuteNonQuery("spUpdateNhanVien", CommandType.StoredProcedure, ref err,
-               new SqlParameter("@MANV", employee.MaNV),
+                return DBProvider.Instance.MyExcuteNonQuery("spUpdateNhanVien", CommandType.StoredProcedure, ref err,
+                new SqlParameter("@MANV", employee.MaNV),
                 new SqlParameter("@HOTEN", employee.HoTen),
                 new SqlParameter("@GIOITINH", employee.GioiTinh),
                 new SqlParameter("@NGAYSINH", employee.NgaySinh),

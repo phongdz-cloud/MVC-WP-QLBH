@@ -116,10 +116,10 @@ namespace QuanLyBanHang
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(76, 441);
+            this.btnLogin.Location = new System.Drawing.Point(203, 441);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(375, 51);
+            this.btnLogin.Size = new System.Drawing.Size(248, 51);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
