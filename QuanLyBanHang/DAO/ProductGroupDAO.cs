@@ -27,7 +27,7 @@ namespace DAO
         #region Insert product group
         public bool insertProductGroup(ref string err, ProductGroupDTO productGroup)
         {
-            return DBProvider.Instance.MyExcuteNonQuery("spInsertNhomSanPham", CommandType.StoredProcedure, ref err,
+            return DBProvider.Instance.MyExcuteNonQuery("spInsertPhieuChi", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MANHOMSP", productGroup.ManhomSP),
                 new SqlParameter("@TENNHOMSP", productGroup.TennhomSP));
         }

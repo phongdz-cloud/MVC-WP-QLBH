@@ -40,6 +40,7 @@ namespace QuanLyBanHang
             this.label2 = new System.Windows.Forms.Label();
             this.btnRest = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2TileButton();
             this.txtNameProduct = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbbGroupProduct = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@ namespace QuanLyBanHang
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -63,7 +63,7 @@ namespace QuanLyBanHang
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(795, 6);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(1035, 6);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -79,7 +79,7 @@ namespace QuanLyBanHang
             this.txtFileName.Multiline = true;
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = true;
-            this.txtFileName.Size = new System.Drawing.Size(430, 37);
+            this.txtFileName.Size = new System.Drawing.Size(710, 37);
             this.txtFileName.TabIndex = 14;
             // 
             // btnBrown
@@ -116,7 +116,7 @@ namespace QuanLyBanHang
             this.btnInsert.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(146)))), ((int)(((byte)(231)))));
             this.btnInsert.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnInsert.HoverState.Parent = this.btnInsert;
-            this.btnInsert.Location = new System.Drawing.Point(242, 355);
+            this.btnInsert.Location = new System.Drawing.Point(505, 359);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.ShadowDecoration.Parent = this.btnInsert;
             this.btnInsert.Size = new System.Drawing.Size(136, 40);
@@ -140,7 +140,7 @@ namespace QuanLyBanHang
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(35, 213);
+            this.label9.Location = new System.Drawing.Point(19, 163);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(201, 23);
             this.label9.TabIndex = 6;
@@ -151,7 +151,7 @@ namespace QuanLyBanHang
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 158);
+            this.label5.Location = new System.Drawing.Point(19, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 23);
             this.label5.TabIndex = 2;
@@ -162,7 +162,7 @@ namespace QuanLyBanHang
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 108);
+            this.label2.Location = new System.Drawing.Point(19, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 23);
             this.label2.TabIndex = 0;
@@ -180,7 +180,7 @@ namespace QuanLyBanHang
             this.btnRest.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(146)))), ((int)(((byte)(231)))));
             this.btnRest.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnRest.HoverState.Parent = this.btnRest;
-            this.btnRest.Location = new System.Drawing.Point(630, 480);
+            this.btnRest.Location = new System.Drawing.Point(910, 479);
             this.btnRest.Name = "btnRest";
             this.btnRest.ShadowDecoration.Parent = this.btnRest;
             this.btnRest.Size = new System.Drawing.Size(183, 40);
@@ -206,9 +206,30 @@ namespace QuanLyBanHang
             this.guna2GroupBox2.Location = new System.Drawing.Point(290, 61);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(543, 412);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(803, 412);
             this.guna2GroupBox2.TabIndex = 11;
             this.guna2GroupBox2.Text = "Nhập thông tin nhân viên";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BorderRadius = 5;
+            this.btnUpdate.BorderThickness = 1;
+            this.btnUpdate.CheckedState.Parent = this.btnUpdate;
+            this.btnUpdate.CustomImages.Parent = this.btnUpdate;
+            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnUpdate.FillColor = System.Drawing.Color.White;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(146)))), ((int)(((byte)(231)))));
+            this.btnUpdate.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.HoverState.Parent = this.btnUpdate;
+            this.btnUpdate.Location = new System.Drawing.Point(650, 359);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
+            this.btnUpdate.Size = new System.Drawing.Size(136, 40);
+            this.btnUpdate.TabIndex = 30;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtNameProduct
             // 
@@ -224,7 +245,7 @@ namespace QuanLyBanHang
             this.txtNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameProduct.HoverState.Parent = this.txtNameProduct;
-            this.txtNameProduct.Location = new System.Drawing.Point(253, 148);
+            this.txtNameProduct.Location = new System.Drawing.Point(237, 98);
             this.txtNameProduct.Margin = new System.Windows.Forms.Padding(6);
             this.txtNameProduct.Name = "txtNameProduct";
             this.txtNameProduct.PasswordChar = '\0';
@@ -241,7 +262,7 @@ namespace QuanLyBanHang
             this.cbbGroupProduct.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbbGroupProduct.Location = new System.Drawing.Point(253, 262);
+            this.cbbGroupProduct.Location = new System.Drawing.Point(237, 212);
             this.cbbGroupProduct.Name = "cbbGroupProduct";
             this.cbbGroupProduct.Size = new System.Drawing.Size(270, 28);
             this.cbbGroupProduct.TabIndex = 28;
@@ -251,7 +272,7 @@ namespace QuanLyBanHang
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 267);
+            this.label3.Location = new System.Drawing.Point(19, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 23);
             this.label3.TabIndex = 27;
@@ -271,7 +292,7 @@ namespace QuanLyBanHang
             "Đức",
             "Ý",
             "Hà Lan"});
-            this.cbbNuocSX.Location = new System.Drawing.Point(253, 208);
+            this.cbbNuocSX.Location = new System.Drawing.Point(237, 158);
             this.cbbNuocSX.Name = "cbbNuocSX";
             this.cbbNuocSX.Size = new System.Drawing.Size(270, 28);
             this.cbbNuocSX.TabIndex = 26;
@@ -290,7 +311,7 @@ namespace QuanLyBanHang
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(253, 98);
+            this.txtID.Location = new System.Drawing.Point(237, 48);
             this.txtID.Margin = new System.Windows.Forms.Padding(6);
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '\0';
@@ -323,32 +344,11 @@ namespace QuanLyBanHang
             this.guna2GroupBox1.TabIndex = 10;
             this.guna2GroupBox1.Text = "Avatar";
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BorderRadius = 5;
-            this.btnUpdate.BorderThickness = 1;
-            this.btnUpdate.CheckedState.Parent = this.btnUpdate;
-            this.btnUpdate.CustomImages.Parent = this.btnUpdate;
-            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnUpdate.FillColor = System.Drawing.Color.White;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(146)))), ((int)(((byte)(231)))));
-            this.btnUpdate.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(387, 355);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
-            this.btnUpdate.Size = new System.Drawing.Size(136, 40);
-            this.btnUpdate.TabIndex = 30;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // frmInsertProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 532);
+            this.ClientSize = new System.Drawing.Size(1105, 532);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.btnBrown);

@@ -12,6 +12,7 @@ using DTO;
 using DAO;
 using System.IO;
 using Function;
+using Guna.UI2.WinForms;
 namespace QuanLyBanHang
 {
     public partial class frmCustomer : Form

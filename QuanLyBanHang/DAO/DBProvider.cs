@@ -15,7 +15,6 @@ namespace DAO
         private SqlDataAdapter adp;
         private static string myMsg;
         string strConnect = "Data Source=(local);Initial Catalog=PROJECT_DBMS;Integrated Security=True";
-        
         /*
          * 
          * Hàm khởi tạo có chức năng thực hiện kết nối tới Database trên local 
