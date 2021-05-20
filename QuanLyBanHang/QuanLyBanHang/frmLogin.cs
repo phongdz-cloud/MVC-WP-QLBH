@@ -29,7 +29,6 @@ namespace QuanLyBanHang
                 SqlDataReader read = DBProvider.Instance.Cmd.ExecuteReader();
                 if(read.Read())
                 {
-                    MessageBox.Show("Chúc mừng bạn đã đăng nhập thành công","Login thành công",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     if(guna2ToggleSwitch1.Checked == false)
                     {
@@ -38,6 +37,9 @@ namespace QuanLyBanHang
                     }
                     read.Close();
                     read.Dispose();
+
+                    frmSell.Intance.ShowDialog();
+                    this.Show();
                 }
                 else
                 {
@@ -51,9 +53,8 @@ namespace QuanLyBanHang
             {
                 DBProvider.Instance.Conn.Close();
                 DBProvider.Instance.Cmd.Dispose();
-                frmSell.Intance.ShowDialog();
-                this.Show();
             }
+
         }
 
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)

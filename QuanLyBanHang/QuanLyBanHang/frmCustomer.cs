@@ -41,6 +41,10 @@ namespace QuanLyBanHang
             InitializeComponent();
             load();
         }
+        public void Init()
+        {
+
+        }
         private void load()
         {
             DbCustomerALL = new DataTable();
