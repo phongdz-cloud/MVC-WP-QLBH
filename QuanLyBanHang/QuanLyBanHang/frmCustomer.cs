@@ -56,6 +56,8 @@ namespace QuanLyBanHang
             cbbType.DisplayMember = "TENLOAI";
             cbbType.ValueMember = "MALOAIKH";
             dgvCustomer.DataSource = customerBUS.GetCustomer();
+            ((DataGridViewImageColumn)dgvCustomer.Columns[6]).ImageLayout =
+ DataGridViewImageCellLayout.Stretch;
             lbCustomer.Text = (dgvCustomer.Rows.Count - 1).ToString() + " Employee";
             int countMale = 0;
             int countFemale = 0;

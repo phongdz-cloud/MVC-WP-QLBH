@@ -67,13 +67,17 @@ namespace QuanLyBanHang
             DataTable db = new DataTable();
             db = employeeBUS.GetEmployee();
             dgvEmployee.DataSource = db;
+            ((DataGridViewImageColumn)dgvEmployee.Columns[8]).ImageLayout =
+    DataGridViewImageCellLayout.Stretch;
             int countMale = 0;
             int countFemale = 0;
             for (int i = 0; i <= dgvEmployee.Rows.Count - 2; i++)
             {
                 if (dgvEmployee.Rows[i].Cells[2].Value.ToString() == "Nam") countMale++;
                 else countFemale++;
+
             }
+            lbEmployee.Text = (dgvEmployee.Rows.Count - 1).ToString() + " Employee";
             lbMale.Text = countMale.ToString() + " Male";
             lbFemale.Text = countFemale.ToString() + " Female";
             DbAll = new DataTable();
@@ -105,11 +109,8 @@ namespace QuanLyBanHang
             frmDetailEmloyee frmDetailEmloyee = new frmDetailEmloyee();
             frmDetailEmloyee.ShowDialog();
             frmDetailEmloyee.loadForm(ref flag);
-            if(flag == true)
-            {
-                DbAll = null;
-                frmEmployeeGuna_Load(sender,e);
-            }
+            DbAll = null;
+            frmEmployeeGuna_Load(sender,e);
         }
         private void btnView_Click(object sender, EventArgs e)
         {

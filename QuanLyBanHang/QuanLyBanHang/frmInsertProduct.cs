@@ -97,7 +97,7 @@ namespace QuanLyBanHang
             product.TenSP = txtNameProduct.Text;
             product.NuocSX = cbbNuocSX.Text;
             product.ManhomSP = cbbGroupProduct.SelectedValue.ToString();
-            product.GiaBan = 0;
+            product.GiaBan = Convert.ToInt32(txtPrice.Text);
             product.SlTon = 0;
             return product;
         }
