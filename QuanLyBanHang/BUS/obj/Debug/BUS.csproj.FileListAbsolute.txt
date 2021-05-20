@@ -9,3 +9,14 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\DAO.dll
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\DTO.dll
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\BUS.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\BUS.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\DAO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\DTO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\DAO.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\bin\Debug\DTO.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj\Debug\BUS.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\BUS\obj\Debug\BUS.pdb

@@ -9,3 +9,14 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Functio
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.dll
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.pdb
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\bin\Debug\Function.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\bin\Debug\Function.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\bin\Debug\DAO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\bin\Debug\DTO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\bin\Debug\DAO.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\bin\Debug\DTO.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.csproj.CopyComplete
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\Function\obj\Debug\Function.pdb

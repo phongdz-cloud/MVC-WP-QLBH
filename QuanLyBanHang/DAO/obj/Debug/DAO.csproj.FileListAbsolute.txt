@@ -7,3 +7,12 @@ C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\bin
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\bin\Debug\DTO.pdb
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\dell\Desktop\CloneProject\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\bin\Debug\DAO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\bin\Debug\DAO.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\bin\Debug\DTO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\bin\Debug\DTO.pdb
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.dll
+C:\Users\DELL\Desktop\SQL\Project-Qu-n-l-b-n-h-ng\QuanLyBanHang\DAO\obj\Debug\DAO.pdb
