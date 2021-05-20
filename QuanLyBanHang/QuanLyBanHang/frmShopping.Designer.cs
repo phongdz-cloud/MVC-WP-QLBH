@@ -32,6 +32,7 @@ namespace QuanLyBanHang
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShopping));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtPhoneEmloyee = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiaChiEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSexEmployee = new Guna.UI2.WinForms.Guna2TextBox();
@@ -101,6 +102,7 @@ namespace QuanLyBanHang
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.btnExit);
             this.guna2GroupBox2.Controls.Add(this.txtPhoneEmloyee);
             this.guna2GroupBox2.Controls.Add(this.txtDiaChiEmployee);
             this.guna2GroupBox2.Controls.Add(this.txtSexEmployee);
@@ -118,6 +120,28 @@ namespace QuanLyBanHang
             this.guna2GroupBox2.Size = new System.Drawing.Size(364, 311);
             this.guna2GroupBox2.TabIndex = 3;
             this.guna2GroupBox2.Text = "Employee";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.BorderRadius = 5;
+            this.btnExit.BorderThickness = 1;
+            this.btnExit.CheckedState.Parent = this.btnExit;
+            this.btnExit.CustomImages.Parent = this.btnExit;
+            this.btnExit.FillColor = System.Drawing.Color.White;
+            this.btnExit.FillColor2 = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnExit.HoverState.Parent = this.btnExit;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnExit.Location = new System.Drawing.Point(181, 261);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Parent = this.btnExit;
+            this.btnExit.Size = new System.Drawing.Size(178, 41);
+            this.btnExit.TabIndex = 24;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // txtPhoneEmloyee
             // 
@@ -308,10 +332,10 @@ namespace QuanLyBanHang
             this.btnInsert.HoverState.Parent = this.btnInsert;
             this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
             this.btnInsert.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInsert.Location = new System.Drawing.Point(85, 278);
+            this.btnInsert.Location = new System.Drawing.Point(182, 278);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.ShadowDecoration.Parent = this.btnInsert;
-            this.btnInsert.Size = new System.Drawing.Size(282, 41);
+            this.btnInsert.Size = new System.Drawing.Size(178, 41);
             this.btnInsert.TabIndex = 13;
             this.btnInsert.Text = "Insert & Edit";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -788,5 +812,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2TrackBar tBPrice;
         private System.Windows.Forms.Label lbValue;
+        private Guna.UI2.WinForms.Guna2GradientButton btnExit;
     }
 }

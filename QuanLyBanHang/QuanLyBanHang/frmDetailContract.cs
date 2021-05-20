@@ -31,6 +31,10 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
         }
+        public void Init()
+        {
+
+        }
         private PaymentDTO getPayment(string idContract,string idEmployee,double total)
         {
             PaymentDTO payment = new PaymentDTO();

@@ -23,6 +23,10 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
         }
+        public void Init()
+        {
+
+        }
         private void btnBrown_Click(object sender, EventArgs e)
         {
             try

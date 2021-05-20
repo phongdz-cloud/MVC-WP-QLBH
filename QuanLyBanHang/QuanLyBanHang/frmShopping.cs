@@ -37,14 +37,16 @@ namespace QuanLyBanHang
         Dictionary<string, UserControl1> newOrder = new Dictionary<string, UserControl1>();
 
         public DataTable DblistImageProduct { get => dblistImageProduct; set => dblistImageProduct = value; }
-        public static frmShopping Instance { get { if (instance == null) instance = new frmShopping(); return frmShopping.instance; } set => instance = value; }
+        public static frmShopping Instance { get { if (instance == null) instance = new frmShopping(); return frmShopping.instance; }private set => instance = value; }
 
         public frmShopping()
         {
             InitializeComponent();
         }
+        public void Init()
+        {
 
-
+        }
         UserControl1 orderProduct(string nameProduct, string price, int amount,string idSP)
         {
             UserControl1 ctl1 = new UserControl1(amount);
@@ -81,8 +83,7 @@ namespace QuanLyBanHang
                 lbSubTotal.Text = "";
             }
         }
-        // Procedure  -> số dòng bị ảnh hưởng - > Message trigger
-        // Fuction
+
         private void eventButtonClick(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm khỏi giỏ hàng không ?", "Xác nhận hủy",
@@ -208,7 +209,7 @@ namespace QuanLyBanHang
                         status.Location = new Point(100, 80);
                         status.Tag = DblistImageProduct.Rows[j][0].ToString(); // lấy ra mã sản phẩm
                         status.Visible = false;
-                        status.Image = Image.FromFile(@"C:\Users\dell\Desktop\Image\checkmark_50pxwhite.png");
+                        status.Image = Image.FromFile(Application.StartupPath + @"\Resources\checkmark_50pxwhite.png");
                         status.ImageAlign = HorizontalAlignment.Center;
 
                         pic.Image = Image.FromStream(new MemoryStream(ImageByteArray));
@@ -250,7 +251,7 @@ namespace QuanLyBanHang
                 status.TextAlign = HorizontalAlignment.Center;
                 status.Location = new Point(100, 80);
                 status.Visible = false;
-                status.Image = Image.FromFile(@"C:\Users\dell\Desktop\Image\checkmark_50pxwhite.png");
+                status.Image = Image.FromFile(Application.StartupPath + @"\Resources\checkmark_50pxwhite.png");
                 status.ImageAlign = HorizontalAlignment.Center;
 
                 pic.Image = Image.FromStream(new MemoryStream(ImageByteArray));
@@ -454,6 +455,11 @@ namespace QuanLyBanHang
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

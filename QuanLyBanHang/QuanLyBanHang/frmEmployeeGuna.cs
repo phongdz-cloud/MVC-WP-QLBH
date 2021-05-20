@@ -35,6 +35,10 @@ namespace QuanLyBanHang
             InitializeComponent();
             load();
         }
+        public void Init()
+        {
+            
+        }
         private EmployeeDTO getData(int RowIndex)
         {
             EmployeeDTO employee = new EmployeeDTO();
@@ -139,7 +143,7 @@ namespace QuanLyBanHang
             if (dr == DialogResult.Yes)
                 this.Close();
         }
-
+        #region event không dùng
         private void frmEmployeeGuna_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -239,5 +243,6 @@ namespace QuanLyBanHang
         {
 
         }
+        #endregion
     }
 }

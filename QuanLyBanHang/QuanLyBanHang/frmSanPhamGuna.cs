@@ -44,7 +44,10 @@ namespace QuanLyBanHang
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        
+        public void Init()
+        {
+
+        }
         private void load()
         {
 
@@ -60,7 +63,7 @@ namespace QuanLyBanHang
         UserControl2 orderProduct(string nameProduct, string price, string idSP)
         {
             UserControl2 ctl2 = new UserControl2(1);
-            if (!UpdateOrder.ContainsKey(nameProduct))
+            if (!UpdateOrder.ContainsKey(idSP))
             {
                 double priceSupllier = Convert.ToDouble(price) * 0.7;
                 ctl2.Controls["lbSP"].Text = nameProduct;
@@ -68,7 +71,7 @@ namespace QuanLyBanHang
                 ctl2.Controls["lbPrice"].Tag = idSP; // luu idSP
                 ctl2.Controls["btnRemove"].Click += eventButtonClick;
                 ctl2.Controls["btnRemove"].Tag = nameProduct;
-                UpdateOrder.Add(nameProduct, ctl2);
+                UpdateOrder.Add(idSP, ctl2);
             }
             return ctl2;
         }
@@ -173,7 +176,7 @@ namespace QuanLyBanHang
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Product = getData(dgvProduct.CurrentCell.RowIndex);
-            if (!UpdateOrder.ContainsKey(dgvProduct.Rows[dgvProduct.CurrentCell.RowIndex].Cells[1].ToString()))
+            if (!UpdateOrder.ContainsKey(product.MaSP))
             {
                 newOrder.Controls.Add(orderProduct(Product.TenSP, Product.GiaBan.ToString(), product.MaSP));
             }
