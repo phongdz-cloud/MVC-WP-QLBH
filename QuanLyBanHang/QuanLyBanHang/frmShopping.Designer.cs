@@ -593,9 +593,9 @@ namespace QuanLyBanHang
             this.lbTotal.ForeColor = System.Drawing.Color.OrangeRed;
             this.lbTotal.Location = new System.Drawing.Point(137, 15);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(77, 28);
+            this.lbTotal.Size = new System.Drawing.Size(24, 28);
             this.lbTotal.TabIndex = 10;
-            this.lbTotal.Text = "250,00";
+            this.lbTotal.Text = "0";
             // 
             // btnPay
             // 
@@ -626,9 +626,8 @@ namespace QuanLyBanHang
             this.lbSubTotal.ForeColor = System.Drawing.Color.OrangeRed;
             this.lbSubTotal.Location = new System.Drawing.Point(138, 57);
             this.lbSubTotal.Name = "lbSubTotal";
-            this.lbSubTotal.Size = new System.Drawing.Size(58, 20);
+            this.lbSubTotal.Size = new System.Drawing.Size(0, 20);
             this.lbSubTotal.TabIndex = 7;
-            this.lbSubTotal.Text = "250,00";
             // 
             // label6
             // 

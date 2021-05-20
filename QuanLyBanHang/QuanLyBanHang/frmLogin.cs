@@ -22,12 +22,9 @@ namespace QuanLyBanHang
         {
             try
             {
-                DBProvider.Instance.Conn.Open();
                 string sql = "SELECT * FROM dbo._USER WHERE userID = "+txtID.Text+" AND userPassword = '"+Encrytion.Encrypt(txtPassword.Text)+"'";
-                DBProvider.Instance.Cmd.CommandText = sql;
-                DBProvider.Instance.Cmd.CommandType = CommandType.Text;
-                SqlDataReader read = DBProvider.Instance.Cmd.ExecuteReader();
-                if(read.Read())
+                DataTable read = DBProvider.Instance.ExecuteQueryDataTable(sql, CommandType.Text, null);
+                if(read.Rows.Count>0)
                 {
                     this.Hide();
                     if(guna2ToggleSwitch1.Checked == false)
@@ -35,9 +32,6 @@ namespace QuanLyBanHang
                         txtID.ResetText();
                         txtPassword.ResetText();
                     }
-                    read.Close();
-                    read.Dispose();
-
                     frmSell.Intance.ShowDialog();
                     this.Show();
                 }
@@ -47,16 +41,9 @@ namespace QuanLyBanHang
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Tên tài khoản không tồn tại", "Login thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            finally
-            {
-                DBProvider.Instance.Conn.Close();
-                DBProvider.Instance.Cmd.Dispose();
-            }
-
         }
-
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == 13)

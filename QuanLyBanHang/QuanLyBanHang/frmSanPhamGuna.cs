@@ -50,7 +50,6 @@ namespace QuanLyBanHang
         }
         private void load()
         {
-
             DbProductType = productGroupBUS.GetProductGroup();
             MANHOMSP.DataSource = DbProductType ;
             MANHOMSP.DisplayMember = "TENNHOMSP";
@@ -141,11 +140,7 @@ namespace QuanLyBanHang
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
-            if(Flag != -1)
-            {
                 frmSanPhamGuna_Load(sender, e);
-                Flag = -1;
-            }
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

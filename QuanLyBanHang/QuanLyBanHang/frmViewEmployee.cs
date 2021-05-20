@@ -31,9 +31,6 @@ namespace QuanLyBanHang
         }
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn thoát không?", "Xác nhận hủy",
-                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
                 this.Close();
         }
        

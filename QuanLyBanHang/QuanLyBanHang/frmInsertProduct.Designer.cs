@@ -48,6 +48,8 @@ namespace QuanLyBanHang
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lb = new System.Windows.Forms.Label();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -140,7 +142,7 @@ namespace QuanLyBanHang
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 163);
+            this.label9.Location = new System.Drawing.Point(19, 201);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(201, 23);
             this.label9.TabIndex = 6;
@@ -190,6 +192,8 @@ namespace QuanLyBanHang
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.Controls.Add(this.txtPrice);
+            this.guna2GroupBox2.Controls.Add(this.lb);
             this.guna2GroupBox2.Controls.Add(this.btnUpdate);
             this.guna2GroupBox2.Controls.Add(this.txtNameProduct);
             this.guna2GroupBox2.Controls.Add(this.cbbGroupProduct);
@@ -262,7 +266,7 @@ namespace QuanLyBanHang
             this.cbbGroupProduct.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbbGroupProduct.Location = new System.Drawing.Point(237, 212);
+            this.cbbGroupProduct.Location = new System.Drawing.Point(237, 250);
             this.cbbGroupProduct.Name = "cbbGroupProduct";
             this.cbbGroupProduct.Size = new System.Drawing.Size(270, 28);
             this.cbbGroupProduct.TabIndex = 28;
@@ -272,7 +276,7 @@ namespace QuanLyBanHang
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 217);
+            this.label3.Location = new System.Drawing.Point(19, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 23);
             this.label3.TabIndex = 27;
@@ -292,7 +296,7 @@ namespace QuanLyBanHang
             "Đức",
             "Ý",
             "Hà Lan"});
-            this.cbbNuocSX.Location = new System.Drawing.Point(237, 158);
+            this.cbbNuocSX.Location = new System.Drawing.Point(237, 196);
             this.cbbNuocSX.Name = "cbbNuocSX";
             this.cbbNuocSX.Size = new System.Drawing.Size(270, 28);
             this.cbbNuocSX.TabIndex = 26;
@@ -344,6 +348,41 @@ namespace QuanLyBanHang
             this.guna2GroupBox1.TabIndex = 10;
             this.guna2GroupBox1.Text = "Avatar";
             // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.DefaultText = "";
+            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.DisabledState.Parent = this.txtPrice;
+            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.FocusedState.Parent = this.txtPrice;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.HoverState.Parent = this.txtPrice;
+            this.txtPrice.Location = new System.Drawing.Point(237, 142);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PasswordChar = '\0';
+            this.txtPrice.PlaceholderText = "";
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
+            this.txtPrice.Size = new System.Drawing.Size(267, 33);
+            this.txtPrice.TabIndex = 32;
+            // 
+            // lb
+            // 
+            this.lb.AutoSize = true;
+            this.lb.BackColor = System.Drawing.Color.Transparent;
+            this.lb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.Location = new System.Drawing.Point(19, 152);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(54, 23);
+            this.lb.TabIndex = 31;
+            this.lb.Text = "Price:";
+            // 
             // frmInsertProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,5 +429,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.ComboBox cbbNuocSX;
         private Guna.UI2.WinForms.Guna2TextBox txtNameProduct;
         private Guna.UI2.WinForms.Guna2TileButton btnUpdate;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
+        private System.Windows.Forms.Label lb;
     }
 }
