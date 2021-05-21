@@ -107,14 +107,15 @@ namespace QuanLyBanHang
         private void btnStock_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmSanPhamGuna.Instance.ShowDialog();
+            UserHistoryContract.Instance.ShowDialog();
             this.Show();
         }
 
         private void btnShopping2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmShopping.Instance.ShowDialog();
+            UserHistoryTrans.Instance.ShowDialog();
+            lbTotalPrice.Text = "$"+UserHistoryTrans.Instance.Sum.ToString()+"đ" ;
             this.Show();
         }
     }

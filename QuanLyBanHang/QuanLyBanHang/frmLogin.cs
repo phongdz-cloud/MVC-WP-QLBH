@@ -32,7 +32,8 @@ namespace QuanLyBanHang
                         txtID.ResetText();
                         txtPassword.ResetText();
                     }
-                    frmSell.Intance.ShowDialog();
+                    if (cbEmploy.Checked == false) frmShopping.Instance.ShowDialog();
+                    else frmSell.Intance.ShowDialog();
                     this.Show();
                 }
                 else
@@ -58,6 +59,25 @@ namespace QuanLyBanHang
             {
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserSignUp.Instance.ShowDialog();
+            this.Show();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEmploy_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (cbEmploy.Checked == false) lbEmploy.Text = "Employee";
+            else lbEmploy.Text = "Manager";
         }
     }
 }

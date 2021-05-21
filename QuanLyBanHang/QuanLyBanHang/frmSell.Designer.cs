@@ -41,7 +41,7 @@ namespace QuanLyBanHang
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbTotalPrice = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -112,7 +112,7 @@ namespace QuanLyBanHang
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Controls.Add(this.label8);
-            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.lbTotalPrice);
             this.guna2Panel1.Controls.Add(this.guna2Button6);
             this.guna2Panel1.Controls.Add(this.guna2Button4);
             this.guna2Panel1.Controls.Add(this.guna2Button7);
@@ -138,15 +138,15 @@ namespace QuanLyBanHang
             this.label8.TabIndex = 37;
             this.label8.Text = "Your blance wallet";
             // 
-            // label7
+            // lbTotalPrice
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(53, 85);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 23);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "$ 27530.18";
+            this.lbTotalPrice.AutoSize = true;
+            this.lbTotalPrice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalPrice.Location = new System.Drawing.Point(53, 85);
+            this.lbTotalPrice.Name = "lbTotalPrice";
+            this.lbTotalPrice.Size = new System.Drawing.Size(100, 23);
+            this.lbTotalPrice.TabIndex = 38;
+            this.lbTotalPrice.Text = "$ 27530.18";
             // 
             // guna2Button6
             // 
@@ -314,9 +314,9 @@ namespace QuanLyBanHang
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.btnStock);
-            this.panel4.Location = new System.Drawing.Point(925, 118);
+            this.panel4.Location = new System.Drawing.Point(937, 118);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(220, 54);
+            this.panel4.Size = new System.Drawing.Size(239, 54);
             this.panel4.TabIndex = 41;
             // 
             // label9
@@ -325,9 +325,9 @@ namespace QuanLyBanHang
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(58, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 23);
+            this.label9.Size = new System.Drawing.Size(143, 23);
             this.label9.TabIndex = 38;
-            this.label9.Text = "Stock";
+            this.label9.Text = "History Contract";
             // 
             // btnStock
             // 
@@ -355,18 +355,18 @@ namespace QuanLyBanHang
             this.panel2.Controls.Add(this.btnShopping2);
             this.panel2.Location = new System.Drawing.Point(699, 118);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 54);
+            this.panel2.Size = new System.Drawing.Size(232, 54);
             this.panel2.TabIndex = 40;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 15);
+            this.label4.Location = new System.Drawing.Point(53, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 23);
+            this.label4.Size = new System.Drawing.Size(165, 23);
             this.label4.TabIndex = 38;
-            this.label4.Text = "Shopping";
+            this.label4.Text = "History Transaction";
             // 
             // btnShopping2
             // 
@@ -378,7 +378,7 @@ namespace QuanLyBanHang
             this.btnShopping2.ForeColor = System.Drawing.Color.White;
             this.btnShopping2.HoverState.Parent = this.btnShopping2;
             this.btnShopping2.Image = ((System.Drawing.Image)(resources.GetObject("btnShopping2.Image")));
-            this.btnShopping2.Location = new System.Drawing.Point(12, 6);
+            this.btnShopping2.Location = new System.Drawing.Point(7, 6);
             this.btnShopping2.Name = "btnShopping2";
             this.btnShopping2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(102)))), ((int)(((byte)(235)))));
             this.btnShopping2.ShadowDecoration.Parent = this.btnShopping2;
@@ -986,7 +986,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTotalPrice;
         private Guna.UI2.WinForms.Guna2DataGridView dgvChart;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;

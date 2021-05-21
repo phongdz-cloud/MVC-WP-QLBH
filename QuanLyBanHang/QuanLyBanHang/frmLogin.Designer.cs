@@ -42,7 +42,8 @@ namespace QuanLyBanHang
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
+            this.lbEmploy = new System.Windows.Forms.Label();
+            this.cbEmploy = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -93,7 +94,8 @@ namespace QuanLyBanHang
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.guna2Panel2.Controls.Add(this.btnSignUp);
+            this.guna2Panel2.Controls.Add(this.lbEmploy);
+            this.guna2Panel2.Controls.Add(this.cbEmploy);
             this.guna2Panel2.Controls.Add(this.btnLogin);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.guna2ToggleSwitch1);
@@ -118,12 +120,12 @@ namespace QuanLyBanHang
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(295, 441);
+            this.btnLogin.Location = new System.Drawing.Point(76, 441);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(156, 51);
+            this.btnLogin.Size = new System.Drawing.Size(375, 51);
             this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Sign in";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
@@ -214,23 +216,36 @@ namespace QuanLyBanHang
             this.txtID.TabIndex = 1;
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
-            // btnSignUp
+            // lbEmploy
             // 
-            this.btnSignUp.Animated = true;
-            this.btnSignUp.BorderRadius = 10;
-            this.btnSignUp.CheckedState.Parent = this.btnSignUp;
-            this.btnSignUp.CustomImages.Parent = this.btnSignUp;
-            this.btnSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(21)))), ((int)(((byte)(136)))));
-            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSignUp.HoverState.Parent = this.btnSignUp;
-            this.btnSignUp.Location = new System.Drawing.Point(76, 441);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.ShadowDecoration.Parent = this.btnSignUp;
-            this.btnSignUp.Size = new System.Drawing.Size(158, 51);
-            this.btnSignUp.TabIndex = 4;
-            this.btnSignUp.Text = "Sign Up";
+            this.lbEmploy.AutoSize = true;
+            this.lbEmploy.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmploy.ForeColor = System.Drawing.Color.White;
+            this.lbEmploy.Location = new System.Drawing.Point(353, 400);
+            this.lbEmploy.Name = "lbEmploy";
+            this.lbEmploy.Size = new System.Drawing.Size(68, 19);
+            this.lbEmploy.TabIndex = 6;
+            this.lbEmploy.Text = "Employee";
+            // 
+            // cbEmploy
+            // 
+            this.cbEmploy.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(138)))), ((int)(((byte)(159)))));
+            this.cbEmploy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(138)))), ((int)(((byte)(159)))));
+            this.cbEmploy.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(1)))), ((int)(((byte)(86)))));
+            this.cbEmploy.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.cbEmploy.CheckedState.Parent = this.cbEmploy;
+            this.cbEmploy.Location = new System.Drawing.Point(293, 400);
+            this.cbEmploy.Name = "cbEmploy";
+            this.cbEmploy.ShadowDecoration.Parent = this.cbEmploy;
+            this.cbEmploy.Size = new System.Drawing.Size(35, 20);
+            this.cbEmploy.TabIndex = 5;
+            this.cbEmploy.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.cbEmploy.UncheckedState.BorderThickness = 2;
+            this.cbEmploy.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(12)))), ((int)(((byte)(34)))));
+            this.cbEmploy.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.cbEmploy.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.cbEmploy.UncheckedState.Parent = this.cbEmploy;
+            this.cbEmploy.CheckedChanged += new System.EventHandler(this.cbEmploy_CheckedChanged);
             // 
             // frmLogin
             // 
@@ -243,6 +258,7 @@ namespace QuanLyBanHang
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
@@ -265,6 +281,7 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2TextBox txtID;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnSignUp;
+        private System.Windows.Forms.Label lbEmploy;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch cbEmploy;
     }
 }

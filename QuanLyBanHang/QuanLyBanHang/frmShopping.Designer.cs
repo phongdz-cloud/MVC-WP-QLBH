@@ -44,7 +44,6 @@ namespace QuanLyBanHang
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cbbID = new System.Windows.Forms.ComboBox();
             this.cbbType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnInsert = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label14 = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -270,7 +269,6 @@ namespace QuanLyBanHang
             // 
             this.guna2GroupBox1.Controls.Add(this.cbbID);
             this.guna2GroupBox1.Controls.Add(this.cbbType);
-            this.guna2GroupBox1.Controls.Add(this.btnInsert);
             this.guna2GroupBox1.Controls.Add(this.label14);
             this.guna2GroupBox1.Controls.Add(this.txtPhone);
             this.guna2GroupBox1.Controls.Add(this.label13);
@@ -317,28 +315,6 @@ namespace QuanLyBanHang
             this.cbbType.ShadowDecoration.Parent = this.cbbType;
             this.cbbType.Size = new System.Drawing.Size(273, 36);
             this.cbbType.TabIndex = 15;
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnInsert.BorderRadius = 5;
-            this.btnInsert.BorderThickness = 1;
-            this.btnInsert.CheckedState.Parent = this.btnInsert;
-            this.btnInsert.CustomImages.Parent = this.btnInsert;
-            this.btnInsert.FillColor = System.Drawing.Color.White;
-            this.btnInsert.FillColor2 = System.Drawing.Color.White;
-            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnInsert.HoverState.Parent = this.btnInsert;
-            this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
-            this.btnInsert.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInsert.Location = new System.Drawing.Point(182, 278);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.ShadowDecoration.Parent = this.btnInsert;
-            this.btnInsert.Size = new System.Drawing.Size(178, 41);
-            this.btnInsert.TabIndex = 13;
-            this.btnInsert.Text = "Insert & Edit";
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label14
             // 
@@ -784,7 +760,6 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2GradientButton btnInsert;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private System.Windows.Forms.Label label13;

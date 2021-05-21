@@ -158,6 +158,18 @@
     <Compile Include="UserControl3.Designer.cs">
       <DependentUpon>UserControl3.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserHistoryContract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHistoryContract.Designer.cs">
+      <DependentUpon>UserHistoryContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHistoryTrans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserHistoryTrans.Designer.cs">
+      <DependentUpon>UserHistoryTrans.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserSignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl3.resx">
       <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHistoryContract.resx">
+      <DependentUpon>UserHistoryContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHistoryTrans.resx">
+      <DependentUpon>UserHistoryTrans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.cs</DependentUpon>
