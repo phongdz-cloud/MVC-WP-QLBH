@@ -63,9 +63,6 @@ namespace QuanLyBanHang
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            UserSignUp.Instance.ShowDialog();
-            this.Show();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
