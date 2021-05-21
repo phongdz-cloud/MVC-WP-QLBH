@@ -37,13 +37,13 @@ namespace QuanLyBanHang
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbEmploy = new System.Windows.Forms.Label();
+            this.cbEmploy = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbEmploy = new System.Windows.Forms.Label();
-            this.cbEmploy = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -108,6 +108,38 @@ namespace QuanLyBanHang
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(521, 742);
             this.guna2Panel2.TabIndex = 3;
+            // 
+            // lbEmploy
+            // 
+            this.lbEmploy.AutoSize = true;
+            this.lbEmploy.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmploy.ForeColor = System.Drawing.Color.White;
+            this.lbEmploy.Location = new System.Drawing.Point(353, 400);
+            this.lbEmploy.Name = "lbEmploy";
+            this.lbEmploy.Size = new System.Drawing.Size(64, 19);
+            this.lbEmploy.TabIndex = 6;
+            this.lbEmploy.Text = "Manager";
+            // 
+            // cbEmploy
+            // 
+            this.cbEmploy.Checked = true;
+            this.cbEmploy.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(138)))), ((int)(((byte)(159)))));
+            this.cbEmploy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(138)))), ((int)(((byte)(159)))));
+            this.cbEmploy.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(1)))), ((int)(((byte)(86)))));
+            this.cbEmploy.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.cbEmploy.CheckedState.Parent = this.cbEmploy;
+            this.cbEmploy.Location = new System.Drawing.Point(293, 400);
+            this.cbEmploy.Name = "cbEmploy";
+            this.cbEmploy.ShadowDecoration.Parent = this.cbEmploy;
+            this.cbEmploy.Size = new System.Drawing.Size(35, 20);
+            this.cbEmploy.TabIndex = 5;
+            this.cbEmploy.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.cbEmploy.UncheckedState.BorderThickness = 2;
+            this.cbEmploy.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(12)))), ((int)(((byte)(34)))));
+            this.cbEmploy.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.cbEmploy.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.cbEmploy.UncheckedState.Parent = this.cbEmploy;
+            this.cbEmploy.CheckedChanged += new System.EventHandler(this.cbEmploy_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -215,37 +247,6 @@ namespace QuanLyBanHang
             this.txtID.Size = new System.Drawing.Size(375, 44);
             this.txtID.TabIndex = 1;
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
-            // 
-            // lbEmploy
-            // 
-            this.lbEmploy.AutoSize = true;
-            this.lbEmploy.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmploy.ForeColor = System.Drawing.Color.White;
-            this.lbEmploy.Location = new System.Drawing.Point(353, 400);
-            this.lbEmploy.Name = "lbEmploy";
-            this.lbEmploy.Size = new System.Drawing.Size(68, 19);
-            this.lbEmploy.TabIndex = 6;
-            this.lbEmploy.Text = "Employee";
-            // 
-            // cbEmploy
-            // 
-            this.cbEmploy.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(138)))), ((int)(((byte)(159)))));
-            this.cbEmploy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(138)))), ((int)(((byte)(159)))));
-            this.cbEmploy.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(1)))), ((int)(((byte)(86)))));
-            this.cbEmploy.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.cbEmploy.CheckedState.Parent = this.cbEmploy;
-            this.cbEmploy.Location = new System.Drawing.Point(293, 400);
-            this.cbEmploy.Name = "cbEmploy";
-            this.cbEmploy.ShadowDecoration.Parent = this.cbEmploy;
-            this.cbEmploy.Size = new System.Drawing.Size(35, 20);
-            this.cbEmploy.TabIndex = 5;
-            this.cbEmploy.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
-            this.cbEmploy.UncheckedState.BorderThickness = 2;
-            this.cbEmploy.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(12)))), ((int)(((byte)(34)))));
-            this.cbEmploy.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
-            this.cbEmploy.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
-            this.cbEmploy.UncheckedState.Parent = this.cbEmploy;
-            this.cbEmploy.CheckedChanged += new System.EventHandler(this.cbEmploy_CheckedChanged);
             // 
             // frmLogin
             // 
