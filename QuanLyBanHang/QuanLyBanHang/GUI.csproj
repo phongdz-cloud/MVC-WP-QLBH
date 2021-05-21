@@ -158,6 +158,12 @@
     <Compile Include="UserControl3.Designer.cs">
       <DependentUpon>UserControl3.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSignUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserSignUp.Designer.cs">
+      <DependentUpon>UserSignUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDetailContract.resx">
       <DependentUpon>frmDetailContract.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl3.resx">
       <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSignUp.resx">
+      <DependentUpon>UserSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -56,7 +56,7 @@ namespace QuanLyBanHang
             cbbType.DisplayMember = "TENLOAI";
             cbbType.ValueMember = "MALOAIKH";
             dgvCustomer.DataSource = customerBUS.GetCustomer();
-            ((DataGridViewImageColumn)dgvCustomer.Columns[6]).ImageLayout =
+            ((DataGridViewImageColumn)dgvCustomer.Columns["IMAGES"]).ImageLayout =
  DataGridViewImageCellLayout.Stretch;
             lbCustomer.Text = (dgvCustomer.Rows.Count - 1).ToString() + " Employee";
             int countMale = 0;
@@ -68,16 +68,11 @@ namespace QuanLyBanHang
             }
             lbMale.Text = countMale.ToString() + " Male";
             lbFemale.Text = countFemale.ToString() + " Female";
-            DbAll = new DataTable();
             DbAll = (DataTable)dgvCustomer.DataSource;
         }
         private void frmCustomer_Load(object sender, EventArgs e)
         {
-            if (flag == false)
-            {
-                if (DbAll == null) load();
-                else dgvCustomer.DataSource = DbAll;
-            }
+            load();
             dis_en(false);
         }
         private void btnSeach_Click(object sender, EventArgs e)
@@ -102,7 +97,21 @@ namespace QuanLyBanHang
             customer.DiaChi = dgvCustomer.Rows[rowIndex].Cells[3].Value.ToString();
             customer.DienThoai = dgvCustomer.Rows[rowIndex].Cells[4].Value.ToString();
             customer.MaLoaiKH = dgvCustomer.Rows[rowIndex].Cells[5].Value.ToString();
-            customer.Images = ImageByteArray;
+            if(ImageByteArray != null) customer.Images = ImageByteArray;
+            else customer.Images = (byte [])dgvCustomer.Rows[rowIndex].Cells[6].Value;
+            return customer;
+        }
+        private CustomerDTO getInsertAndUpdate(int rowIndex)
+        {
+            CustomerDTO customer = new CustomerDTO();
+            customer.MaKH = txtID.Text;
+            customer.TenKH = txtName.Text;
+            customer.GioiTinh = cbbSex.SelectedItem.ToString();
+            customer.DiaChi = txtDiaChi.Text;
+            customer.DienThoai = txtPhone.Text;
+            customer.MaLoaiKH = cbbType.SelectedValue.ToString();
+            if (ImageByteArray != null) customer.Images = ImageByteArray;
+            else customer.Images = (byte[])dgvCustomer.Rows[rowIndex].Cells[6].Value;
             return customer;
         }
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -188,12 +197,11 @@ namespace QuanLyBanHang
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                customer = getData(dgvCustomer.CurrentCell.RowIndex);
+                customer = getInsertAndUpdate(dgvCustomer.CurrentCell.RowIndex);
                 if (customerBUS.DeleteCustomer(ref err, customer))
                 {
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     flag = false;
-                    DbAll = null;
                     frmCustomer_Load(sender, e);
                 }
                 else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -215,7 +223,7 @@ namespace QuanLyBanHang
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    customer = getData(dgvCustomer.CurrentCell.RowIndex);
+                    customer = getInsertAndUpdate(dgvCustomer.CurrentCell.RowIndex);
                     customer.MaKH = autoID;
                     if (customerBUS.InsertCustomer(ref err, customer))
                     {
@@ -235,12 +243,11 @@ namespace QuanLyBanHang
                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    customer = getData(dgvCustomer.CurrentCell.RowIndex);
+                    customer = getInsertAndUpdate(dgvCustomer.CurrentCell.RowIndex);
                     if (customerBUS.UpdateCustomer(ref err, customer))
                     {
                         MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         flag = false;
-                        DbAll = null;
                         frmCustomer_Load(sender, e);
                     }
                     else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -54,12 +54,6 @@ namespace QuanLyBanHang
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnInsert = new Guna.UI2.WinForms.Guna2Button();
             this.dgvCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MALOAIKH = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -80,6 +74,13 @@ namespace QuanLyBanHang
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MALOAIKH = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.IMAGES = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
@@ -479,7 +480,8 @@ namespace QuanLyBanHang
             this.GIOITINH,
             this.DIACHI,
             this.DIENTHOAI,
-            this.MALOAIKH});
+            this.MALOAIKH,
+            this.IMAGES});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -522,58 +524,6 @@ namespace QuanLyBanHang
             this.dgvCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(210)))));
             this.dgvCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
-            // 
-            // MAKH
-            // 
-            this.MAKH.DataPropertyName = "MAKH";
-            this.MAKH.HeaderText = "ID";
-            this.MAKH.MinimumWidth = 6;
-            this.MAKH.Name = "MAKH";
-            this.MAKH.ReadOnly = true;
-            // 
-            // TENKH
-            // 
-            this.TENKH.DataPropertyName = "TENKH";
-            this.TENKH.HeaderText = "Name";
-            this.TENKH.MinimumWidth = 6;
-            this.TENKH.Name = "TENKH";
-            this.TENKH.ReadOnly = true;
-            // 
-            // GIOITINH
-            // 
-            this.GIOITINH.DataPropertyName = "GIOITINH";
-            this.GIOITINH.HeaderText = "Sex";
-            this.GIOITINH.MinimumWidth = 6;
-            this.GIOITINH.Name = "GIOITINH";
-            this.GIOITINH.ReadOnly = true;
-            // 
-            // DIACHI
-            // 
-            this.DIACHI.DataPropertyName = "DIACHI";
-            this.DIACHI.HeaderText = "Address";
-            this.DIACHI.MinimumWidth = 6;
-            this.DIACHI.Name = "DIACHI";
-            this.DIACHI.ReadOnly = true;
-            this.DIACHI.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DIACHI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DIENTHOAI
-            // 
-            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
-            this.DIENTHOAI.HeaderText = "Phone";
-            this.DIENTHOAI.MinimumWidth = 6;
-            this.DIENTHOAI.Name = "DIENTHOAI";
-            this.DIENTHOAI.ReadOnly = true;
-            // 
-            // MALOAIKH
-            // 
-            this.MALOAIKH.DataPropertyName = "MALOAIKH";
-            this.MALOAIKH.HeaderText = "Customer Type";
-            this.MALOAIKH.MinimumWidth = 6;
-            this.MALOAIKH.Name = "MALOAIKH";
-            this.MALOAIKH.ReadOnly = true;
-            this.MALOAIKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MALOAIKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // btnDelete
             // 
@@ -908,6 +858,66 @@ namespace QuanLyBanHang
             this.label2.TabIndex = 27;
             this.label2.Text = "ID: ";
             // 
+            // MAKH
+            // 
+            this.MAKH.DataPropertyName = "MAKH";
+            this.MAKH.HeaderText = "ID";
+            this.MAKH.MinimumWidth = 6;
+            this.MAKH.Name = "MAKH";
+            this.MAKH.ReadOnly = true;
+            // 
+            // TENKH
+            // 
+            this.TENKH.DataPropertyName = "TENKH";
+            this.TENKH.HeaderText = "Name";
+            this.TENKH.MinimumWidth = 6;
+            this.TENKH.Name = "TENKH";
+            this.TENKH.ReadOnly = true;
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.DataPropertyName = "GIOITINH";
+            this.GIOITINH.HeaderText = "Sex";
+            this.GIOITINH.MinimumWidth = 6;
+            this.GIOITINH.Name = "GIOITINH";
+            this.GIOITINH.ReadOnly = true;
+            // 
+            // DIACHI
+            // 
+            this.DIACHI.DataPropertyName = "DIACHI";
+            this.DIACHI.HeaderText = "Address";
+            this.DIACHI.MinimumWidth = 6;
+            this.DIACHI.Name = "DIACHI";
+            this.DIACHI.ReadOnly = true;
+            this.DIACHI.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DIACHI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DIENTHOAI
+            // 
+            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
+            this.DIENTHOAI.HeaderText = "Phone";
+            this.DIENTHOAI.MinimumWidth = 6;
+            this.DIENTHOAI.Name = "DIENTHOAI";
+            this.DIENTHOAI.ReadOnly = true;
+            // 
+            // MALOAIKH
+            // 
+            this.MALOAIKH.DataPropertyName = "MALOAIKH";
+            this.MALOAIKH.HeaderText = "Customer Type";
+            this.MALOAIKH.MinimumWidth = 6;
+            this.MALOAIKH.Name = "MALOAIKH";
+            this.MALOAIKH.ReadOnly = true;
+            this.MALOAIKH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MALOAIKH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // IMAGES
+            // 
+            this.IMAGES.DataPropertyName = "IMAGES";
+            this.IMAGES.HeaderText = "Images";
+            this.IMAGES.MinimumWidth = 6;
+            this.IMAGES.Name = "IMAGES";
+            this.IMAGES.ReadOnly = true;
+            // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -987,5 +997,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.DataGridViewTextBoxColumn DIACHI;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIENTHOAI;
         private System.Windows.Forms.DataGridViewComboBoxColumn MALOAIKH;
+        private System.Windows.Forms.DataGridViewImageColumn IMAGES;
     }
 }

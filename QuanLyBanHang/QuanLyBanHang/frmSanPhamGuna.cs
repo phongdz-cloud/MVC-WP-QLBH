@@ -86,7 +86,7 @@ namespace QuanLyBanHang
                     if (item.Controls["btnRemove"].Tag.ToString() == button.Tag.ToString())
                     {
                         newOrder.Controls.Remove(item);
-                        UpdateOrder.Remove(item.Controls["btnRemove"].Tag.ToString());
+                        UpdateOrder.Remove(item.Controls["lbPrice"].Tag.ToString());
                         break;
                     }
                 }
