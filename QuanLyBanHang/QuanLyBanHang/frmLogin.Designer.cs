@@ -42,6 +42,7 @@ namespace QuanLyBanHang
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -92,6 +93,7 @@ namespace QuanLyBanHang
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.guna2Panel2.Controls.Add(this.btnSignUp);
             this.guna2Panel2.Controls.Add(this.btnLogin);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.guna2ToggleSwitch1);
@@ -116,10 +118,10 @@ namespace QuanLyBanHang
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(252, 441);
+            this.btnLogin.Location = new System.Drawing.Point(295, 441);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
-            this.btnLogin.Size = new System.Drawing.Size(199, 51);
+            this.btnLogin.Size = new System.Drawing.Size(156, 51);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -212,6 +214,24 @@ namespace QuanLyBanHang
             this.txtID.TabIndex = 1;
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Animated = true;
+            this.btnSignUp.BorderRadius = 10;
+            this.btnSignUp.CheckedState.Parent = this.btnSignUp;
+            this.btnSignUp.CustomImages.Parent = this.btnSignUp;
+            this.btnSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(21)))), ((int)(((byte)(136)))));
+            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnSignUp.ForeColor = System.Drawing.Color.White;
+            this.btnSignUp.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSignUp.HoverState.Parent = this.btnSignUp;
+            this.btnSignUp.Location = new System.Drawing.Point(76, 441);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.ShadowDecoration.Parent = this.btnSignUp;
+            this.btnSignUp.Size = new System.Drawing.Size(158, 51);
+            this.btnSignUp.TabIndex = 4;
+            this.btnSignUp.Text = "Sign Up";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,5 +265,6 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2TextBox txtID;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnSignUp;
     }
 }

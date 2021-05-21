@@ -61,6 +61,7 @@ namespace QuanLyBanHang
             frmEmployeeGuna.Instance.EmployeeDTO.DienThoai = txtPhone.Text.Trim();
             frmEmployeeGuna.Instance.EmployeeDTO.NgayVaoLam = dtpNgayVaoLam.Text;
             frmEmployeeGuna.Instance.EmployeeDTO.Salary = Convert.ToInt32(txtSalary.Text);
+            if (ImageByteArray != null)
             frmEmployeeGuna.Instance.EmployeeDTO.Images = ImageByteArray;
         }
         private void btnRest_Click(object sender, EventArgs e)
@@ -109,7 +110,6 @@ namespace QuanLyBanHang
                         nvID = null;
                         flag = true;
                         Func.updateAutoID();
-                        
                     }
                     else MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

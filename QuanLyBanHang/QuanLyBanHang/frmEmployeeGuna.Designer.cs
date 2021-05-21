@@ -34,14 +34,6 @@ namespace QuanLyBanHang
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployeeGuna));
             this.dgvEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYVAOLAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SALARY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -66,6 +58,15 @@ namespace QuanLyBanHang
             this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnView = new Guna.UI2.WinForms.Guna2Button();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYVAOLAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SALARY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMAGES = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -97,7 +98,8 @@ namespace QuanLyBanHang
             this.DIACHI,
             this.DIENTHOAI,
             this.NGAYVAOLAM,
-            this.SALARY});
+            this.SALARY,
+            this.IMAGES});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -140,72 +142,6 @@ namespace QuanLyBanHang
             this.dgvEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(210)))));
             this.dgvEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellContentClick);
-            // 
-            // MANV
-            // 
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "ID";
-            this.MANV.MinimumWidth = 6;
-            this.MANV.Name = "MANV";
-            this.MANV.ReadOnly = true;
-            // 
-            // HOTEN
-            // 
-            this.HOTEN.DataPropertyName = "HOTEN";
-            this.HOTEN.HeaderText = "Name";
-            this.HOTEN.MinimumWidth = 6;
-            this.HOTEN.Name = "HOTEN";
-            this.HOTEN.ReadOnly = true;
-            // 
-            // GIOITINH
-            // 
-            this.GIOITINH.DataPropertyName = "GIOITINH";
-            this.GIOITINH.HeaderText = "Sex";
-            this.GIOITINH.MinimumWidth = 6;
-            this.GIOITINH.Name = "GIOITINH";
-            this.GIOITINH.ReadOnly = true;
-            // 
-            // NGAYSINH
-            // 
-            this.NGAYSINH.DataPropertyName = "NGAYSINH";
-            this.NGAYSINH.HeaderText = "Birthday";
-            this.NGAYSINH.MinimumWidth = 6;
-            this.NGAYSINH.Name = "NGAYSINH";
-            this.NGAYSINH.ReadOnly = true;
-            // 
-            // DIACHI
-            // 
-            this.DIACHI.DataPropertyName = "DIACHI";
-            this.DIACHI.HeaderText = "Address";
-            this.DIACHI.MinimumWidth = 6;
-            this.DIACHI.Name = "DIACHI";
-            this.DIACHI.ReadOnly = true;
-            this.DIACHI.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DIACHI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DIENTHOAI
-            // 
-            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
-            this.DIENTHOAI.HeaderText = "Phone";
-            this.DIENTHOAI.MinimumWidth = 6;
-            this.DIENTHOAI.Name = "DIENTHOAI";
-            this.DIENTHOAI.ReadOnly = true;
-            // 
-            // NGAYVAOLAM
-            // 
-            this.NGAYVAOLAM.DataPropertyName = "NGAYVAOLAM";
-            this.NGAYVAOLAM.HeaderText = "Day to work";
-            this.NGAYVAOLAM.MinimumWidth = 6;
-            this.NGAYVAOLAM.Name = "NGAYVAOLAM";
-            this.NGAYVAOLAM.ReadOnly = true;
-            // 
-            // SALARY
-            // 
-            this.SALARY.DataPropertyName = "SALARY";
-            this.SALARY.HeaderText = "Salary";
-            this.SALARY.MinimumWidth = 6;
-            this.SALARY.Name = "SALARY";
-            this.SALARY.ReadOnly = true;
             // 
             // lbSoLuong
             // 
@@ -672,6 +608,80 @@ namespace QuanLyBanHang
             this.btnView.Text = "View";
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "ID";
+            this.MANV.MinimumWidth = 6;
+            this.MANV.Name = "MANV";
+            this.MANV.ReadOnly = true;
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.DataPropertyName = "HOTEN";
+            this.HOTEN.HeaderText = "Name";
+            this.HOTEN.MinimumWidth = 6;
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.ReadOnly = true;
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.DataPropertyName = "GIOITINH";
+            this.GIOITINH.HeaderText = "Sex";
+            this.GIOITINH.MinimumWidth = 6;
+            this.GIOITINH.Name = "GIOITINH";
+            this.GIOITINH.ReadOnly = true;
+            // 
+            // NGAYSINH
+            // 
+            this.NGAYSINH.DataPropertyName = "NGAYSINH";
+            this.NGAYSINH.HeaderText = "Birthday";
+            this.NGAYSINH.MinimumWidth = 6;
+            this.NGAYSINH.Name = "NGAYSINH";
+            this.NGAYSINH.ReadOnly = true;
+            // 
+            // DIACHI
+            // 
+            this.DIACHI.DataPropertyName = "DIACHI";
+            this.DIACHI.HeaderText = "Address";
+            this.DIACHI.MinimumWidth = 6;
+            this.DIACHI.Name = "DIACHI";
+            this.DIACHI.ReadOnly = true;
+            this.DIACHI.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DIACHI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DIENTHOAI
+            // 
+            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
+            this.DIENTHOAI.HeaderText = "Phone";
+            this.DIENTHOAI.MinimumWidth = 6;
+            this.DIENTHOAI.Name = "DIENTHOAI";
+            this.DIENTHOAI.ReadOnly = true;
+            // 
+            // NGAYVAOLAM
+            // 
+            this.NGAYVAOLAM.DataPropertyName = "NGAYVAOLAM";
+            this.NGAYVAOLAM.HeaderText = "Day to work";
+            this.NGAYVAOLAM.MinimumWidth = 6;
+            this.NGAYVAOLAM.Name = "NGAYVAOLAM";
+            this.NGAYVAOLAM.ReadOnly = true;
+            // 
+            // SALARY
+            // 
+            this.SALARY.DataPropertyName = "SALARY";
+            this.SALARY.HeaderText = "Salary";
+            this.SALARY.MinimumWidth = 6;
+            this.SALARY.Name = "SALARY";
+            this.SALARY.ReadOnly = true;
+            // 
+            // IMAGES
+            // 
+            this.IMAGES.DataPropertyName = "IMAGES";
+            this.IMAGES.HeaderText = "Images";
+            this.IMAGES.MinimumWidth = 6;
+            this.IMAGES.Name = "IMAGES";
+            this.IMAGES.ReadOnly = true;
+            // 
             // frmEmployeeGuna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -724,6 +734,9 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2Button btnSeach;
         private Guna.UI2.WinForms.Guna2Button btnShowList;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
+        private Guna.UI2.WinForms.Guna2Button btnDetail;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnView;
         private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;
@@ -732,8 +745,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.DataGridViewTextBoxColumn DIENTHOAI;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYVAOLAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn SALARY;
-        private Guna.UI2.WinForms.Guna2Button btnDetail;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnView;
+        private System.Windows.Forms.DataGridViewImageColumn IMAGES;
     }
 }

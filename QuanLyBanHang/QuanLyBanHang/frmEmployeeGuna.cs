@@ -55,19 +55,15 @@ namespace QuanLyBanHang
         }
         private void frmEmployeeGuna_Load(object sender, EventArgs e)
         {
-            
-            if(flag == false)
-            {
-                if (DbAll == null) load();
-                else dgvEmployee.DataSource = DbAll;
-            }
+
+            load();
         }
         private void load()
         {
             DataTable db = new DataTable();
             db = employeeBUS.GetEmployee();
             dgvEmployee.DataSource = db;
-            ((DataGridViewImageColumn)dgvEmployee.Columns[8]).ImageLayout =
+            ((DataGridViewImageColumn)dgvEmployee.Columns["IMAGES"]).ImageLayout =
     DataGridViewImageCellLayout.Stretch;
             int countMale = 0;
             int countFemale = 0;
