@@ -92,6 +92,29 @@ namespace DAO
             }
             return f;
         }
-        
+        public object MyExcuteScalar(string strSQL, CommandType ct
+            , ref string error, params SqlParameter[] p)
+        {
+            Conn.Open();
+            Conn.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
+            Conn.FireInfoMessageEventOnUserErrors = true;
+            Cmd.Parameters.Clear();
+            Cmd.CommandText = strSQL;
+            Cmd.CommandType = ct;
+            try
+            {
+                return Cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                Conn.Close();
+            }
+            return null;
+        }
+
     }
 }

@@ -42,6 +42,7 @@ namespace QuanLyBanHang
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnRecommend = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbbID = new System.Windows.Forms.ComboBox();
             this.cbbType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -65,7 +66,7 @@ namespace QuanLyBanHang
             this.lbTotal = new System.Windows.Forms.Label();
             this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbSubTotal = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbDisCount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@ namespace QuanLyBanHang
             this.label8 = new System.Windows.Forms.Label();
             this.floPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutList = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRecommend = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -288,6 +288,28 @@ namespace QuanLyBanHang
             this.guna2GroupBox1.Size = new System.Drawing.Size(367, 336);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "Customer";
+            // 
+            // btnRecommend
+            // 
+            this.btnRecommend.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRecommend.BorderRadius = 5;
+            this.btnRecommend.BorderThickness = 1;
+            this.btnRecommend.CheckedState.Parent = this.btnRecommend;
+            this.btnRecommend.CustomImages.Parent = this.btnRecommend;
+            this.btnRecommend.FillColor = System.Drawing.Color.White;
+            this.btnRecommend.FillColor2 = System.Drawing.Color.White;
+            this.btnRecommend.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecommend.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnRecommend.HoverState.Parent = this.btnRecommend;
+            this.btnRecommend.Image = ((System.Drawing.Image)(resources.GetObject("btnRecommend.Image")));
+            this.btnRecommend.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRecommend.Location = new System.Drawing.Point(182, 281);
+            this.btnRecommend.Name = "btnRecommend";
+            this.btnRecommend.ShadowDecoration.Parent = this.btnRecommend;
+            this.btnRecommend.Size = new System.Drawing.Size(178, 41);
+            this.btnRecommend.TabIndex = 25;
+            this.btnRecommend.Text = "Recommend";
+            this.btnRecommend.Click += new System.EventHandler(this.btnRecommend_Click);
             // 
             // cbbID
             // 
@@ -554,7 +576,7 @@ namespace QuanLyBanHang
             this.guna2GradientPanel3.Controls.Add(this.lbTotal);
             this.guna2GradientPanel3.Controls.Add(this.btnPay);
             this.guna2GradientPanel3.Controls.Add(this.lbSubTotal);
-            this.guna2GradientPanel3.Controls.Add(this.label6);
+            this.guna2GradientPanel3.Controls.Add(this.lbDisCount);
             this.guna2GradientPanel3.Controls.Add(this.label5);
             this.guna2GradientPanel3.Controls.Add(this.guna2CheckBox2);
             this.guna2GradientPanel3.Controls.Add(this.label2);
@@ -575,6 +597,7 @@ namespace QuanLyBanHang
             this.lbTotal.Size = new System.Drawing.Size(24, 28);
             this.lbTotal.TabIndex = 10;
             this.lbTotal.Text = "0";
+            this.lbTotal.TextChanged += new System.EventHandler(this.lbTotal_TextChanged);
             // 
             // btnPay
             // 
@@ -608,16 +631,16 @@ namespace QuanLyBanHang
             this.lbSubTotal.Size = new System.Drawing.Size(0, 20);
             this.lbSubTotal.TabIndex = 7;
             // 
-            // label6
+            // lbDisCount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label6.Location = new System.Drawing.Point(138, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "00";
+            this.lbDisCount.AutoSize = true;
+            this.lbDisCount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisCount.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbDisCount.Location = new System.Drawing.Point(138, 94);
+            this.lbDisCount.Name = "lbDisCount";
+            this.lbDisCount.Size = new System.Drawing.Size(27, 20);
+            this.lbDisCount.TabIndex = 6;
+            this.lbDisCount.Text = "00";
             // 
             // label5
             // 
@@ -643,9 +666,9 @@ namespace QuanLyBanHang
             this.guna2CheckBox2.ForeColor = System.Drawing.Color.Gray;
             this.guna2CheckBox2.Location = new System.Drawing.Point(19, 96);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
-            this.guna2CheckBox2.Size = new System.Drawing.Size(94, 21);
+            this.guna2CheckBox2.Size = new System.Drawing.Size(85, 21);
             this.guna2CheckBox2.TabIndex = 3;
-            this.guna2CheckBox2.Text = "Day event";
+            this.guna2CheckBox2.Text = "Discount";
             this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.Gray;
             this.guna2CheckBox2.UncheckedState.BorderRadius = 2;
             this.guna2CheckBox2.UncheckedState.BorderThickness = 1;
@@ -712,28 +735,6 @@ namespace QuanLyBanHang
             this.flowLayoutList.TabIndex = 1;
             this.flowLayoutList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
-            // btnRecommend
-            // 
-            this.btnRecommend.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRecommend.BorderRadius = 5;
-            this.btnRecommend.BorderThickness = 1;
-            this.btnRecommend.CheckedState.Parent = this.btnRecommend;
-            this.btnRecommend.CustomImages.Parent = this.btnRecommend;
-            this.btnRecommend.FillColor = System.Drawing.Color.White;
-            this.btnRecommend.FillColor2 = System.Drawing.Color.White;
-            this.btnRecommend.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecommend.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnRecommend.HoverState.Parent = this.btnRecommend;
-            this.btnRecommend.Image = ((System.Drawing.Image)(resources.GetObject("btnRecommend.Image")));
-            this.btnRecommend.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRecommend.Location = new System.Drawing.Point(182, 281);
-            this.btnRecommend.Name = "btnRecommend";
-            this.btnRecommend.ShadowDecoration.Parent = this.btnRecommend;
-            this.btnRecommend.Size = new System.Drawing.Size(178, 41);
-            this.btnRecommend.TabIndex = 25;
-            this.btnRecommend.Text = "Recommend";
-            this.btnRecommend.Click += new System.EventHandler(this.btnRecommend_Click);
-            // 
             // frmShopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -775,7 +776,7 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2GradientButton btnPay;
         private System.Windows.Forms.Label lbSubTotal;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbDisCount;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
         private System.Windows.Forms.Label label2;
