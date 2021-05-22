@@ -33,7 +33,11 @@ namespace QuanLyBanHang
                         txtPassword.ResetText();
                     }
                     if (cbEmploy.Checked == false) frmShopping.Instance.ShowDialog();
-                    else frmSell.Intance.ShowDialog();
+                    else
+                    {
+                        frmSell.Intance.loadImageUser(read.Rows[0][5].ToString(),read.Rows[0][0].ToString());
+                        frmSell.Intance.ShowDialog();
+                    }
                     this.Show();
                 }
                 else
