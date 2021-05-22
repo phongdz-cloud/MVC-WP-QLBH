@@ -61,9 +61,12 @@ namespace QuanLyBanHang
             }
         }
 
+<<<<<<< HEAD
         private void btnSignUp_Click(object sender, EventArgs e)
         {
         }
+=======
+>>>>>>> 534aec0a575bd068b627ccbf7086b8d0bcacc771
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
