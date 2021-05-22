@@ -534,5 +534,20 @@ namespace QuanLyBanHang
                     flowLayoutList.Controls.Add(item);
                 }
         }
+
+        private void lbTotal_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double total = Convert.ToDouble(lbTotal.Text.Substring(0, lbTotal.Text.Length - 1));
+                string s = String.Format("Select dbo.Day_Event ('{0}',{1})", cbbID.SelectedValue.ToString(), total);
+                double discount = Convert.ToDouble(DBProvider.Instance.MyExcuteScalar(String.Format("Select dbo.Day_Event ('{0}',{1})", cbbID.SelectedValue.ToString(), total), CommandType.Text, ref err, null));
+                discount *= 100;
+                lbDisCount.Text = "-" + discount.ToString() + "%";
+            }catch(Exception ex)
+            {
+
+            }
+        }
     }
 }
