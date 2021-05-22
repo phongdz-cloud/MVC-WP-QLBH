@@ -35,7 +35,7 @@ namespace QuanLyBanHang
         List<PictureBox> row;
         List<double> listPriceMax = new List<double>();
         Dictionary<string, UserControl1> newOrder = new Dictionary<string, UserControl1>();
-
+        List<PictureBox> listRecommend = new List<PictureBox>();
         public DataTable DblistImageProduct { get => dblistImageProduct; set => dblistImageProduct = value; }
         public static frmShopping Instance { get { if (instance == null) instance = new frmShopping(); return frmShopping.instance; }private set => instance = value; }
 
@@ -46,6 +46,67 @@ namespace QuanLyBanHang
         public void Init()
         {
 
+        }
+        private void loadListRecommend()
+        {
+            
+            DataTable dbRecommend = DBProvider.Instance.ExecuteQueryDataTable
+                 ("select * from bestRecommend('" + cbbID.SelectedValue.ToString()
+                 + "','" + txtSex.ToString() + "','"
+                 + cbbType.SelectedValue.ToString() + "')", CommandType.Text, null);
+            cbbID.Tag = cbbID.SelectedValue.ToString();
+            string[] s;
+            for (int i =0; i<= dbRecommend.Rows.Count-1;i++)
+            {
+                for (int j = 0; j <= DblistImageProduct.Rows.Count - 1; j++)
+                {
+                    if (dbRecommend.Rows[i][0].ToString() == DblistImageProduct.Rows[j][0].ToString())
+                    {
+                        s = searchProduct(DblistImageProduct.Rows[j][0].ToString());
+                        byte[] ImageArray = (byte[])DblistImageProduct.Rows[j][3];
+                        ImageByteArray = ImageArray;
+                        pic = new PictureBox();
+                        pic.Width = 150;
+                        pic.Height = 154;
+
+                        price = new Label();
+                        price.Width = 150;
+                        price.Text = s[1];
+                        price.Name = "price";
+                        price.BackColor = Color.FromArgb(255, 121, 121);
+                        price.TextAlign = ContentAlignment.MiddleCenter;
+                        price.Dock = DockStyle.Bottom;
+
+
+                        description = new Label();
+                        description.Width = 150;
+                        description.Text = s[0];
+                        description.BackColor = Color.FromArgb(37, 131, 227);
+                        description.TextAlign = ContentAlignment.MiddleCenter;
+
+                        status = new Guna2GradientButton();
+                        status.Name = "status";
+                        status.FillColor = Color.FromArgb(249, 130, 68);
+                        status.Width = 50;
+                        status.Height = 50;
+                        status.TextAlign = HorizontalAlignment.Center;
+                        status.Location = new Point(100, 80);
+                        status.Tag = DblistImageProduct.Rows[j][0].ToString(); // lấy ra mã sản phẩm
+                        status.Visible = false;
+                        status.Image = Image.FromFile(Application.StartupPath + @"\Resources\checkmark_50pxwhite.png");
+                        status.ImageAlign = HorizontalAlignment.Center;
+
+                        pic.Image = Image.FromStream(new MemoryStream(ImageByteArray));
+                        pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pic.Click += pictureSanPham_click;
+                        pic.Tag = j;
+                        pic.Controls.Add(price);
+                        pic.Controls.Add(description);
+                        pic.Controls.Add(status);
+                        listRecommend.Add(pic);
+                    }
+                }
+            }
         }
         UserControl1 orderProduct(string nameProduct, string price, int amount,string idSP)
         {
@@ -460,6 +521,18 @@ namespace QuanLyBanHang
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRecommend_Click(object sender, EventArgs e)
+        {
+
+            listRecommend.Clear();
+            loadListRecommend();
+            flowLayoutList.Controls.Clear();
+            foreach (var item in listRecommend)
+                {
+                    flowLayoutList.Controls.Add(item);
+                }
         }
     }
 }

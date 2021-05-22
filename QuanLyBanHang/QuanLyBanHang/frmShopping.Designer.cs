@@ -74,6 +74,7 @@ namespace QuanLyBanHang
             this.label8 = new System.Windows.Forms.Label();
             this.floPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutList = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRecommend = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -267,6 +268,7 @@ namespace QuanLyBanHang
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.btnRecommend);
             this.guna2GroupBox1.Controls.Add(this.cbbID);
             this.guna2GroupBox1.Controls.Add(this.cbbType);
             this.guna2GroupBox1.Controls.Add(this.label14);
@@ -295,6 +297,7 @@ namespace QuanLyBanHang
             this.cbbID.Name = "cbbID";
             this.cbbID.Size = new System.Drawing.Size(274, 31);
             this.cbbID.TabIndex = 20;
+            this.cbbID.Tag = "-1";
             this.cbbID.SelectedIndexChanged += new System.EventHandler(this.cbbID_SelectedIndexChanged);
             // 
             // cbbType
@@ -709,6 +712,28 @@ namespace QuanLyBanHang
             this.flowLayoutList.TabIndex = 1;
             this.flowLayoutList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
+            // btnRecommend
+            // 
+            this.btnRecommend.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRecommend.BorderRadius = 5;
+            this.btnRecommend.BorderThickness = 1;
+            this.btnRecommend.CheckedState.Parent = this.btnRecommend;
+            this.btnRecommend.CustomImages.Parent = this.btnRecommend;
+            this.btnRecommend.FillColor = System.Drawing.Color.White;
+            this.btnRecommend.FillColor2 = System.Drawing.Color.White;
+            this.btnRecommend.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecommend.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnRecommend.HoverState.Parent = this.btnRecommend;
+            this.btnRecommend.Image = ((System.Drawing.Image)(resources.GetObject("btnRecommend.Image")));
+            this.btnRecommend.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRecommend.Location = new System.Drawing.Point(182, 281);
+            this.btnRecommend.Name = "btnRecommend";
+            this.btnRecommend.ShadowDecoration.Parent = this.btnRecommend;
+            this.btnRecommend.Size = new System.Drawing.Size(178, 41);
+            this.btnRecommend.TabIndex = 25;
+            this.btnRecommend.Text = "Recommend";
+            this.btnRecommend.Click += new System.EventHandler(this.btnRecommend_Click);
+            // 
             // frmShopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -787,5 +812,6 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2TrackBar tBPrice;
         private System.Windows.Forms.Label lbValue;
         private Guna.UI2.WinForms.Guna2GradientButton btnExit;
+        private Guna.UI2.WinForms.Guna2GradientButton btnRecommend;
     }
 }
