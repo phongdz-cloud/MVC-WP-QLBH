@@ -84,8 +84,8 @@ namespace QuanLyBanHang
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pbImageUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -105,7 +105,7 @@ namespace QuanLyBanHang
             this.panel3.SuspendLayout();
             this.pnEmployee.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageUser)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -295,8 +295,8 @@ namespace QuanLyBanHang
             this.guna_container.Controls.Add(this.panel1);
             this.guna_container.Controls.Add(this.guna2CircleButton4);
             this.guna_container.Controls.Add(this.guna2HtmlLabel4);
-            this.guna_container.Controls.Add(this.guna2HtmlLabel3);
-            this.guna_container.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna_container.Controls.Add(this.lbName);
+            this.guna_container.Controls.Add(this.pbImageUser);
             this.guna_container.Controls.Add(this.guna2CircleButton3);
             this.guna_container.Controls.Add(this.guna2CircleButton2);
             this.guna_container.Controls.Add(this.guna2ImageButton2);
@@ -797,28 +797,28 @@ namespace QuanLyBanHang
             this.guna2HtmlLabel4.TabIndex = 25;
             this.guna2HtmlLabel4.Text = "Admin";
             // 
-            // guna2HtmlLabel3
+            // lbName
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(1128, 14);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(48, 22);
-            this.guna2HtmlLabel3.TabIndex = 24;
-            this.guna2HtmlLabel3.Text = "Phong";
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.lbName.Location = new System.Drawing.Point(1128, 14);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(58, 22);
+            this.lbName.TabIndex = 24;
+            this.lbName.Text = "lbName";
             // 
-            // guna2CirclePictureBox1
+            // pbImageUser
             // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1080, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(42, 42);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 23;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.pbImageUser.Image = ((System.Drawing.Image)(resources.GetObject("pbImageUser.Image")));
+            this.pbImageUser.Location = new System.Drawing.Point(1080, 12);
+            this.pbImageUser.Name = "pbImageUser";
+            this.pbImageUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbImageUser.ShadowDecoration.Parent = this.pbImageUser;
+            this.pbImageUser.Size = new System.Drawing.Size(42, 42);
+            this.pbImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImageUser.TabIndex = 23;
+            this.pbImageUser.TabStop = false;
             // 
             // guna2CircleButton3
             // 
@@ -938,7 +938,7 @@ namespace QuanLyBanHang
             this.pnEmployee.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -973,8 +973,8 @@ namespace QuanLyBanHang
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbName;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbImageUser;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;

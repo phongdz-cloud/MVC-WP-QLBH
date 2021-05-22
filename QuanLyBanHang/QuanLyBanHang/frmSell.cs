@@ -59,6 +59,11 @@ namespace QuanLyBanHang
                 }
             }
         }
+        public void loadImageUser(string file,string name)
+        {
+            pbImageUser.Image = Image.FromFile(Application.StartupPath + @file);
+            lbName.Text = name;
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
